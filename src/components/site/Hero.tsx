@@ -118,14 +118,31 @@ export function Hero() {
           <div className="relative aspect-4/5 overflow-hidden rounded-[2rem] shadow-lift lg:aspect-3/4">
             <motion.img
               src={heroImg}
-              alt="Интерьер студии красивого тела «Импульс» в Истре"
-              width={1600}
-              height={1104}
+              alt="Гладкая ухоженная кожа и тонкие золотые кольца — студия красивого тела «Импульс»"
+              width={1024}
+              height={1280}
               style={{ y: imgY }}
               className="absolute inset-0 size-full scale-110 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/25 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, rotate: -6 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 1.2, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute -top-8 -right-3 size-28 overflow-hidden rounded-full border border-gold/40 shadow-soft md:-right-8 md:size-40 animate-float-slow"
+          >
+            <img
+              src={oilImg}
+              alt="Капля питательного масла на гладкой коже"
+              width={912}
+              height={912}
+              loading="lazy"
+              className="size-full object-cover"
+            />
+          </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
