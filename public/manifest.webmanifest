@@ -1,0 +1,14 @@
+{
+  "name": "Импульс — студия красивого тела",
+  "short_name": "Импульс",
+  "description": "Лазерная эпиляция, шугаринг и коррекция фигуры в Истре",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#fffdf8",
+  "lang": "ru",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -21,7 +22,7 @@ export function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-14 md:items-center md:pb-0"
+      className="relative isolate flex min-h-[100svh] items-center overflow-hidden pb-10 md:pb-0"
     >
       {/* фоновая подложка на всю ширину */}
       <motion.img
@@ -38,9 +39,9 @@ export function Hero() {
 
       {/* капля масла и импульс омоложения — прямо по коже руки */}
       <OilPulse className="left-[68%] top-[52%] hidden md:block" />
-      <OilPulse className="left-[62%] top-[26%] scale-[0.6] md:hidden" />
+      <OilPulse className="left-[70%] top-[16%] scale-[0.6] md:hidden" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 pt-32 md:px-10 md:pt-16">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pt-24 md:px-10 md:pt-16">
         <motion.div style={{ y: textY }} className="max-w-xl">
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -52,7 +53,7 @@ export function Hero() {
             Истра · Ленина 75
           </motion.span>
 
-          <h1 className="mt-7 font-display text-[3.1rem] leading-[0.95] tracking-tight text-balance md:text-7xl xl:text-[5.2rem]">
+          <h1 className="mt-5 font-display text-[2.6rem] leading-[0.95] tracking-tight text-balance sm:text-[3.1rem] md:mt-7 md:text-7xl xl:text-[5.2rem]">
             {["Начни", "свой", "день"].map((w, i) => (
               <motion.span
                 key={w}
@@ -78,7 +79,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.75 }}
-            className="mt-7 max-w-md text-[15px] leading-relaxed text-muted-foreground text-pretty"
+            className="mt-5 max-w-md text-[14px] md:mt-7 md:text-[15px] leading-relaxed text-muted-foreground text-pretty"
           >
             Лазерная эпиляция, шугаринг и аппаратная коррекция фигуры в Истре. Безупречно гладкая
             кожа, сертифицированный мастер и понятные цены — без звонков и переписок.
@@ -88,27 +89,28 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.9 }}
-            className="mt-9 flex flex-wrap items-center gap-4"
+            className="mt-6 flex flex-wrap items-center gap-3 md:mt-9 md:gap-4"
           >
-            <a
-              href="#booking"
-              className="group relative overflow-hidden rounded-full bg-primary px-8 py-4 text-[11px] tracking-[0.24em] text-primary-foreground uppercase"
+            <Link
+              to="/contacts"
+              hash="booking"
+              className="group relative overflow-hidden rounded-full bg-primary px-6 py-3.5 md:px-8 md:py-4 text-[11px] tracking-[0.24em] text-primary-foreground uppercase"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Записаться онлайн
                 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
               </span>
               <span className="absolute inset-0 shimmer-gold opacity-45" />
-            </a>
-            <a
-              href="#quiz"
-              className="rounded-full border border-foreground/20 bg-card/40 px-8 py-4 text-[11px] tracking-[0.24em] uppercase backdrop-blur transition-colors hover:border-gold hover:text-gold"
+            </Link>
+            <Link
+              to="/quiz"
+              className="rounded-full border border-foreground/20 bg-card/40 px-6 py-3.5 md:px-8 md:py-4 text-[11px] tracking-[0.24em] uppercase backdrop-blur transition-colors hover:border-gold hover:text-gold"
             >
               Подобрать программу
-            </a>
+            </Link>
           </motion.div>
 
-          <div className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-gold/20 pt-6">
+          <div className="mt-7 grid max-w-lg grid-cols-3 gap-4 border-t border-gold/20 pt-5 md:mt-10 md:gap-6 md:pt-6">
             {stats.map((s, i) => (
               <motion.div
                 key={s.label}
@@ -116,7 +118,7 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 + i * 0.12 }}
               >
-                <div className="font-display text-3xl text-gold">{s.value}</div>
+                <div className="font-display text-2xl text-gold md:text-3xl">{s.value}</div>
                 <div className="mt-1 text-[10px] tracking-[0.18em] text-muted-foreground uppercase">
                   {s.label}
                 </div>
@@ -129,7 +131,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.15 }}
-          className="glass-card mt-12 inline-block rounded-2xl px-6 py-5 md:absolute md:right-10 md:-bottom-2 md:mt-0 md:bg-card/85"
+          className="glass-card mt-7 inline-block rounded-2xl px-5 py-4 md:mt-12 md:px-6 md:py-5 md:absolute md:right-10 md:-bottom-2 md:mt-0 md:bg-card/85"
         >
           <div className="eyebrow">первое посещение</div>
           <div className="mt-2 font-display text-2xl">−50% лазерная эпиляция</div>

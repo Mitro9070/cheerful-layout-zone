@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Gift } from "lucide-react";
 import { Reveal } from "./Reveal";
@@ -29,13 +30,13 @@ export function QuizTeaser() {
                 Четыре вопроса — и вы увидите, какой курс подходит именно вам, с расчётом стоимости и
                 спецпредложением на первый визит.
               </p>
-              <a
-                href="#booking"
+              <Link
+                to="/quiz"
                 className="group relative mt-9 inline-flex overflow-hidden rounded-full bg-primary px-8 py-4 text-[11px] tracking-[0.24em] text-primary-foreground uppercase"
               >
                 <span className="relative z-10">Пройти квиз</span>
                 <span className="absolute inset-0 shimmer-gold opacity-45" />
-              </a>
+              </Link>
             </div>
 
             <div className="grid gap-3">

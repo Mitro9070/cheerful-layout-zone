@@ -1,14 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Marquee } from "@/components/site/Marquee";
+import { Advantages } from "@/components/site/Advantages";
 import { Services } from "@/components/site/Services";
 import { Pricing } from "@/components/site/Pricing";
+import { GalleryTeaser } from "@/components/site/GalleryTeaser";
+import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { Master } from "@/components/site/Master";
 import { QuizTeaser } from "@/components/site/QuizTeaser";
 import { Reviews } from "@/components/site/Reviews";
 import { Contacts } from "@/components/site/Contacts";
-import { StickyActions } from "@/components/site/StickyActions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,19 +33,18 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   return (
-    <div id="top" className="min-h-screen overflow-x-clip bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <Marquee />
-        <Services />
-        <Pricing />
-        <Master />
-        <QuizTeaser />
-        <Reviews />
-        <Contacts />
-      </main>
-      <StickyActions />
+    <div id="top">
+      <Hero />
+      <Marquee />
+      <Advantages />
+      <Services />
+      <Pricing />
+      <GalleryTeaser />
+      <QuizTeaser />
+      <ReelsFeed />
+      <Master />
+      <Reviews />
+      <Contacts />
     </div>
   );
 }

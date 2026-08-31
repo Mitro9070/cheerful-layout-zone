@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BodyRouteImport } from './routes/body'
+import { Route as ContactsRouteImport } from './routes/contacts'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as LaserRouteImport } from './routes/laser'
+import { Route as MenRouteImport } from './routes/men'
+import { Route as PromoRouteImport } from './routes/promo'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as SugaringRouteImport } from './routes/sugaring'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BodyRoute = BodyRouteImport.update({
+  id: '/body',
+  path: '/body',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactsRoute = ContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LaserRoute = LaserRouteImport.update({
+  id: '/laser',
+  path: '/laser',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenRoute = MenRouteImport.update({
+  id: '/men',
+  path: '/men',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromoRoute = PromoRouteImport.update({
+  id: '/promo',
+  path: '/promo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SugaringRoute = SugaringRouteImport.update({
+  id: '/sugaring',
+  path: '/sugaring',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/body': typeof BodyRoute
+  '/contacts': typeof ContactsRoute
+  '/gallery': typeof GalleryRoute
+  '/laser': typeof LaserRoute
+  '/men': typeof MenRoute
+  '/promo': typeof PromoRoute
+  '/quiz': typeof QuizRoute
+  '/reviews': typeof ReviewsRoute
+  '/sugaring': typeof SugaringRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/body': typeof BodyRoute
+  '/contacts': typeof ContactsRoute
+  '/gallery': typeof GalleryRoute
+  '/laser': typeof LaserRoute
+  '/men': typeof MenRoute
+  '/promo': typeof PromoRoute
+  '/quiz': typeof QuizRoute
+  '/reviews': typeof ReviewsRoute
+  '/sugaring': typeof SugaringRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/body': typeof BodyRoute
+  '/contacts': typeof ContactsRoute
+  '/gallery': typeof GalleryRoute
+  '/laser': typeof LaserRoute
+  '/men': typeof MenRoute
+  '/promo': typeof PromoRoute
+  '/quiz': typeof QuizRoute
+  '/reviews': typeof ReviewsRoute
+  '/sugaring': typeof SugaringRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/body'
+    | '/contacts'
+    | '/gallery'
+    | '/laser'
+    | '/men'
+    | '/promo'
+    | '/quiz'
+    | '/reviews'
+    | '/sugaring'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/body'
+    | '/contacts'
+    | '/gallery'
+    | '/laser'
+    | '/men'
+    | '/promo'
+    | '/quiz'
+    | '/reviews'
+    | '/sugaring'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/body'
+    | '/contacts'
+    | '/gallery'
+    | '/laser'
+    | '/men'
+    | '/promo'
+    | '/quiz'
+    | '/reviews'
+    | '/sugaring'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BodyRoute: typeof BodyRoute
+  ContactsRoute: typeof ContactsRoute
+  GalleryRoute: typeof GalleryRoute
+  LaserRoute: typeof LaserRoute
+  MenRoute: typeof MenRoute
+  PromoRoute: typeof PromoRoute
+  QuizRoute: typeof QuizRoute
+  ReviewsRoute: typeof ReviewsRoute
+  SugaringRoute: typeof SugaringRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/body': {
+      id: '/body'
+      path: '/body'
+      fullPath: '/body'
+      preLoaderRoute: typeof BodyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacts': {
+      id: '/contacts'
+      path: '/contacts'
+      fullPath: '/contacts'
+      preLoaderRoute: typeof ContactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/laser': {
+      id: '/laser'
+      path: '/laser'
+      fullPath: '/laser'
+      preLoaderRoute: typeof LaserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/men': {
+      id: '/men'
+      path: '/men'
+      fullPath: '/men'
+      preLoaderRoute: typeof MenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/promo': {
+      id: '/promo'
+      path: '/promo'
+      fullPath: '/promo'
+      preLoaderRoute: typeof PromoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sugaring': {
+      id: '/sugaring'
+      path: '/sugaring'
+      fullPath: '/sugaring'
+      preLoaderRoute: typeof SugaringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BodyRoute: BodyRoute,
+  ContactsRoute: ContactsRoute,
+  GalleryRoute: GalleryRoute,
+  LaserRoute: LaserRoute,
+  MenRoute: MenRoute,
+  PromoRoute: PromoRoute,
+  QuizRoute: QuizRoute,
+  ReviewsRoute: ReviewsRoute,
+  SugaringRoute: SugaringRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

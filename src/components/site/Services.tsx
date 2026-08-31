@@ -1,4 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
+
+const MotionLink = motion.create(Link);
 import { ArrowUpRight } from "lucide-react";
 import laser from "@/assets/service-laser.jpg";
 import sugaring from "@/assets/service-sugaring.jpg";
@@ -9,6 +12,7 @@ const services = [
   {
     n: "01",
     title: "Лазерная эпиляция",
+    to: "/laser",
     price: "от 500 ₽",
     text: "Диодный лазер, комфортный протокол и заметный результат уже после первых процедур. Все зоны — для женщин и мужчин.",
     img: laser,
@@ -16,6 +20,7 @@ const services = [
   {
     n: "02",
     title: "Шугаринг и воск",
+    to: "/sugaring",
     price: "от 300 ₽",
     text: "Деликатная сахарная паста и плёночный воск. Идеальная гладкость там, где лазер пока не подходит.",
     img: sugaring,
@@ -23,6 +28,7 @@ const services = [
   {
     n: "03",
     title: "Коррекция фигуры",
+    to: "/body",
     price: "от 1 300 ₽",
     text: "Вакуумный и вибрационно-роликовый массаж, микротоки, ЛимфаЛик. Курсы и абонементы со выгодой до 15%.",
     img: body,
@@ -54,8 +60,8 @@ export function Services() {
       <div className="mt-16 grid gap-6 md:grid-cols-3">
         {services.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.12}>
-            <motion.a
-              href="#prices"
+            <MotionLink
+              to={s.to}
               whileHover="hover"
               className="group relative block overflow-hidden rounded-[1.75rem] bg-card shadow-soft"
             >
@@ -85,7 +91,7 @@ export function Services() {
                 </div>
               </div>
               <p className="px-6 py-6 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-            </motion.a>
+            </MotionLink>
           </Reveal>
         ))}
       </div>
