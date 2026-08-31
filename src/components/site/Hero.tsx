@@ -36,9 +36,10 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/80 to-transparent md:via-background/55" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/85 via-transparent to-background/25" />
 
-      {/* капля масла и импульс омоложения — прямо по коже руки */}
-      <OilPulse className="left-[68%] top-[52%] hidden md:block" />
-      <OilPulse className="left-[62%] top-[26%] scale-[0.6] md:hidden" />
+      {/* капля масла и импульс омоложения — каждый раз в новом месте кожи */}
+      <OilPulse />
+      <OilPulse mobile />
+
 
       <div className="relative mx-auto w-full max-w-7xl px-5 pt-32 md:px-10 md:pt-16">
         <motion.div style={{ y: textY }} className="max-w-xl">
