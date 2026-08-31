@@ -4,7 +4,9 @@ import { Reveal } from "./Reveal";
 
 type Row = { zone: string; price: string; note?: string };
 
-const groups: { id: string; label: string; rows: Row[] }[] = [
+type Group = { id: string; label: string; rows: Row[] };
+
+const groups: [Group, ...Group[]] = [
   {
     id: "laser",
     label: "Лазерная эпиляция",
@@ -69,7 +71,7 @@ const groups: { id: string; label: string; rows: Row[] }[] = [
 
 export function Pricing() {
   const [active, setActive] = useState(groups[0].id);
-  const current = groups.find((g) => g.id === active) ?? groups[0];
+  const current: Group = groups.find((g) => g.id === active) ?? groups[0];
 
   return (
     <section id="prices" className="relative bg-secondary/35 py-28 md:py-36">
