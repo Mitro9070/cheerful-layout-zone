@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { StickyActions } from "@/components/site/StickyActions";
+import { MobileTabBar } from "@/components/site/MobileTabBar";
 
 function NotFoundComponent() {
   return (
