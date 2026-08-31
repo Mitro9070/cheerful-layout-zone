@@ -20,9 +20,9 @@ export function Header() {
       style={{ backgroundColor: bg, borderBottomColor: border }}
       className="fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl"
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-10">
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-5 md:h-28 md:px-10">
         <a href="#top" className="flex shrink-0 items-center gap-3">
-          <img src={logo.url} alt="Студия Импульс" className="h-6 w-auto md:h-7" />
+          <img src={logo.url} alt="Студия Импульс" className="h-10 w-auto md:h-14" />
           <span className="hidden text-[9px] tracking-[0.34em] text-muted-foreground uppercase sm:block">
             студия красивого тела
           </span>
