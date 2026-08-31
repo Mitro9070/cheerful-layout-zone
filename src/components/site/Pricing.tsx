@@ -1,77 +1,14 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
+import { priceGroups, type PriceGroup } from "@/data/site";
 
-type Row = { zone: string; price: string; note?: string };
-
-type Group = { id: string; label: string; rows: Row[] };
-
-const groups: [Group, ...Group[]] = [
-  {
-    id: "laser",
-    label: "Лазерная эпиляция",
-    rows: [
-      { zone: "Верхняя губа", price: "500 ₽" },
-      { zone: "Подбородок", price: "500 ₽" },
-      { zone: "Лицо полностью", price: "1 600 ₽" },
-      { zone: "Подмышечные впадины", price: "1 000 ₽" },
-      { zone: "Руки до локтя", price: "1 700 ₽" },
-      { zone: "Руки полностью", price: "2 100 ₽" },
-      { zone: "Живот полностью", price: "1 200 ₽" },
-      { zone: "Спина полностью", price: "2 700 ₽" },
-      { zone: "Бикини классическое", price: "1 100 ₽" },
-      { zone: "Бикини глубокое", price: "2 300 ₽" },
-      { zone: "Ноги до колена (голени)", price: "1 800 ₽" },
-      { zone: "Ноги полностью", price: "3 300 ₽" },
-      { zone: "Всё тело", price: "9 900 ₽", note: "самое выгодное предложение" },
-      { zone: "Мужские зоны", price: "+500 ₽", note: "к базовому прайсу" },
-    ],
-  },
-  {
-    id: "complex",
-    label: "Комплексы (выгодно)",
-    rows: [
-      { zone: "Глубокое бикини + подмышки", price: "2 900 ₽" },
-      { zone: "Глубокое бикини + подмышки + голени", price: "4 200 ₽" },
-      { zone: "Подмышки + ноги полностью", price: "4 000 ₽" },
-      { zone: "Глубокое бикини + подмышки + ноги полностью", price: "5 400 ₽" },
-      { zone: "Бикини + подмышки + ноги + руки до локтя", price: "6 500 ₽" },
-      { zone: "Бикини + подмышки + ноги + руки полностью", price: "7 000 ₽" },
-    ],
-  },
-  {
-    id: "sugaring",
-    label: "Шугаринг и воск",
-    rows: [
-      { zone: "Лицо", price: "от 300 ₽" },
-      { zone: "Подмышечные впадины", price: "500 ₽" },
-      { zone: "Руки до локтя", price: "900 ₽" },
-      { zone: "Руки полностью", price: "1 200 ₽" },
-      { zone: "Бикини классика", price: "800 ₽" },
-      { zone: "Бикини глубокое", price: "1 800 ₽" },
-      { zone: "Ноги полностью", price: "1 900 ₽" },
-      { zone: "Живот полностью", price: "600 ₽" },
-      { zone: "Ягодицы", price: "600 ₽" },
-      { zone: "Комплекс: бикини + подмышки + ноги", price: "3 600 ₽" },
-    ],
-  },
-  {
-    id: "body",
-    label: "Коррекция фигуры",
-    rows: [
-      { zone: "Вакуумный массаж, первое посещение (20 мин)", price: "1 300 ₽" },
-      { zone: "Вакуумный массаж (30 мин)", price: "2 000 ₽" },
-      { zone: "Вакуумный массаж, абонемент 10 сеансов", price: "17 000 ₽" },
-      { zone: "Вакуумный массаж (60 мин)", price: "3 000 ₽" },
-      { zone: "Вакуумный массаж 60 мин, абонемент 10 сеансов", price: "27 000 ₽" },
-      { zone: "Микротоковый массаж лица и шеи (20 мин)", price: "2 000 ₽", note: "первое посещение 1 300 ₽" },
-    ],
-  },
-];
+const groups = priceGroups;
 
 export function Pricing() {
-  const [active, setActive] = useState(groups[0].id);
-  const current: Group = groups.find((g) => g.id === active) ?? groups[0];
+  const [active, setActive] = useState(groups[0]!.id);
+  const current: PriceGroup = groups.find((g) => g.id === active) ?? groups[0]!;
 
   return (
     <section id="prices" className="relative bg-secondary/35 py-28 md:py-36">
@@ -148,6 +85,23 @@ export function Pricing() {
             </motion.ul>
           </AnimatePresence>
         </div>
+
+        <Reveal>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/laser"
+              className="rounded-full bg-primary px-7 py-3.5 text-[11px] tracking-[0.2em] text-primary-foreground uppercase"
+            >
+              Полный прайс по лазеру
+            </Link>
+            <Link to="/body" className="glass-card rounded-full px-7 py-3.5 text-[11px] tracking-[0.2em] uppercase">
+              Коррекция фигуры
+            </Link>
+            <Link to="/quiz" className="glass-card rounded-full px-7 py-3.5 text-[11px] tracking-[0.2em] uppercase">
+              Подобрать программу
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
