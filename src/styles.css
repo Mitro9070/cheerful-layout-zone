@@ -247,7 +247,7 @@
   animation: shimmer 3.5s linear infinite;
 }
 
-/* — капля масла и импульс омоложения на hero — */
+/* — капля масла и мягкий импульс на hero — */
 @keyframes oil-fall {
   0% {
     transform: translate(-50%, -170px) scale(0.5);
@@ -271,34 +271,40 @@
   }
 }
 
-@keyframes oil-ripple {
+@keyframes oil-impact {
   0%,
-  40% {
+  55% {
     transform: translate(-50%, -50%) scale(0.2);
     opacity: 0;
   }
-  55% {
-    opacity: 0.85;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
-  }
-}
-
-@keyframes oil-glow {
-  0%,
-  45% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.4);
-  }
-  60% {
+  58% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  72% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.9);
   }
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(2.1);
+  }
+}
+
+@keyframes oil-skin-ripple {
+  0%,
+  55% {
+    transform: translate(-50%, -50%) scale(0.15);
+    opacity: 0;
+    border-width: 1px;
+  }
+  60% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+    border-width: 0px;
   }
 }
 
@@ -317,6 +323,28 @@
   animation: oil-fall 5.5s var(--ease-silk) infinite;
 }
 
+.oil-impact {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: radial-gradient(
+    circle at 50% 50%,
+    color-mix(in oklab, white 82%, var(--gold)) 0%,
+    color-mix(in oklab, var(--gold) 55%, transparent) 45%,
+    transparent 70%
+  );
+  filter: blur(2px);
+  animation: oil-impact 5.5s var(--ease-silk) infinite;
+}
+
+.oil-skin-ripple {
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid color-mix(in oklab, var(--gold) 42%, transparent);
+  box-shadow: inset 0 0 36px color-mix(in oklab, var(--gold) 12%, transparent);
+  animation: oil-skin-ripple 5.5s var(--ease-silk) infinite;
+}
+
+/* отключённые тяжёлые волны импульса (закомментированы по запросу)
 .oil-ripple {
   width: 18rem;
   height: 18rem;
@@ -330,11 +358,12 @@
   filter: blur(6px);
   animation: oil-glow 5.5s var(--ease-silk) infinite;
 }
+*/
 
 @media (prefers-reduced-motion: reduce) {
   .oil-drop,
-  .oil-ripple,
-  .oil-glow {
+  .oil-impact,
+  .oil-skin-ripple {
     animation: none;
     opacity: 0.35;
   }
