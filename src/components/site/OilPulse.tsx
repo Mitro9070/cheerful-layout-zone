@@ -1,6 +1,6 @@
 /**
- * Капля масла падает на кожу. В момент исчезновения — лёгкая
- * световая вспышка и рябь по коже (импульс омоложения — soft-версия).
+ * Капля масла падает на кожу. Импульс омоложения пока отключён.
+ * Чистая презентационная анимация: CSS-кейфреймы + мягкое золотое свечение.
  */
 export function OilPulse({ className = "" }: { className?: string }) {
   return (
@@ -11,12 +11,13 @@ export function OilPulse({ className = "" }: { className?: string }) {
       {/* капля */}
       <span className="oil-drop absolute left-1/2 -translate-x-1/2" />
 
-      {/* световая вспышка в точке исчезновения капли */}
-      <span className="oil-impact absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+      {/* импульсные волны по коже — отключены
+      <span className="oil-ripple absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+      <span className="oil-ripple absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full [animation-delay:0.55s]" />
+      <span className="oil-ripple absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full [animation-delay:1.1s]" />
 
-      {/* лёгкая рябь по коже */}
-      <span className="oil-skin-ripple absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full" />
-      <span className="oil-skin-ripple absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full [animation-delay:0.28s]" />
+      <span className="oil-glow absolute left-1/2 top-0 size-16 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+      */}
     </div>
   );
 }
