@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import oilImg from "@/assets/hero-oil.jpg";
 import { PulseLine } from "./PulseLine";
 
 const stats = [
@@ -17,7 +18,7 @@ export function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
 
   return (
-    <section id="top" ref={ref} className="hero-canvas relative overflow-hidden pt-28 pb-16 md:pt-32">
+    <section id="top" ref={ref} className="hero-canvas relative overflow-hidden pt-32 pb-16 md:pt-40">
       <div className="pointer-events-none absolute -top-24 -left-24 size-[28rem] rounded-full bg-gold-soft/40 blur-[120px] animate-float-slow" />
       <div className="pointer-events-none absolute top-40 -right-32 size-[32rem] rounded-full bg-blush/50 blur-[130px] animate-float-slow [animation-delay:3s]" />
 
