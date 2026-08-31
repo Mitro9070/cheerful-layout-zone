@@ -91,8 +91,9 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.9 }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <a
-              to="/contacts" hash="booking"
+            <Link
+              to="/contacts"
+              hash="booking"
               className="group relative overflow-hidden rounded-full bg-primary px-8 py-4 text-[11px] tracking-[0.24em] text-primary-foreground uppercase"
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -100,13 +101,13 @@ export function Hero() {
                 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
               </span>
               <span className="absolute inset-0 shimmer-gold opacity-45" />
-            </a>
-            <a
+            </Link>
+            <Link
               to="/quiz"
               className="rounded-full border border-foreground/20 bg-card/40 px-8 py-4 text-[11px] tracking-[0.24em] uppercase backdrop-blur transition-colors hover:border-gold hover:text-gold"
             >
               Подобрать программу
-            </a>
+            </Link>
           </motion.div>
 
           <div className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-gold/20 pt-6">
