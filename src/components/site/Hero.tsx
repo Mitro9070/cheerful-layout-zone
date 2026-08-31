@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -91,7 +92,7 @@ export function Hero() {
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <a
-              href="#booking"
+              to="/contacts" hash="booking"
               className="group relative overflow-hidden rounded-full bg-primary px-8 py-4 text-[11px] tracking-[0.24em] text-primary-foreground uppercase"
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -101,7 +102,7 @@ export function Hero() {
               <span className="absolute inset-0 shimmer-gold opacity-45" />
             </a>
             <a
-              href="#quiz"
+              to="/quiz"
               className="rounded-full border border-foreground/20 bg-card/40 px-8 py-4 text-[11px] tracking-[0.24em] uppercase backdrop-blur transition-colors hover:border-gold hover:text-gold"
             >
               Подобрать программу
