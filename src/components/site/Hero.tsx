@@ -40,7 +40,7 @@ export function Hero() {
       <OilPulse className="left-[68%] top-[52%] hidden md:block" />
       <OilPulse className="left-[62%] top-[26%] scale-[0.6] md:hidden" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 pt-32 md:px-10 md:pt-24">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pt-32 md:px-10 md:pt-16">
         <motion.div style={{ y: textY }} className="max-w-xl">
           <motion.span
             initial={{ opacity: 0, y: 14 }}
@@ -108,7 +108,7 @@ export function Hero() {
             </a>
           </motion.div>
 
-          <div className="mt-11 grid max-w-lg grid-cols-3 gap-6 border-t border-gold/20 pt-6">
+          <div className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-gold/20 pt-6">
             {stats.map((s, i) => (
               <motion.div
                 key={s.label}
@@ -129,7 +129,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.15 }}
-          className="glass-card mt-12 inline-block rounded-2xl px-6 py-5 md:absolute md:right-10 md:bottom-6 md:mt-0"
+          className="glass-card mt-12 inline-block rounded-2xl px-6 py-5 md:absolute md:right-10 md:-bottom-2 md:mt-0 md:bg-card/85"
         >
           <div className="eyebrow">первое посещение</div>
           <div className="mt-2 font-display text-2xl">−50% лазерная эпиляция</div>
