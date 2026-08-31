@@ -1,24 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Marquee } from "@/components/site/Marquee";
+import { Services } from "@/components/site/Services";
+import { Pricing } from "@/components/site/Pricing";
+import { Master } from "@/components/site/Master";
+import { QuizTeaser } from "@/components/site/QuizTeaser";
+import { Reviews } from "@/components/site/Reviews";
+import { Contacts } from "@/components/site/Contacts";
+import { StickyActions } from "@/components/site/StickyActions";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Импульс — лазерная эпиляция и шугаринг в Истре" },
+      {
+        name: "description",
+        content:
+          "Студия красивого тела «Импульс» в Истре: диодная лазерная эпиляция, шугаринг, аппаратная коррекция фигуры. Скидка 50% на первое посещение.",
+      },
+      { property: "og:title", content: "Импульс — студия красивого тела в Истре" },
+      {
+        property: "og:description",
+        content:
+          "Лазерная эпиляция, шугаринг и коррекция фигуры у мастера с опытом более 7 лет. Истра, ул. Ленина 75.",
+      },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div id="top" className="min-h-screen overflow-x-clip bg-background">
+      <Header />
+      <main>
+        <Hero />
+        <Marquee />
+        <Services />
+        <Pricing />
+        <Master />
+        <QuizTeaser />
+        <Reviews />
+        <Contacts />
+      </main>
+      <StickyActions />
     </div>
   );
 }
