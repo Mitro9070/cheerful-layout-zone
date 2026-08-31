@@ -15,15 +15,13 @@ export function Hero() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section id="top" ref={ref} className="hero-canvas relative overflow-hidden pt-28 pb-16 md:pt-32">
       <div className="pointer-events-none absolute -top-24 -left-24 size-[28rem] rounded-full bg-gold-soft/40 blur-[120px] animate-float-slow" />
       <div className="pointer-events-none absolute top-40 -right-32 size-[32rem] rounded-full bg-blush/50 blur-[130px] animate-float-slow [animation-delay:3s]" />
 
-      <motion.div
-        style={{ opacity: fade }}
+      <div
         className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-10 lg:grid-cols-[1.05fr_0.95fr]"
       >
         <motion.div style={{ y: textY }}>
@@ -139,7 +137,7 @@ export function Hero() {
             <div className="mt-1 text-xs text-muted-foreground">−10% шугаринг · −500 ₽ массаж</div>
           </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
 
       <PulseLine className="mt-16 h-16 w-full text-gold md:h-24" />
     </section>
