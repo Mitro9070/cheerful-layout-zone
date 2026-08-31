@@ -273,11 +273,11 @@
 
 @keyframes oil-ripple {
   0%,
-  40% {
-    transform: translate(-50%, -50%) scale(0.2);
+  64% {
+    transform: translate(-50%, -50%) scale(0.12);
     opacity: 0;
   }
-  55% {
+  70% {
     opacity: 0.85;
   }
   100% {
@@ -288,19 +288,20 @@
 
 @keyframes oil-glow {
   0%,
-  45% {
+  62% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.4);
+    transform: translate(-50%, -50%) scale(0.3);
   }
-  60% {
+  72% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.15);
+    transform: translate(-50%, -50%) scale(1.1);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(2.1);
+    transform: translate(-50%, -50%) scale(2);
   }
 }
+
 
 .oil-drop {
   top: 0;
