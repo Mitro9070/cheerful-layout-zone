@@ -41,7 +41,7 @@ export function Hero() {
       <OilPulse className="left-[68%] top-[52%] hidden md:block" />
       <OilPulse className="left-[70%] top-[16%] scale-[0.6] md:hidden" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 pt-24 md:px-10 md:pt-16">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pt-28 md:px-10 md:pt-20">
         <motion.div style={{ y: textY }} className="max-w-xl">
           <motion.span
             initial={{ opacity: 0, y: 14 }}

@@ -85,8 +85,8 @@ export function Header() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-background/95 backdrop-blur-xl xl:hidden"
           >
-            <div className="flex h-20 items-center justify-between px-5 md:h-28 md:px-10">
-              <img src={logo.url} alt="Студия Импульс" className="h-11 w-auto" />
+            <div className="flex h-24 items-center justify-between px-5 md:h-32 md:px-10">
+              <img src={logo.url} alt="Студия Импульс" className="h-14 w-auto" />
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Закрыть меню"
