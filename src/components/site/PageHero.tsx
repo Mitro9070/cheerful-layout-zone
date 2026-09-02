@@ -17,7 +17,7 @@ export function PageHero({
   cta?: boolean;
 }) {
   return (
-    <section className="hero-canvas relative overflow-hidden pt-28 pb-16 md:pt-40 md:pb-24">
+    <section className="hero-canvas relative overflow-hidden pt-32 pb-16 md:pt-44 md:pb-24">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:px-10 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <Reveal>
