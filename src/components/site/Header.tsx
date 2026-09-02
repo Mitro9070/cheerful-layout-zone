@@ -10,12 +10,13 @@ const links = [
   { to: "/sugaring", label: "Шугаринг" },
   { to: "/body", label: "Фигура" },
   { to: "/men", label: "Мужчинам" },
-  { to: "/gallery", label: "До/После" },
+  { to: "/gallery", label: "До / После" },
   { to: "/promo", label: "Акции" },
   { to: "/reviews", label: "Отзывы" },
-  { to: "/about", label: "О студии" },
+  { to: "/about", label: "Студия" },
   { to: "/contacts", label: "Контакты" },
 ];
+
 
 export function Header() {
   const { scrollY } = useScroll();
@@ -28,20 +29,20 @@ export function Header() {
       style={{ backgroundColor: bg, borderBottomColor: border }}
       className="fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl"
     >
-      <div className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 md:h-28 md:px-10 lg:flex lg:justify-between lg:gap-8">
+      <div className="mx-auto grid h-24 max-w-[110rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 md:h-32 md:px-8 xl:flex xl:justify-between xl:gap-6">
         <Link to="/" className="flex min-w-0 shrink-0 items-center gap-3">
-          <img src={logo.url} alt="Студия Импульс" className="h-11 w-auto md:h-14" />
-          <span className="hidden text-[9px] tracking-[0.34em] text-muted-foreground uppercase sm:block">
+          <img src={logo.url} alt="Студия Импульс" className="h-14 w-auto md:h-20" />
+          <span className="hidden max-w-[9rem] text-[9px] leading-relaxed tracking-[0.28em] text-muted-foreground uppercase lg:block">
             {site.tagline}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 xl:flex">
+        <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="group relative text-[11px] tracking-[0.18em] uppercase transition-colors hover:text-gold [&.active]:text-gold"
+              className="group relative text-[10px] whitespace-nowrap tracking-[0.14em] uppercase transition-colors hover:text-gold [&.active]:text-gold 2xl:text-[11px] 2xl:tracking-[0.18em]"
             >
               {l.label}
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
@@ -52,7 +53,7 @@ export function Header() {
         <div className="flex shrink-0 items-center gap-3">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 text-sm tracking-wide transition-colors hover:text-gold md:flex"
+            className="hidden items-center gap-2 text-[13px] whitespace-nowrap tracking-wide transition-colors hover:text-gold lg:flex"
           >
             <Phone className="size-3.5 text-gold" />
             {site.phone}
@@ -60,7 +61,7 @@ export function Header() {
           <Link
             to="/contacts"
             hash="booking"
-            className="relative hidden overflow-hidden rounded-full bg-primary px-5 py-2.5 text-[11px] tracking-[0.2em] text-primary-foreground uppercase sm:inline-flex"
+            className="relative hidden overflow-hidden rounded-full bg-primary px-5 py-2.5 text-[10px] whitespace-nowrap tracking-[0.18em] text-primary-foreground uppercase sm:inline-flex"
           >
             <span className="relative z-10">Записаться</span>
             <span className="absolute inset-0 shimmer-gold opacity-40" />
@@ -74,6 +75,7 @@ export function Header() {
           </button>
         </div>
       </div>
+
 
       <AnimatePresence>
         {open && (
