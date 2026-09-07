@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
-import { priceGroups, type PriceGroup } from "@/data/site";
+import { priceGroups, pricingTopNote, legalNote, type PriceGroup } from "@/data/site";
 
 const groups = priceGroups;
 
@@ -23,8 +23,8 @@ export function Pricing() {
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Полный прайс по зонам. Скидки первого посещения суммируются с комплексами.
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              {pricingTopNote}
             </p>
           </Reveal>
         </div>
