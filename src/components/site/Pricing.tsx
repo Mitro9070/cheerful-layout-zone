@@ -86,6 +86,12 @@ export function Pricing() {
           </AnimatePresence>
         </div>
 
+        <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted-foreground">
+          {legalNote}
+        </p>
+
+
+
         <Reveal>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link
