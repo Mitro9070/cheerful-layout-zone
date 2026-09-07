@@ -3,6 +3,8 @@ import { Hero } from "@/components/site/Hero";
 import { Marquee } from "@/components/site/Marquee";
 import { Advantages } from "@/components/site/Advantages";
 import { Services } from "@/components/site/Services";
+import { Complexes } from "@/components/site/Complexes";
+import { Savings } from "@/components/site/Savings";
 import { Pricing } from "@/components/site/Pricing";
 import { GalleryTeaser } from "@/components/site/GalleryTeaser";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
@@ -38,7 +40,10 @@ function HomePage() {
       <Marquee />
       <Advantages />
       <Services />
+      <Complexes />
+      <Savings />
       <Pricing />
+
       <GalleryTeaser />
       <QuizTeaser />
       <ReelsFeed />

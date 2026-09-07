@@ -29,7 +29,7 @@ export function PageHero({
             </h1>
           </Reveal>
           <Reveal delay={0.16}>
-            <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-[15px]">{text}</p>
+            <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">{text}</p>
           </Reveal>
           {cta && (
             <Reveal delay={0.24}>
@@ -37,14 +37,14 @@ export function PageHero({
                 <Link
                   to="/contacts"
                   hash="booking"
-                  className="relative overflow-hidden rounded-full bg-primary px-7 py-3.5 text-[11px] tracking-[0.22em] text-primary-foreground uppercase"
+                  className="relative overflow-hidden rounded-full bg-primary px-7 py-3.5 text-sm tracking-[0.18em] text-primary-foreground uppercase"
                 >
                   <span className="relative z-10">Записаться</span>
                   <span className="absolute inset-0 shimmer-gold opacity-40" />
                 </Link>
                 <Link
                   to="/quiz"
-                  className="glass-card rounded-full px-7 py-3.5 text-[11px] tracking-[0.22em] uppercase"
+                  className="glass-card rounded-full px-7 py-3.5 text-sm tracking-[0.18em] uppercase"
                 >
                   Подобрать программу
                 </Link>
