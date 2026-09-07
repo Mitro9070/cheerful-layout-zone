@@ -40,12 +40,12 @@ function HomePage() {
     <div id="top">
       <Hero />
       <Marquee />
-      <Offers />
+      <OffersStrip />
       <Advantages />
       <Services />
       <Complexes />
       <Savings />
-      <Pricing />
+      <PricingTeaser />
 
       <GalleryTeaser />
       <QuizTeaser />
