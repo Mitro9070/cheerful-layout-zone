@@ -138,9 +138,13 @@ export function Hero() {
           transition={{ duration: 1, delay: 1.15 }}
           className="glass-card mt-8 inline-block rounded-2xl px-6 py-5 md:absolute md:right-10 md:-bottom-4 md:mt-0 md:bg-card/90 md:px-8 md:py-6"
         >
-          <div className="eyebrow">первое посещение</div>
-          <div className="mt-2.5 font-display text-3xl md:text-4xl">−50% лазерная эпиляция</div>
-          <div className="mt-2 text-sm text-muted-foreground">−10% шугаринг · −500 ₽ массаж</div>
+          <div className="eyebrow">первый визит</div>
+          <div className="mt-2.5 font-display text-3xl md:text-4xl">
+            Консультация и тестовая зона — 0 ₽
+          </div>
+          <div className="mt-2 text-sm text-muted-foreground">
+            Для новых клиентов. Свободно 3 места.
+          </div>
         </motion.div>
       </div>
     </section>
