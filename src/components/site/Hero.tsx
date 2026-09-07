@@ -101,17 +101,17 @@ export function Hero() {
               className="group relative overflow-hidden rounded-full bg-primary px-8 py-4.5 text-sm tracking-[0.18em] text-primary-foreground uppercase md:px-10"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Записаться онлайн
+                Записаться бесплатно
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </span>
               <span className="absolute inset-0 shimmer-gold opacity-45" />
             </Link>
             <Link
-              to="/quiz"
+              to="/laser"
               className="flex items-center gap-2 rounded-full border border-foreground/25 bg-card/50 px-8 py-4.5 text-sm tracking-[0.18em] uppercase backdrop-blur transition-colors hover:border-gold hover:text-gold md:px-10"
             >
               <Play className="size-3.5 text-gold" />
-              Подобрать программу
+              Цены и комплексы
             </Link>
           </motion.div>
 
