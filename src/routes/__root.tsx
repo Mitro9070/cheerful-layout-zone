@@ -15,6 +15,8 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { StickyActions } from "@/components/site/StickyActions";
 import { MobileTabBar } from "@/components/site/MobileTabBar";
+import { PriceDrawer } from "@/components/site/PriceDrawer";
+import { OfferPulse } from "@/components/site/OfferPulse";
 
 function NotFoundComponent() {
   return (
@@ -150,6 +152,8 @@ function RootComponent() {
         </main>
         <Footer />
         <StickyActions />
+        <PriceDrawer />
+        <OfferPulse />
         <MobileTabBar />
       </div>
     </QueryClientProvider>

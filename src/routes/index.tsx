@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { Marquee } from "@/components/site/Marquee";
-import { Offers } from "@/components/site/Offers";
+import { OffersStrip } from "@/components/site/OffersStrip";
 import { Loyalty } from "@/components/site/Loyalty";
 import { Advantages } from "@/components/site/Advantages";
 import { Services } from "@/components/site/Services";
 import { Complexes } from "@/components/site/Complexes";
 import { Savings } from "@/components/site/Savings";
-import { Pricing } from "@/components/site/Pricing";
+import { PricingTeaser } from "@/components/site/PricingTeaser";
 import { GalleryTeaser } from "@/components/site/GalleryTeaser";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { Master } from "@/components/site/Master";
@@ -40,12 +40,12 @@ function HomePage() {
     <div id="top">
       <Hero />
       <Marquee />
-      <Offers />
+      <OffersStrip />
       <Advantages />
       <Services />
       <Complexes />
       <Savings />
-      <Pricing />
+      <PricingTeaser />
 
       <GalleryTeaser />
       <QuizTeaser />
