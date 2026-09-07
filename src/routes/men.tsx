@@ -1,35 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, X } from "lucide-react";
+import { Check, Gift, X } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
-import { PriceTable } from "@/components/site/PriceTable";
 import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { Reveal } from "@/components/site/Reveal";
-import { laserMen } from "@/data/site";
+import { menComplexes, menZonesNote, laserZones, legalNote } from "@/data/site";
 import laserImg from "@/assets/service-laser.jpg";
 import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/men")({
   head: () => ({
     meta: [
-      { title: "Лазерная эпиляция для мужчин в Истре — цены | Студия «Импульс»" },
+      { title: "Мужская лазерная эпиляция в Истре — цены | Студия «Импульс»" },
       {
         name: "description",
         content:
-          "Мужская лазерная эпиляция в Истре: спина, живот, подмышки, грудь, контур бороды. Цены, комплекс со скидкой и результаты до/после.",
+          "Мужская лазерная эпиляция в Истре: комплексы «Мужской верх» от 4 500 ₽ и «Мужской фронт» от 4 000 ₽ с подарочными зонами. Отдельная запись, два аппарата, бесплатная консультация.",
       },
       { property: "og:title", content: "Мужская лазерная эпиляция в Истре" },
       {
         property: "og:description",
-        content: "Спина, живот, подмышки и грудь — комфортно, без стеснения, с понятной ценой.",
+        content: "Спина, плечи, грудь, живот и подмышки. Спокойно, быстро и по делу — с понятной ценой.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: MenPage,
 });
 
-const yes = ["Спина и плечи", "Живот и грудь", "Подмышки", "Шея и контур бороды", "Коррекция плотности волос"];
-const no = ["Интимные зоны мужчинам", "Массаж и мануальные техники", "Татуаж и косметология лица"];
+const yes = ["Спина и плечи", "Грудь и живот", "Подмышки", "Шея сзади", "Ареолы", "Коррекция плотности волос"];
+const no = ["Интимные зоны мужчинам", "Татуаж и косметология лица"];
 
 function MenPage() {
   return (
@@ -72,9 +73,48 @@ function MenPage() {
           </Reveal>
         </div>
 
-        <div className="mt-6">
-          <PriceTable rows={laserMen} title="Цены на мужские зоны" />
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {menComplexes.map((m, i) => (
+            <Reveal key={m.name} delay={i * 0.08}>
+              <article className="flex h-full flex-col rounded-[1.75rem] border border-border bg-card p-7 shadow-soft md:p-8">
+                <h2 className="font-display text-3xl leading-tight md:text-4xl">{m.name}</h2>
+                <p className="mt-3 text-base">{m.zones}</p>
+                <p className="mt-3 flex gap-2.5 text-[15px] text-gold">
+                  <Gift className="mt-0.5 size-4 shrink-0" />
+                  {m.gift}
+                </p>
+                <div className="mt-6 flex-1 space-y-3 border-t border-border pt-5">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <span className="text-sm text-muted-foreground">Everlas 1800 Вт</span>
+                    <span className="font-display text-2xl">{m.everlas}</span>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <span className="text-sm text-muted-foreground">Magic One 4000 Вт</span>
+                    <span className="font-display text-2xl text-gold">{m.magic}</span>
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
+
+        <div className="mt-8 rounded-[1.75rem] bg-card p-5 shadow-soft md:p-10">
+          <h3 className="font-display text-2xl md:text-3xl">Отдельные зоны</h3>
+          <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{menZonesNote}</p>
+          <ul className="mt-6 divide-y divide-border">
+            {laserZones.slice(0, 4).map((z) => (
+              <li key={z.group} className="py-4">
+                <div className="font-display text-xl text-gold">{z.group}</div>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{z.zones}</p>
+                <div className="mt-2 text-sm">
+                  Женский прайс {z.everlas} / {z.magic} · для мужчин +30%
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p className="mt-8 max-w-3xl text-xs leading-relaxed text-muted-foreground">{legalNote}</p>
 
         <div className="py-20 md:py-28">
           <Reveal>
@@ -84,9 +124,9 @@ function MenPage() {
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <BeforeAfter before={studio} after={laserImg} label="Спина, 4 процедуры" />
-            <BeforeAfter before={laserImg} after={studio} label="Живот и грудь, 5 процедур" />
+            <BeforeAfter before={laserImg} after={studio} label="Грудь и живот, 5 процедур" />
           </div>
-          <p className="mt-5 text-[11px] text-muted-foreground">
+          <p className="mt-5 text-xs text-muted-foreground">
             Демонстрационные кадры — заменяются живыми фото мужского комплекса.
           </p>
 

@@ -455,7 +455,16 @@ export const bodyProcedures: BodyRow[] = [
   { procedure: "Бандажное обёртывание", session: "3 000 ₽" },
 ];
 
-export const bodyPrograms = [
+export type BodyProgram = {
+  name: string;
+  price: string;
+  oldPrice?: string;
+  text: string;
+  course?: string;
+  benefit?: string;
+};
+
+export const bodyPrograms: BodyProgram[] = [
   {
     name: "Полная перезагрузка",
     price: "5 000 ₽",
