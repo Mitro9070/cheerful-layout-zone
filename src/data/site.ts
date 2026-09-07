@@ -506,11 +506,11 @@ const laserZoneRows: PriceRow[] = laserZones.map((z) => ({
   note: "Everlas / Magic One",
 }));
 
-const bodyRowsFlat: PriceRow[] = bodyProcedures.map((b) => ({
-  zone: b.procedure,
-  price: b.session,
-  note: b.coursePrice ? `${b.course} — ${b.coursePrice}` : undefined,
-}));
+const bodyRowsFlat: PriceRow[] = bodyProcedures.map((b) =>
+  b.coursePrice
+    ? { zone: b.procedure, price: b.session, note: `${b.course} — ${b.coursePrice}` }
+    : { zone: b.procedure, price: b.session },
+);
 
 export const priceGroups: PriceGroup[] = [
   {
