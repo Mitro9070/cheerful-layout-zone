@@ -8,7 +8,7 @@ import poster from "@/assets/hero-reel-poster.jpg.asset.json";
 
 const stats = [
   { value: "7+", label: "лет практики" },
-  { value: "−50%", label: "на первый лазер" },
+  { value: "4000 Вт", label: "лазер Magic One" },
   { value: "231", label: "кабинет, Ленина 75" },
 ];
 
