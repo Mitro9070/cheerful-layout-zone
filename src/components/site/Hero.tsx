@@ -41,8 +41,9 @@ export function Hero() {
       </motion.div>
 
       {/* читаемость надписей */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-transparent md:via-background/60" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/90 via-transparent to-background/35" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/88 to-background/20 md:via-background/65" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/90 via-transparent to-background/40" />
+
 
       <div className="relative mx-auto w-full max-w-7xl px-5 pt-28 md:px-10 md:pt-24">
         <motion.div style={{ y: textY }} className="max-w-2xl">
