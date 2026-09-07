@@ -18,7 +18,7 @@ export function Advantages() {
             <div className="h-full rounded-2xl border border-border bg-card/70 p-6 transition-colors hover:border-gold/40">
               <span className="font-display text-lg text-gold">0{i + 1}</span>
               <h3 className="mt-3 font-display text-2xl leading-tight">{a.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
+              <p className="mt-2 text-base leading-relaxed text-muted-foreground">{a.text}</p>
             </div>
           </Reveal>
         ))}

@@ -23,7 +23,7 @@ export function Pricing() {
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Полный прайс по зонам. Скидки первого посещения суммируются с комплексами.
             </p>
           </Reveal>
@@ -35,7 +35,7 @@ export function Pricing() {
               <button
                 key={g.id}
                 onClick={() => setActive(g.id)}
-                className={`relative rounded-full px-5 py-2.5 text-[11px] tracking-[0.18em] uppercase transition-colors ${
+                className={`relative rounded-full px-5 py-2.5 text-xs tracking-[0.18em] uppercase transition-colors ${
                   active === g.id ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
