@@ -1,29 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import { PriceTable } from "@/components/site/PriceTable";
+import { Complexes } from "@/components/site/Complexes";
+import { ZoneMatrix } from "@/components/site/ZoneMatrix";
+import { Abonements } from "@/components/site/Abonements";
 import { Faq } from "@/components/site/Faq";
 import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { Reveal } from "@/components/site/Reveal";
-import { faq, laserWomen, laserComplex, laserMen } from "@/data/site";
+import { faq, lasers } from "@/data/site";
 import laserImg from "@/assets/service-laser.jpg";
 import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/laser")({
   head: () => ({
     meta: [
-      { title: "Лазерная эпиляция в Истре — цены по зонам | Студия «Импульс»" },
+      { title: "Лазерная эпиляция в Истре — комплексы и цены | Студия «Импульс»" },
       {
         name: "description",
         content:
-          "Диодная лазерная эпиляция в Истре: полный прайс по зонам для женщин и мужчин, комплексы, галерея до/после и скидка 50% на первое посещение.",
+          "Лазерная эпиляция в Истре на Everlas 1800 Вт и Magic One 4000 Вт: комплексы с подарочными зонами, цены по группам зон, абонементы на курс и бесплатная консультация с тестовой зоной.",
       },
-      { property: "og:title", content: "Лазерная эпиляция в Истре — прайс по зонам" },
+      { property: "og:title", content: "Лазерная эпиляция в Истре — комплексы, зоны, абонементы" },
       {
         property: "og:description",
-        content: "Диодный лазер с охлаждением, мастер с опытом 7+ лет, открытые цены и запись онлайн.",
+        content:
+          "Два аппарата, комплексы выгоднее суммы зон на 25–40%, подарки в рублях и первый визит от 1 450 ₽.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: LaserPage,
@@ -36,14 +41,27 @@ function LaserPage() {
         eyebrow="лазерная эпиляция"
         title="Гладкость, которая"
         accent="остаётся"
-        text="Диодный лазер с системой охлаждения: комфортно, безопасно и результативно уже с первых процедур. Полный прайс по зонам — ниже, без звонков и переписки."
+        text="Два диодных лазера под разный тип волоса, комфортный протокол и сопровождение всего курса до результата. Полный прайс — ниже, без звонков и переписки."
         image={laserImg}
       />
 
+      <Complexes />
+
       <section className="mx-auto max-w-6xl space-y-6 px-5 md:px-10">
-        <PriceTable rows={laserWomen} title="Прайс для женщин" />
-        <PriceTable rows={laserComplex} title="Комплексы — выгоднее" />
-        <PriceTable rows={laserMen} title="Мужские зоны" />
+        <ZoneMatrix />
+        <Abonements />
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {lasers.map((l) => (
+            <Reveal key={l.id}>
+              <div className="h-full rounded-[1.5rem] border border-border bg-card/70 p-7">
+                <h3 className="font-display text-2xl md:text-3xl">{l.name}</h3>
+                <div className="mt-1.5 text-[11px] tracking-[0.18em] text-gold uppercase">{l.power}</div>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{l.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 pt-20 md:px-10 md:pt-28">
@@ -60,17 +78,17 @@ function LaserPage() {
           <BeforeAfter before={laserImg} after={studio} label="Голени, 5 процедур" />
           <BeforeAfter before={studio} after={laserImg} label="Глубокое бикини, 6 процедур" />
         </div>
-        <p className="mt-5 text-[11px] text-muted-foreground">
-          Демонстрационные кадры — заменяются живыми фото студии с согласия клиентов (единый ракурс, свет и фон).
+        <p className="mt-5 text-xs text-muted-foreground">
+          Демонстрационные кадры — заменяются живыми фото студии после фотосессии.
         </p>
       </section>
 
       <ReelsFeed />
       <Faq items={faq} />
 
-      <div className="mx-auto max-w-6xl px-5 pb-20 md:px-10 md:pb-28">
+      <section className="mx-auto max-w-6xl px-5 pb-20 md:px-10 md:pb-28">
         <BookingWidget defaultService="Лазерная эпиляция" />
-      </div>
+      </section>
     </div>
   );
 }

@@ -8,7 +8,7 @@ import poster from "@/assets/hero-reel-poster.jpg.asset.json";
 
 const stats = [
   { value: "7+", label: "лет практики" },
-  { value: "−50%", label: "на первый лазер" },
+  { value: "4000 Вт", label: "лазер Magic One" },
   { value: "231", label: "кабинет, Ленина 75" },
 ];
 
@@ -101,17 +101,17 @@ export function Hero() {
               className="group relative overflow-hidden rounded-full bg-primary px-8 py-4.5 text-sm tracking-[0.18em] text-primary-foreground uppercase md:px-10"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Записаться онлайн
+                Записаться бесплатно
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </span>
               <span className="absolute inset-0 shimmer-gold opacity-45" />
             </Link>
             <Link
-              to="/quiz"
+              to="/laser"
               className="flex items-center gap-2 rounded-full border border-foreground/25 bg-card/50 px-8 py-4.5 text-sm tracking-[0.18em] uppercase backdrop-blur transition-colors hover:border-gold hover:text-gold md:px-10"
             >
               <Play className="size-3.5 text-gold" />
-              Подобрать программу
+              Цены и комплексы
             </Link>
           </motion.div>
 
@@ -138,9 +138,13 @@ export function Hero() {
           transition={{ duration: 1, delay: 1.15 }}
           className="glass-card mt-8 inline-block rounded-2xl px-6 py-5 md:absolute md:right-10 md:-bottom-4 md:mt-0 md:bg-card/90 md:px-8 md:py-6"
         >
-          <div className="eyebrow">первое посещение</div>
-          <div className="mt-2.5 font-display text-3xl md:text-4xl">−50% лазерная эпиляция</div>
-          <div className="mt-2 text-sm text-muted-foreground">−10% шугаринг · −500 ₽ массаж</div>
+          <div className="eyebrow">первый визит</div>
+          <div className="mt-2.5 font-display text-3xl md:text-4xl">
+            Консультация и тестовая зона — 0 ₽
+          </div>
+          <div className="mt-2 text-sm text-muted-foreground">
+            Для новых клиентов. Свободно 3 места.
+          </div>
         </motion.div>
       </div>
     </section>

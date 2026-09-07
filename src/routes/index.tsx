@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { Marquee } from "@/components/site/Marquee";
+import { Offers } from "@/components/site/Offers";
+import { Loyalty } from "@/components/site/Loyalty";
 import { Advantages } from "@/components/site/Advantages";
 import { Services } from "@/components/site/Services";
 import { Complexes } from "@/components/site/Complexes";
@@ -38,6 +40,7 @@ function HomePage() {
     <div id="top">
       <Hero />
       <Marquee />
+      <Offers />
       <Advantages />
       <Services />
       <Complexes />
@@ -49,6 +52,7 @@ function HomePage() {
       <ReelsFeed />
       <Master />
       <Reviews />
+      <Loyalty />
       <Contacts />
     </div>
   );

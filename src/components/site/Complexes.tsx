@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Check } from "lucide-react";
-import { complexes } from "@/data/site";
+import { AnimatePresence, motion } from "motion/react";
+import { Check, Gift } from "lucide-react";
+import { lasers, legalNote } from "@/data/site";
 import { Reveal } from "./Reveal";
 
 export function Complexes() {
+  const [activeId, setActiveId] = useState(lasers[0]!.id);
+  const active = lasers.find((l) => l.id === activeId) ?? lasers[0]!;
+
   return (
     <section id="complexes" className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
       <div className="max-w-3xl">
@@ -12,38 +17,73 @@ export function Complexes() {
         </Reveal>
         <Reveal delay={0.08}>
           <h2 className="mt-4 font-display text-4xl leading-[1.05] text-balance md:text-6xl">
-            Готовые комплексы <span className="italic text-gold">с понятной выгодой</span>
+            Комплексы <span className="italic text-gold">с понятной выгодой</span>
           </h2>
         </Reveal>
         <Reveal delay={0.16}>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Три цены в одной карточке: для первого визита, по карте постоянного клиента и обычная.
-            Зоны внутри комплекса можно заменить на равные по размеру.
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            Комплекс всегда выгоднее суммы зон на 25–40%, и подарочные зоны посчитаны в рублях.
+            Выберите аппарат — цены обновятся.
           </p>
         </Reveal>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {complexes.map((c, i) => (
-          <Reveal key={c.name} delay={0.06 * i}>
+      <Reveal delay={0.12}>
+        <div className="mt-10 flex flex-wrap gap-2">
+          {lasers.map((l) => (
+            <button
+              key={l.id}
+              onClick={() => setActiveId(l.id)}
+              className={`relative rounded-full px-6 py-3 text-xs tracking-[0.16em] uppercase transition-colors ${
+                activeId === l.id ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {activeId === l.id && (
+                <motion.span
+                  layoutId="laser-pill"
+                  className="absolute inset-0 rounded-full bg-primary"
+                  transition={{ type: "spring", stiffness: 320, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">
+                {l.name} · {l.power}
+              </span>
+            </button>
+          ))}
+        </div>
+        <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">{active.text}</p>
+      </Reveal>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={active.id}
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {active.complexes.map((c) => (
             <article
+              key={c.name}
               className={`flex h-full flex-col rounded-[1.75rem] border bg-card p-7 shadow-soft transition-all hover:-translate-y-1 hover:shadow-lift md:p-8 ${
                 c.featured ? "border-gold/60" : "border-border"
               }`}
             >
-              {c.badge && (
-                <span
-                  className={`self-start rounded-full px-4 py-1.5 text-[11px] tracking-[0.2em] uppercase ${
-                    c.featured
-                      ? "bg-primary text-primary-foreground"
-                      : "border border-gold/40 text-gold"
-                  }`}
-                >
-                  {c.badge}
-                </span>
-              )}
+              <span className="h-7">
+                {c.badge && (
+                  <span
+                    className={`rounded-full px-4 py-1.5 text-[10px] leading-none tracking-[0.2em] uppercase ${
+                      c.featured ? "bg-primary text-primary-foreground" : "border border-gold/40 text-gold"
+                    }`}
+                  >
+                    {c.badge}
+                  </span>
+                )}
+              </span>
+
               <h3 className="mt-5 font-display text-3xl leading-tight md:text-4xl">{c.name}</h3>
-              <p className="mt-2 text-base text-muted-foreground">{c.subtitle}</p>
+              <p className="mt-2 text-[15px] text-muted-foreground">{c.subtitle}</p>
 
               <ul className="mt-6 space-y-2.5 text-[15px]">
                 {c.zones.map((z) => (
@@ -54,42 +94,59 @@ export function Complexes() {
                 ))}
               </ul>
 
-              <div className="mt-7 space-y-3 border-t border-border pt-6">
+              <div className="mt-5 flex flex-1 gap-2.5 rounded-2xl bg-secondary/50 p-4 text-sm leading-relaxed">
+                <Gift className="mt-0.5 size-4 shrink-0 text-gold" />
+                <span>
+                  {c.gifts}
+                  <span className="mt-1 block text-[11px] tracking-[0.16em] text-gold uppercase">
+                    {c.giftValue}
+                  </span>
+                </span>
+              </div>
+
+              <div className="mt-6 space-y-3 border-t border-border pt-6">
                 <div className="flex items-baseline justify-between gap-4">
-                  <span className="text-sm text-muted-foreground">Первый визит −50%</span>
+                  <span className="text-sm text-muted-foreground">Цена первого визита</span>
                   <span className="font-display text-3xl text-gold">{c.first}</span>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
-                  <span className="text-sm text-muted-foreground">По карте клиента −15%</span>
-                  <span className="font-display text-xl">{c.club}</span>
+                  <span className="text-sm text-muted-foreground">Обычная цена комплекса</span>
+                  <span className="font-display text-xl">{c.price}</span>
                 </div>
                 <div className="flex items-baseline justify-between gap-4 text-muted-foreground">
-                  <span className="text-sm">Обычная цена</span>
-                  <span className="font-display text-lg line-through">{c.base}</span>
+                  <span className="text-sm">По отдельности</span>
+                  <span className="font-display text-lg line-through">{c.separate}</span>
+                </div>
+                <div className="text-[11px] tracking-[0.16em] text-gold uppercase">
+                  Ваша выгода {c.benefit}
                 </div>
               </div>
 
               <Link
                 to="/contacts"
                 hash="booking"
-                className="mt-7 block rounded-full bg-primary py-4 text-center text-sm tracking-[0.18em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
+                className="mt-6 block rounded-full bg-primary py-4 text-center text-sm tracking-[0.18em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
               >
                 Записаться
               </Link>
             </article>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
 
-      <Reveal delay={0.2}>
+      {active.id === "everlas" && (
         <p className="mt-8 text-base text-muted-foreground">
-          Нужен свой набор зон?{" "}
-          <Link to="/quiz" className="text-gold underline underline-offset-4">
-            Соберите комплекс в конструкторе
-          </Link>{" "}
-          — посчитаем стоимость и пришлём в мессенджер.
+          Тот же комплекс на Magic One 4000 Вт — плюс 600 ₽ и заметно быстрее.
         </p>
-      </Reveal>
+      )}
+      <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">{legalNote}</p>
+      <p className="mt-4 text-base text-muted-foreground">
+        Нужен свой набор зон?{" "}
+        <Link to="/quiz" className="text-gold underline underline-offset-4">
+          Соберите комплекс в конструкторе
+        </Link>{" "}
+        — посчитаем стоимость и пришлём в мессенджер.
+      </p>
     </section>
   );
 }
