@@ -11,7 +11,7 @@ import studio from "@/assets/studio.jpg";
 export const Route = createFileRoute("/men")({
   head: () => ({
     meta: [
-      { title: "Мужская лазерная эпиляция в Истре — цены | Студия «Импульс»" },
+      { title: "Мужская лазерная эпиляция в Истре: цены" },
       {
         name: "description",
         content:
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/men")({
       { property: "og:title", content: "Мужская лазерная эпиляция в Истре" },
       {
         property: "og:description",
-        content: "Спина, плечи, грудь, живот и подмышки. Спокойно, быстро и по делу — с понятной ценой.",
+        content: "Лазерная эпиляция спины, плеч, груди, живота и подмышек. Отдельные зоны и готовые комплексы с открытыми ценами.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -37,9 +37,9 @@ function MenPage() {
     <div>
       <PageHero
         eyebrow="для мужчин"
-        title="Мужской формат:"
-        accent="спокойно и по делу"
-        text="Отдельная запись, никакой лишней беседы и продаж. Мастер работает быстро, объясняет каждый шаг и сразу называет количество процедур."
+        title="Мужская"
+        accent="лазерная эпиляция"
+        text="Процедуры для спины, плеч, груди, живота, подмышек и шеи. До начала курса специалист проведёт консультацию и подберёт параметры аппарата."
         image={laserImg}
       />
 
@@ -127,7 +127,7 @@ function MenPage() {
             <BeforeAfter before={laserImg} after={studio} label="Грудь и живот, 5 процедур" />
           </div>
           <p className="mt-5 text-xs text-muted-foreground">
-            Демонстрационные кадры — заменяются живыми фото мужского комплекса.
+            Сейчас используются демонстрационные кадры. Раздел будет дополнен реальными фото с согласия клиентов.
           </p>
 
           <div className="mt-12">

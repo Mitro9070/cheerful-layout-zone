@@ -22,13 +22,13 @@ export function PricingTeaser() {
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-4 font-display text-4xl leading-[1.05] text-balance md:text-6xl">
-                Цены <span className="italic text-gold">без звонка</span>
+                Все цены <span className="italic text-gold">открыто</span>
               </h2>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Полный прайс открывается в один клик — с поиском по зонам и услугам. Кнопка «Прайс»
-                остаётся с вами на любой странице.
+                Найдите нужную процедуру или зону через поиск. Отдельные цены, комплексы и абонементы
+                собраны в одном прайсе.
               </p>
             </Reveal>
             <Reveal delay={0.22}>

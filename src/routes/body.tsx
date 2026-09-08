@@ -18,7 +18,7 @@ import studio from "@/assets/studio.jpg";
 export const Route = createFileRoute("/body")({
   head: () => ({
     meta: [
-      { title: "Коррекция фигуры в Истре — EMSculpt, массаж, обёртывания | «Импульс»" },
+      { title: "Коррекция фигуры в Истре: массаж и EMSculpt" },
       {
         name: "description",
         content:
@@ -42,8 +42,8 @@ function BodyPage() {
       <PageHero
         eyebrow="коррекция фигуры"
         title="Рельеф и тонус"
-        accent="без спортзала"
-        text="Аппаратный массаж, EMSculpt и TURBOSCULPT: работаем с объёмами, тонусом кожи и тяжестью в ногах. Замеры до и после курса — результат виден в цифрах."
+        accent="в комфортном ритме"
+        text="Вакуумный и вибрационно-роликовый массаж, EMSculpt и TURBOSCULPT. Перед курсом специалист уточнит задачу и поможет выбрать подходящую процедуру."
         image={bodyImg}
       />
 
@@ -54,12 +54,12 @@ function BodyPage() {
               Знакомство с телом
             </span>
             <h2 className="mt-5 font-display text-3xl md:text-4xl">
-              Любая процедура 30 минут — 1 500 ₽{" "}
+              Любая процедура 30 минут: 1 500 ₽{" "}
               <span className="text-muted-foreground line-through">2 000 ₽</span>
             </h2>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-              Вакуумный массаж, вибрационно-роликовый, EMSculpt или TURBOSCULPT на выбор. Не знаете, что
-              вам подходит — на месте разберём и соберём программу. {bodyFirstVisitNote}
+              Выберите вакуумный массаж, вибрационно-роликовый массаж, EMSculpt или TURBOSCULPT.
+              Если сомневаетесь, специалист поможет определиться на консультации. {bodyFirstVisitNote}
             </p>
           </div>
         </Reveal>
@@ -75,11 +75,11 @@ function BodyPage() {
                   <div className="text-sm text-muted-foreground md:min-w-56 md:text-right">
                     {b.coursePrice ? (
                       <>
-                        {b.course} — <span className="font-display text-lg text-gold">{b.coursePrice}</span>
+                        {b.course}: <span className="font-display text-lg text-gold">{b.coursePrice}</span>
                         {b.benefit && <span className="block text-xs">выгода {b.benefit}</span>}
                       </>
                     ) : (
-                      "—"
+                      "Нет абонемента"
                     )}
                   </div>
                 </div>
@@ -148,7 +148,7 @@ function BodyPage() {
           <BeforeAfter before={studio} after={bodyImg} label="Ягодицы, EMSculpt 5 сеансов" />
         </div>
         <p className="mt-5 text-xs text-muted-foreground">
-          Демонстрационные кадры — заменяются живыми фото и видео студии.
+          Сейчас используются демонстрационные кадры. Реальные фото появятся после съёмки в студии.
         </p>
 
         <div className="mt-12">

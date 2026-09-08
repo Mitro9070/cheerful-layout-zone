@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { Gift } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { PulseLine } from "./PulseLine";
 
@@ -8,7 +8,7 @@ const steps = [
   { n: "01", label: "Что вас интересует" },
   { n: "02", label: "Какие зоны" },
   { n: "03", label: "Когда хотите начать" },
-  { n: "04", label: "Куда отправить предложение" },
+  { n: "04", label: "Получите рекомендацию" },
 ];
 
 export function QuizTeaser() {
@@ -20,15 +20,15 @@ export function QuizTeaser() {
           <div className="relative grid items-center gap-12 lg:grid-cols-[1fr_auto]">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/70 px-4 py-1.5 text-[10px] tracking-[0.28em] uppercase backdrop-blur">
-                <Gift className="size-3 text-gold" />
-                Подарок за 40 секунд
+                <Sparkles className="size-3 text-gold" />
+                Подбор за 40 секунд
               </span>
               <h2 className="mt-7 max-w-xl font-display text-4xl leading-[1.05] text-balance md:text-5xl">
-                Подберём программу и дадим <span className="italic text-gold">персональный промокод</span>
+                Поможем выбрать <span className="italic text-gold">подходящую процедуру</span>
               </h2>
               <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-                Четыре вопроса — и вы увидите, какой курс подходит именно вам, с расчётом стоимости и
-                спецпредложением на первый визит.
+                Ответьте на три вопроса и получите предварительную рекомендацию. Окончательный выбор
+                специалист поможет сделать после консультации.
               </p>
               <Link
                 to="/quiz"
