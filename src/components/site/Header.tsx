@@ -157,7 +157,7 @@ export function Header() {
                   {site.phone}
                 </a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
