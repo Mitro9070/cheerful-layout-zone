@@ -126,10 +126,6 @@ function MenPage() {
             <BeforeAfter before={studio} after={laserImg} label="Спина, 4 процедуры" />
             <BeforeAfter before={laserImg} after={studio} label="Грудь и живот, 5 процедур" />
           </div>
-          <p className="mt-5 text-xs text-muted-foreground">
-            Сейчас используются демонстрационные кадры. Раздел будет дополнен реальными фото с согласия клиентов.
-          </p>
-
           <div className="mt-12">
             <BookingWidget defaultService="Для мужчин" />
           </div>

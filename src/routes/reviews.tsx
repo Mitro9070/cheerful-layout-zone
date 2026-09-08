@@ -11,7 +11,7 @@ import bodyImg from "@/assets/service-body.jpg";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Отзывы о студии «Импульс» в Истре — реальные клиенты" },
+      { title: "Отзывы о студии «Импульс» в Истре" },
       {
         name: "description",
         content:
@@ -46,7 +46,7 @@ function ReviewsPage() {
         eyebrow="отзывы"
         title="Нас выбирают"
         accent="и возвращаются"
-        text="Более 1 500 процедур и клиенты, которые приходят курсами по 6–8 визитов. Ниже — их слова и видео."
+        text="Впечатления клиентов о процедурах, специалистах и атмосфере студии. Больше отзывов можно прочитать на внешних площадках."
         cta={false}
       />
 

@@ -22,7 +22,7 @@ export function Footer() {
         <div>
           <img src={logo.url} alt="Студия Импульс" className="h-12 w-auto" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Студия красивого тела «Импульс» — лазерная эпиляция, шугаринг и аппаратная коррекция фигуры в Истре.
+            Лазерная эпиляция, шугаринг, электроэпиляция и аппаратный уход за телом в центре Истры.
           </p>
         </div>
         <nav className="grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">

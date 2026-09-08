@@ -9,7 +9,7 @@ import poster from "@/assets/hero-reel-poster.jpg.asset.json";
 const stats = [
   { value: "7+", label: "лет опыта студии" },
   { value: "4000 Вт", label: "лазер Magic One" },
-  { value: "231", label: "кабинет, Ленина 75" },
+  { value: "центр", label: "Истры, Ленина 75" },
 ];
 
 export function Hero() {
@@ -142,9 +142,7 @@ export function Hero() {
           <div className="mt-2.5 font-display text-3xl md:text-4xl">
             Консультация и тестовая зона: 0 ₽
           </div>
-          <div className="mt-2 text-sm text-muted-foreground">
-            Для новых клиентов. Свободно 3 места.
-          </div>
+          <div className="mt-2 text-sm text-muted-foreground">Для новых клиентов по предварительной записи.</div>
         </motion.div>
       </div>
     </section>

@@ -12,13 +12,13 @@ import studio from "@/assets/studio.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Галерея до / после — студия «Импульс», Истра" },
+      { title: "До и после | Студия «Импульс», Истра" },
       {
         name: "description",
         content:
           "Результаты клиентов студии «Импульс»: лазерная эпиляция по зонам, коррекция фигуры и мужской комплекс. Фильтр по направлению и зоне.",
       },
-      { property: "og:title", content: "До / после — результаты студии «Импульс»" },
+      { property: "og:title", content: "До и после: результаты студии «Импульс»" },
       {
         property: "og:description",
         content: "Пары фото до и после по каждой зоне: эпиляция, коррекция фигуры, мужской комплекс.",
@@ -60,7 +60,7 @@ function GalleryPage() {
         eyebrow="до / после"
         title="Результаты"
         accent="наших клиентов"
-        text="Единый ракурс, свет и фон — так видно настоящий результат. Галерея пополняется после каждой процедуры с согласия клиента."
+        text="Результаты процедур по разным направлениям и зонам. Фотографии клиентов публикуются только с их согласия."
         cta={false}
       />
 
@@ -88,10 +88,6 @@ function GalleryPage() {
             <BeforeAfter key={i.label} before={i.before} after={i.after} label={i.label} />
           ))}
         </div>
-        <p className="mt-5 text-[11px] text-muted-foreground">
-          Демонстрационные кадры — заменяются живыми фото и короткими видео-переходами студии.
-        </p>
-
         <div className="py-20 md:py-28">
           <BookingWidget />
         </div>

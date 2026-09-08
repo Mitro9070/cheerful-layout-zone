@@ -78,9 +78,6 @@ function LaserPage() {
           <BeforeAfter before={laserImg} after={studio} label="Голени, 5 процедур" />
           <BeforeAfter before={studio} after={laserImg} label="Глубокое бикини, 6 процедур" />
         </div>
-        <p className="mt-5 text-xs text-muted-foreground">
-          Сейчас используются демонстрационные кадры. После фотосессии здесь появятся реальные результаты клиентов.
-        </p>
       </section>
 
       <ReelsFeed />

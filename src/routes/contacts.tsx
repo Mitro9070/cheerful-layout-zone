@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 export const Route = createFileRoute("/contacts")({
   head: () => ({
     meta: [
-      { title: "Контакты студии «Импульс» в Истре — адрес, карта, запись" },
+      { title: "Контакты студии «Импульс» в Истре" },
       {
         name: "description",
         content:
@@ -43,7 +43,7 @@ function ContactsPage() {
                 <MapPin className="mt-1 size-4 shrink-0 text-gold" />
                 <div className="min-w-0">
                   <div className="eyebrow">адрес</div>
-                  <p className="mt-1.5 text-[15px]">{site.address}, 2 этаж, каб. 225 и 231</p>
+                  <p className="mt-1.5 text-[15px]">{site.address}</p>
                   <a
                     href={site.yandexMaps}
                     target="_blank"

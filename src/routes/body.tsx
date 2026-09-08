@@ -147,10 +147,6 @@ function BodyPage() {
           <BeforeAfter before={bodyImg} after={studio} label="Живот и бока, 10 сеансов" />
           <BeforeAfter before={studio} after={bodyImg} label="Ягодицы, EMSculpt 5 сеансов" />
         </div>
-        <p className="mt-5 text-xs text-muted-foreground">
-          Сейчас используются демонстрационные кадры. Реальные фото появятся после съёмки в студии.
-        </p>
-
         <div className="mt-12">
           <BookingWidget defaultService="Коррекция фигуры" />
         </div>
