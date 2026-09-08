@@ -5,9 +5,9 @@ import studio from "@/assets/studio.jpg";
 import { Reveal } from "./Reveal";
 
 const points = [
-  { icon: BadgeCheck, title: "Аккредитация «Академии Красоты»", text: "Сертифицированный опыт более 7 лет." },
-  { icon: Sparkles, title: "Современное оборудование", text: "Диодный лазер и аппаратные методики последнего поколения." },
-  { icon: HeartHandshake, title: "Один мастер — весь курс", text: "Евгения Антонова ведёт вас лично от диагностики до результата." },
+  { icon: BadgeCheck, title: "Опыт более 7 лет", text: "Сертифицированные специалисты и регулярное повышение квалификации." },
+  { icon: Sparkles, title: "Технологии для разных задач", text: "Два диодных лазера и аппараты для комплексного ухода за телом." },
+  { icon: HeartHandshake, title: "Персональный подход", text: "Специалист учитывает особенности кожи, волос и желаемый результат." },
   { icon: MapPin, title: "Рядом с домом", text: "Истра, ул. Ленина 75, этаж 2, кабинеты 225 и 231." },
 ];
 
@@ -31,8 +31,8 @@ export function Master() {
               className="aspect-4/5 w-full scale-110 object-cover"
             />
             <div className="glass-card absolute bottom-6 left-6 rounded-2xl px-5 py-4">
-              <div className="eyebrow">мастер</div>
-              <div className="font-display text-2xl">Евгения Антонова</div>
+              <div className="eyebrow">студия в Истре</div>
+              <div className="font-display text-2xl">Команда «Импульс»</div>
             </div>
           </div>
         </Reveal>
@@ -48,8 +48,8 @@ export function Master() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              «Импульс» — небольшая студия красивого тела в центре Истры. Здесь нет потока и
-              администратора, который продаёт лишнее: только вы, мастер и понятный план процедур.
+              В «Импульсе» работают специалисты по эпиляции и уходу за телом. Перед процедурой мы
+              уточняем ваш запрос, оцениваем особенности кожи и предлагаем подходящий вариант ухода.
             </p>
           </Reveal>
 
