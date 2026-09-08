@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { Search, ScrollText } from "lucide-react";
 import { priceGroups, legalNote, pricingTopNote } from "@/data/site";
+import { Button } from "@/components/ui/button";
 
 const PRICE_EVENT = "impulse:open-prices";
 
@@ -34,23 +35,27 @@ export function PriceDrawer() {
 
   return (
     <>
-      <button
+      <Button
+        type="button"
+        variant="outline"
         onClick={() => setOpen(true)}
         aria-label="Открыть прайс"
-        className="fixed top-1/2 right-0 z-40 hidden -translate-y-1/2 items-center gap-2 rounded-l-full border border-gold/50 border-r-0 bg-card/90 py-4 pr-3 pl-4 text-[10px] tracking-[0.24em] uppercase shadow-lift backdrop-blur-xl transition-colors hover:bg-card lg:flex"
-        style={{ writingMode: "vertical-rl" }}
+        className="fixed top-1/2 right-5 z-40 hidden h-12 -translate-y-1/2 items-center gap-2.5 rounded-full border-gold/45 bg-card/95 px-5 text-[10px] tracking-[0.18em] uppercase shadow-lift backdrop-blur-xl hover:border-gold hover:bg-card lg:flex"
       >
-        <ScrollText className="size-3.5 rotate-90 text-gold" />
-        Прайс
-      </button>
+        <ScrollText className="size-4 text-gold" />
+        Полный прайс
+      </Button>
 
-      <button
+      <Button
+        type="button"
+        variant="outline"
         onClick={() => setOpen(true)}
         aria-label="Открыть прайс"
-        className="fixed right-4 bottom-[calc(11.5rem+env(safe-area-inset-bottom))] z-50 grid size-12 place-items-center rounded-full border border-gold/50 bg-card/90 shadow-lift backdrop-blur-xl lg:hidden"
+        className="fixed right-4 bottom-[calc(11.25rem+env(safe-area-inset-bottom))] z-40 h-11 rounded-full border-gold/45 bg-card/95 px-4 text-[10px] tracking-[0.16em] uppercase shadow-lift backdrop-blur-xl lg:hidden"
       >
-        <ScrollText className="size-5 text-gold" />
-      </button>
+        <ScrollText className="size-4 text-gold" />
+        Прайс
+      </Button>
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent
