@@ -22,8 +22,8 @@ export function Abonements() {
     <div id="abonements" className="rounded-[1.75rem] bg-card p-5 shadow-soft md:p-10">
       <h3 className="font-display text-2xl md:text-3xl">Абонементы на курс</h3>
       <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-        Курс лазерной эпиляции — это 6–10 процедур. Абонемент закрепляет цену на весь курс: даже если
-        прайс вырастет, для вас он останется прежним.
+        Абонемент позволяет заранее выбрать количество сеансов и зафиксировать стоимость. Точную
+        продолжительность курса специалист определит индивидуально.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-2">

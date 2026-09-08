@@ -1,23 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Gift, ArrowLeft } from "lucide-react";
+import { Sparkles, ArrowLeft } from "lucide-react";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { PulseLine } from "@/components/site/PulseLine";
 
 export const Route = createFileRoute("/quiz")({
   head: () => ({
     meta: [
-      { title: "Подобрать программу за 40 секунд — студия «Импульс», Истра" },
+      { title: "Подобрать процедуру за 40 секунд | «Импульс»" },
       {
         name: "description",
         content:
-          "Ответьте на 4 вопроса и получите персональную рекомендацию по эпиляции или коррекции фигуры с промокодом на первый визит.",
+          "Ответьте на три вопроса и получите предварительную рекомендацию по эпиляции или коррекции фигуры в студии «Импульс».",
       },
-      { property: "og:title", content: "Квиз: подберём программу и промокод — «Импульс»" },
+      { property: "og:title", content: "Подбор процедур в студии «Импульс»" },
       {
         property: "og:description",
-        content: "4 вопроса, персональная рекомендация и промокод на первое посещение студии в Истре.",
+        content: "Три вопроса и предварительная рекомендация по процедурам студии в Истре.",
       },
     ],
   }),
@@ -41,36 +41,29 @@ const zonesByDirection: Record<string, string[]> = {
 const timing = ["В ближайшие 3 дня", "На этой неделе", "Просто присматриваюсь"];
 
 function recommendation(dir: string, zones: string[], time: string) {
-  const base: Record<string, { title: string; text: string; promo: string }> = {
+  const base: Record<string, { title: string; text: string }> = {
     epil: {
       title: "Курс лазерной эпиляции по выбранным зонам",
-      text: "Диодный лазер, 6–8 процедур с интервалом 4–6 недель. Зоны объединяем в комплекс — так выгоднее, чем по одной.",
-      promo: "IMPULSE-50",
+      text: "Для выбранных зон можно подобрать один из двух диодных лазеров. Количество и интервалы процедур специалист определит после консультации.",
     },
     body: {
       title: "Курс аппаратной коррекции фигуры",
-      text: "Вакуумный массаж 10 сеансов, при необходимости добавляем микротоки. Замеры до и после курса.",
-      promo: "BODY-START",
+      text: "Специалист поможет выбрать аппаратную методику по вашей задаче. До начала курса можно зафиксировать исходные параметры.",
     },
     combo: {
       title: "Комплекс «Эпиляция + фигура»",
-      text: "Совмещаем лазер и вакуумный массаж в одном визите — экономия времени и до 20% стоимости.",
-      promo: "COMBO-20",
+      text: "Эпиляцию и процедуры для тела можно планировать в одной студии. Расписание составляется с учётом совместимости процедур.",
     },
     men: {
       title: "Мужской комплекс: спина + живот + подмышки",
-      text: "Один визит закрывает основные зоны, дискомфорт минимальный за счёт охлаждения манипулы.",
-      promo: "MEN-20",
+      text: "Готовые комплексы включают востребованные зоны. Параметры аппарата подбираются после консультации.",
     },
   };
   const r = base[dir] ?? base["epil"]!;
   return {
     ...r,
     zones,
-    urgency:
-      time === "Просто присматриваюсь"
-        ? "Промокод действует 7 дней — успеете спокойно решить."
-        : "Промокод действует 48 часов и учитывает свободные окна мастера на эти дни.",
+    timing: time === "Просто присматриваюсь" ? "Можно начать с бесплатной консультации." : `Учтём ваш выбор: ${time.toLowerCase()}.`,
   };
 }
 
@@ -90,7 +83,7 @@ function QuizPage() {
       <div className="mx-auto max-w-3xl px-5 md:px-10">
         <div className="flex items-center justify-between gap-4">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/70 px-4 py-1.5 text-[10px] tracking-[0.24em] uppercase backdrop-blur">
-            <Gift className="size-3 text-gold" /> подарок за 40 секунд
+            <Sparkles className="size-3 text-gold" /> подбор за 40 секунд
           </span>
           {step > 0 && step < 3 && (
             <button
@@ -190,9 +183,9 @@ function QuizPage() {
                     </div>
                   )}
                   <div className="relative mt-8 rounded-2xl bg-secondary/70 p-5">
-                    <div className="eyebrow">ваш промокод</div>
-                    <div className="mt-2 font-display text-3xl text-gold">{result.promo}</div>
-                    <p className="mt-2 text-[12px] text-muted-foreground">{result.urgency}</p>
+                    <div className="eyebrow">следующий шаг</div>
+                    <div className="mt-2 font-display text-2xl text-gold">Бесплатная консультация</div>
+                    <p className="mt-2 text-[12px] text-muted-foreground">{result.timing}</p>
                   </div>
                   <button
                     onClick={() => {
@@ -208,7 +201,7 @@ function QuizPage() {
                 </div>
 
                 <div className="mt-6">
-                  <BookingWidget promo={result.promo} />
+                  <BookingWidget />
                 </div>
               </div>
             )}

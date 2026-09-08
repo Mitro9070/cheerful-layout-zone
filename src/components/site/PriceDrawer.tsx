@@ -65,7 +65,7 @@ export function PriceDrawer() {
           <div className="border-b border-border px-6 pt-6 pb-4">
             <span className="eyebrow">прайс студии</span>
             <h2 className="mt-3 font-display text-3xl">
-              Цены <span className="italic text-gold">без звонка</span>
+              Все цены <span className="italic text-gold">открыто</span>
             </h2>
             <div className="mt-4 flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-4 py-2.5">
               <Search className="size-4 shrink-0 text-muted-foreground" />
@@ -112,7 +112,7 @@ export function PriceDrawer() {
               ))}
               {rows.length === 0 && (
                 <li className="py-6 text-sm text-muted-foreground">
-                  Ничего не нашли — напишите нам, подскажем цену.
+                  Ничего не нашли? Напишите нам, и мы подскажем цену.
                 </li>
               )}
             </ul>

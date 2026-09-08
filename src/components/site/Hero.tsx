@@ -7,9 +7,9 @@ import reel1080 from "@/assets/hero-reel-1080.mp4.asset.json";
 import poster from "@/assets/hero-reel-poster.jpg.asset.json";
 
 const stats = [
-  { value: "7+", label: "лет практики" },
+  { value: "7+", label: "лет опыта студии" },
   { value: "4000 Вт", label: "лазер Magic One" },
-  { value: "231", label: "кабинет, Ленина 75" },
+  { value: "центр", label: "Истры, Ленина 75" },
 ];
 
 export function Hero() {
@@ -58,7 +58,7 @@ export function Hero() {
           </motion.span>
 
           <h1 className="mt-6 font-display text-[3.1rem] leading-[0.95] tracking-tight text-balance sm:text-[3.8rem] md:mt-8 md:text-[5.4rem] xl:text-[6.2rem]">
-            {["Эстетика", "тела"].map((w, i) => (
+            {["Красота", "начинается"].map((w, i) => (
               <motion.span
                 key={w}
                 className="mr-4 inline-block"
@@ -75,7 +75,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1.1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
-              как образ жизни
+              с импульса
             </motion.span>
           </h1>
 
@@ -85,8 +85,8 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.7 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80 text-pretty md:mt-8 md:text-xl"
           >
-            Диодная лазерная эпиляция, шугаринг и аппаратная коррекция фигуры в Истре. Один мастер с
-            опытом 7+ лет, комфортные протоколы и понятные комплексы — без потока и без звонков.
+            Лазерная эпиляция, шугаринг и коррекция фигуры в центре Истры. Опытные специалисты,
+            современное оборудование и открытые цены на все процедуры.
           </motion.p>
 
           <motion.div
@@ -140,11 +140,9 @@ export function Hero() {
         >
           <div className="eyebrow">первый визит</div>
           <div className="mt-2.5 font-display text-3xl md:text-4xl">
-            Консультация и тестовая зона — 0 ₽
+            Консультация и тестовая зона: 0 ₽
           </div>
-          <div className="mt-2 text-sm text-muted-foreground">
-            Для новых клиентов. Свободно 3 места.
-          </div>
+          <div className="mt-2 text-sm text-muted-foreground">Для новых клиентов по предварительной записи.</div>
         </motion.div>
       </div>
     </section>

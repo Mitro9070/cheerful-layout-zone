@@ -9,7 +9,7 @@ export function Advantages() {
       </Reveal>
       <Reveal delay={0.08}>
         <h2 className="mt-4 max-w-2xl font-display text-3xl leading-[1.08] text-balance md:text-5xl">
-          Не «как у всех по соседству», <span className="italic text-gold">а по-другому</span>
+          Всё важное для ухода <span className="italic text-gold">в одном месте</span>
         </h2>
       </Reveal>
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

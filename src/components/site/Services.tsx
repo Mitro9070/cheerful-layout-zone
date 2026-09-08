@@ -14,7 +14,7 @@ const services = [
     title: "Лазерная эпиляция",
     to: "/laser",
     price: "от 700 ₽",
-    text: "Два аппарата — Everlas 1800 Вт и Magic One 4000 Вт. Комплексы с подарочными зонами для женщин и мужчин.",
+    text: "Everlas 1800 Вт и Magic One 4000 Вт. Отдельные зоны и готовые комплексы для женщин и мужчин.",
     img: laser,
   },
   {
@@ -52,7 +52,7 @@ export function Services() {
         </div>
         <Reveal delay={0.2}>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Один мастер ведёт вас от консультации до результата — без конвейера и навязанных курсов.
+            Выберите отдельную процедуру или сочетайте несколько направлений в одной студии.
           </p>
         </Reveal>
       </div>

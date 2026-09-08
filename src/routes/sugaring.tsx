@@ -16,7 +16,7 @@ import sugaringImg from "@/assets/service-sugaring.jpg";
 export const Route = createFileRoute("/sugaring")({
   head: () => ({
     meta: [
-      { title: "Шугаринг и электроэпиляция в Истре — цены | Студия «Импульс»" },
+      { title: "Шугаринг и электроэпиляция в Истре: цены" },
       {
         name: "description",
         content:
@@ -37,15 +37,15 @@ export const Route = createFileRoute("/sugaring")({
 const compare = [
   {
     title: "Лазер",
-    text: "Тёмный и русый волос, большие зоны. Курс 6–10 процедур, результат на 3–5 лет, дальше поддержка 1–2 раза в год.",
+    text: "Подходит для тёмных волос и больших зон. Для заметного сокращения роста волос требуется курс, длительность которого зависит от зоны и особенностей организма.",
   },
   {
     title: "Шугаринг",
-    text: "Любой цвет и жёсткость волоса, гладкость сразу на 3–4 недели. Идеален как регулярный уход.",
+    text: "Удаляет волосы разных оттенков и плотности. Эффект заметен сразу, а длительность гладкости индивидуальна.",
   },
   {
     title: "Электроэпиляция",
-    text: "Светлые и седые волосы, которые лазер не видит. Работает точечно и навсегда.",
+    text: "Подходит для светлых и седых волос, на которые не действует лазер. Каждый волос обрабатывается отдельно.",
   },
 ];
 
@@ -55,8 +55,8 @@ function SugaringPage() {
       <PageHero
         eyebrow="шугаринг · электроэпиляция"
         title="Гладкая кожа"
-        accent="без раздражения"
-        text="Паста собственного подбора под тип кожи, аккуратная техника и уход после процедуры. Электроэпиляция закрывает то, что лазеру не под силу."
+        accent="с бережным уходом"
+        text="Шугаринг и восковая депиляция для быстрого результата. Электроэпиляция подходит для точечной работы, в том числе со светлыми и седыми волосами."
         image={sugaringImg}
       />
 
@@ -78,7 +78,7 @@ function SugaringPage() {
               Первый визит
             </span>
             <h2 className="mt-5 font-display text-3xl md:text-4xl">
-              Шугаринг для новых клиентов — 2 100 ₽{" "}
+              Шугаринг для новых клиентов: 2 100 ₽{" "}
               <span className="text-muted-foreground line-through">2 600 ₽</span>
             </h2>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
@@ -92,7 +92,7 @@ function SugaringPage() {
           <PriceTable rows={sugaringAbonements} title="Абонементы, 5 процедур (−15%)" />
           <PriceTable rows={sugaringRows} title="Отдельные зоны" />
           <div>
-            <PriceTable rows={electroRows} title="Электроэпиляция — пакеты" />
+            <PriceTable rows={electroRows} title="Пакеты электроэпиляции" />
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">{electroNote}</p>
           </div>
         </div>

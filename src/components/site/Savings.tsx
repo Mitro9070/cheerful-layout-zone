@@ -11,13 +11,13 @@ export function Savings() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-4 font-display text-4xl leading-[1.05] text-balance md:text-6xl">
-              Лазер — это дорого? <span className="italic text-gold">Посчитаем за 3 года</span>
+              Сравните расходы <span className="italic text-gold">за 3 года</span>
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Расчёт для зон «глубокое бикини + подмышки + голени» — то, что женщины удаляют круглый
-              год. Лазер — это конечная сумма, всё остальное вы платите бесконечно.
+              Для примера взяты зоны «глубокое бикини + подмышки + голени». Расчёт показывает
+              ориентировочные расходы на разные способы удаления волос за одинаковый период.
             </p>
           </Reveal>
         </div>

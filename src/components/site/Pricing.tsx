@@ -19,7 +19,7 @@ export function Pricing() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-5 font-display text-4xl text-balance md:text-6xl">
-              Цены <span className="italic text-gold">без звонка</span>
+              Все цены <span className="italic text-gold">открыто</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>

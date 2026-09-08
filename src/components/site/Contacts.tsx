@@ -1,5 +1,6 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/impulse-logo.png.asset.json";
+import { site } from "@/data/site";
 import { Reveal } from "./Reveal";
 
 export function Contacts() {
@@ -23,9 +24,7 @@ export function Contacts() {
                 <div>
                   <div className="eyebrow">адрес</div>
                   <p className="mt-1.5 text-[15px]">
-                    г. Истра, ул. Ленина, 75, этаж 2
-                    <br />
-                    кабинеты 225 и 231
+                    {site.address}
                   </p>
                 </div>
               </div>
@@ -35,8 +34,8 @@ export function Contacts() {
                 <Phone className="mt-1 size-4 shrink-0 text-gold" />
                 <div>
                   <div className="eyebrow">телефон</div>
-                  <a href="tel:+79858145090" className="mt-1.5 block font-display text-2xl hover:text-gold">
-                    +7 985 814-50-90
+                  <a href={site.phoneHref} className="mt-1.5 block font-display text-2xl hover:text-gold">
+                    {site.phone}
                   </a>
                 </div>
               </div>
@@ -46,7 +45,7 @@ export function Contacts() {
                 <Clock className="mt-1 size-4 shrink-0 text-gold" />
                 <div>
                   <div className="eyebrow">часы работы</div>
-                  <p className="mt-1.5 text-[15px]">Ежедневно, 09:00 — 21:00</p>
+                  <p className="mt-1.5 text-[15px]">{site.hours}</p>
                 </div>
               </div>
             </Reveal>
@@ -55,13 +54,13 @@ export function Contacts() {
           <Reveal delay={0.3}>
             <div className="mt-10 flex flex-wrap gap-3">
               <a
-                href="https://wa.me/79858145090"
+                href={site.whatsapp}
                 className="rounded-full bg-primary px-7 py-3.5 text-[11px] tracking-[0.22em] text-primary-foreground uppercase transition-transform hover:scale-[1.03]"
               >
                 Написать в WhatsApp
               </a>
               <a
-                href="https://t.me/EvgeniaAntonova"
+                href={site.telegram}
                 className="rounded-full border border-foreground/15 px-7 py-3.5 text-[11px] tracking-[0.22em] uppercase transition-colors hover:border-gold hover:text-gold"
               >
                 Telegram
@@ -86,13 +85,13 @@ export function Contacts() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 py-10 md:flex-row md:px-10">
           <img src={logo.url} alt="Студия Импульс" className="h-5 w-auto opacity-70" />
           <p className="text-[10px] tracking-[0.24em] text-muted-foreground uppercase">
-            © 2026 Студия красивого тела «Импульс», Истра
+            © {new Date().getFullYear()} Студия красивого тела «Импульс», Истра
           </p>
           <div className="flex gap-6 text-[10px] tracking-[0.24em] uppercase">
-            <a href="https://www.instagram.com/impulse_beauty.istra" className="hover:text-gold">
+            <a href={site.instagram} className="hover:text-gold">
               Instagram
             </a>
-            <a href="https://vk.ru/impulse_beauty.istra" className="hover:text-gold">
+            <a href={site.vk} className="hover:text-gold">
               ВКонтакте
             </a>
           </div>
