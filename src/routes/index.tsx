@@ -30,6 +30,8 @@ export const Route = createFileRoute("/")({
         content:
           "Лазерная эпиляция, шугаринг и коррекция фигуры в студии с опытом 10 лет. Истра, ул. Ленина 75.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HomePage,

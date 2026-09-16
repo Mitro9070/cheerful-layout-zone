@@ -20,6 +20,8 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Команда специалистов с опытом 10 лет и современное оборудование для ухода за лицом и телом.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AboutPage,

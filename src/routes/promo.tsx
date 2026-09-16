@@ -21,6 +21,8 @@ export const Route = createFileRoute("/promo")({
         property: "og:description",
         content: "Цены первого визита, клубная карта, подарочные сертификаты и постоянные предложения студии «Импульс».",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: PromoPage,
