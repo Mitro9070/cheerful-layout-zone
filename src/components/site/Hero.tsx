@@ -6,11 +6,6 @@ import reel720 from "@/assets/hero-reel-720.mp4.asset.json";
 import reel1080 from "@/assets/hero-reel-1080.mp4.asset.json";
 import poster from "@/assets/hero-reel-poster.jpg.asset.json";
 
-const stats = [
-  { value: "10", label: "лет профессионального опыта" },
-  { value: "4000 Вт", label: "лазер Magic One" },
-  { value: "команда", label: "профильных специалистов" },
-];
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -115,21 +110,6 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          <div className="mt-10 grid max-w-xl grid-cols-3 gap-5 border-t border-gold/25 pt-6 md:gap-8">
-            {stats.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 + i * 0.12 }}
-              >
-                <div className="font-display text-3xl text-gold md:text-4xl">{s.value}</div>
-                <div className="mt-1.5 text-[11px] tracking-[0.16em] text-muted-foreground uppercase md:text-xs">
-                  {s.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div
