@@ -7,9 +7,9 @@ import reel1080 from "@/assets/hero-reel-1080.mp4.asset.json";
 import poster from "@/assets/hero-reel-poster.jpg.asset.json";
 
 const stats = [
-  { value: "7+", label: "лет опыта студии" },
+  { value: "10", label: "лет профессионального опыта" },
   { value: "4000 Вт", label: "лазер Magic One" },
-  { value: "центр", label: "Истры, Ленина 75" },
+  { value: "команда", label: "профильных специалистов" },
 ];
 
 export function Hero() {

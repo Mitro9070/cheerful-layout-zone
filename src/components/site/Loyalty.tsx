@@ -17,7 +17,7 @@ export function Loyalty() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {loyalty.map((l, i) => (
             <Reveal key={l.title} delay={0.07 * i}>
               <div className="flex h-full flex-col rounded-[1.5rem] border border-border bg-card p-7 shadow-soft">
