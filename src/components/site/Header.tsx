@@ -21,8 +21,8 @@ const links = [
 
 export function Header() {
   const { scrollY } = useScroll();
-  const bg = useTransform(scrollY, [0, 140], ["rgba(255,255,255,0)", "rgba(255,253,248,0.9)"]);
-  const border = useTransform(scrollY, [0, 140], ["rgba(0,0,0,0)", "rgba(0,0,0,0.07)"]);
+  const bg = useTransform(scrollY, [0, 140], ["rgba(255,255,255,0)", "rgba(255,253,248,0.97)"]);
+  const border = useTransform(scrollY, [0, 140], ["rgba(0,0,0,0)", "rgba(0,0,0,0.1)"]);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
