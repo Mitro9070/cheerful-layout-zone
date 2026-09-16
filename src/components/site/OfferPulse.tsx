@@ -51,19 +51,23 @@ export function OfferPulse() {
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
           className="fixed bottom-[calc(5.25rem+env(safe-area-inset-bottom))] left-4 z-50 w-[19rem] max-w-[calc(100vw-2rem)] lg:bottom-6 lg:left-6"
         >
-          <div className="glass-card relative overflow-hidden rounded-[1.5rem] p-5 shadow-lift">
+          <div className="relative overflow-hidden rounded-[1.5rem] border border-gold/45 bg-card p-5 shadow-lift">
+            <span
+              aria-hidden
+              className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent"
+            />
             <motion.span
               aria-hidden
-              className="absolute -top-16 -right-10 size-40 rounded-full bg-gold/15 blur-2xl"
-              animate={{ opacity: [0.35, 0.8, 0.35], scale: [0.9, 1.1, 0.9] }}
+              className="absolute -top-16 -right-10 size-40 rounded-full bg-gold/10 blur-2xl"
+              animate={{ opacity: [0.35, 0.7, 0.35], scale: [0.9, 1.1, 0.9] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
             <button
               onClick={() => setClosed(true)}
               aria-label="Скрыть предложение"
-              className="absolute top-3 right-3 text-muted-foreground transition-colors hover:text-foreground"
+              className="absolute top-3 right-3 z-10 flex size-7 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-gold hover:text-gold"
             >
-              <X className="size-4" />
+              <X className="size-3.5" />
             </button>
             <div className="relative">
               <span className="flex items-center gap-2 text-[10px] tracking-[0.2em] text-gold uppercase">
