@@ -6,8 +6,7 @@ import { BookingWidget } from "@/components/site/BookingWidget";
 import { Reveal } from "@/components/site/Reveal";
 import { menComplexes, menZonesNote, laserZones, legalNote } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
-import { laserWorkPhotos } from "@/data/photos";
-import laserImg from "@/assets/service-laser.jpg";
+import { menHeroPhoto, menMasterPhotos } from "@/data/photos";
 import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/men")({
@@ -42,15 +41,15 @@ function MenPage() {
         title="Мужская"
         accent="лазерная эпиляция"
         text="Процедуры для спины, плеч, груди, живота, подмышек и шеи. До начала курса специалист проведёт консультацию и подберёт параметры аппарата."
-        image={laserImg}
+        image={menHeroPhoto.src}
       />
 
       <PhotoGrid
-        eyebrow="как это выглядит"
-        title="Процедура"
-        accent="в кабинете студии"
-        text="Мощность и длительность импульса подбираются под плотность волос: специалист проходит зону с охлаждением манипулы."
-        photos={laserWorkPhotos.slice(6, 12)}
+        eyebrow="специалисты студии"
+        title="Процедуру проводят"
+        accent="опытные мастера"
+        text="Специалист проводит консультацию, настраивает аппарат и контролирует каждый этап процедуры."
+        photos={menMasterPhotos}
       />
 
       <section className="mx-auto max-w-6xl px-5 md:px-10">
@@ -133,8 +132,8 @@ function MenPage() {
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <BeforeAfter before={studio} after={laserImg} label="Спина, 4 процедуры" />
-            <BeforeAfter before={laserImg} after={studio} label="Грудь и живот, 5 процедур" />
+            <BeforeAfter before={studio} after={menHeroPhoto.src} label="Спина, 4 процедуры" />
+            <BeforeAfter before={menHeroPhoto.src} after={studio} label="Грудь и живот, 5 процедур" />
           </div>
           <div className="mt-12">
             <BookingWidget defaultService="Для мужчин" />

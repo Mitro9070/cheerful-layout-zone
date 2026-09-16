@@ -70,6 +70,17 @@ export const teamBodyPhotos: Photo[] = [
   p(teamMasterTurbo, "Специалист с манипулой аппарата Turbo G5"),
 ];
 
+export const menMasterPhotos: Photo[] = [
+  p(teamMasterLaserRoom, "Специалист по лазерной эпиляции в кабинете студии"),
+  p(teamMasterMagicHandpiece, "Специалист студии с манипулой диодного лазера"),
+  p(workGelHands, "Специалист подготавливает средство перед лазерной эпиляцией"),
+];
+
+export const menHeroPhoto = p(
+  teamMasterMagic,
+  "Специалист студии рядом с аппаратом для лазерной эпиляции",
+);
+
 export const equipmentPhotos: Photo[] = [
   p(eqMagicOne, "Диодный лазер Magic One в студии «Импульс»"),
   p(eqMagicFull, "Аппарат диодной лазерной эпиляции Magic"),
