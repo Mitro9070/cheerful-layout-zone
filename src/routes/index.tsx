@@ -72,6 +72,7 @@ function HomePage() {
           photos={equipmentPhotos.slice(0, 3)}
         />
       </div>
+      <LaserVideo />
       <Reviews />
       <Loyalty />
       <Contacts />
