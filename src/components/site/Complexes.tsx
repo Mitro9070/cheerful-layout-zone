@@ -66,7 +66,7 @@ export function Complexes() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+          className="mt-10 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3"
         >
           {active.complexes.map((c, index) => (
             <article
@@ -75,7 +75,7 @@ export function Complexes() {
                 c.featured ? "border-wine/40 bg-wine text-wine-foreground" : "border-border bg-card"
               }`}
             >
-              <div className={`relative overflow-hidden ${index % 3 === 0 ? "h-72" : "h-52"}`}>
+              <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
                 <img
                   src={complexPhotos[index % complexPhotos.length]?.src}
                   alt={complexPhotos[index % complexPhotos.length]?.alt ?? ""}
