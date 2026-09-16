@@ -65,7 +65,7 @@ export function OfferPulse() {
             <button
               onClick={() => setClosed(true)}
               aria-label="Скрыть предложение"
-              className="absolute top-3 right-3 flex size-7 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-gold hover:text-gold"
+              className="absolute top-3 right-3 z-10 flex size-7 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-gold hover:text-gold"
             >
               <X className="size-3.5" />
             </button>
