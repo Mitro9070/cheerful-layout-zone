@@ -61,6 +61,25 @@ function AboutPage() {
         </div>
       </section>
 
+      <PhotoGrid
+        eyebrow="наши мастера"
+        title="Команда"
+        accent="студии «Импульс»"
+        text="Специалисты по лазерной эпиляции, шугарингу и аппаратному уходу за телом: обучение по профилю и регулярное повышение квалификации."
+        photos={teamPhotos}
+        columns={4}
+      />
+
+      <div className="bg-secondary/35">
+        <PhotoGrid
+          eyebrow="студия"
+          title="Кабинет и"
+          accent="сертификаты"
+          text="Истра, ул. Ленина, 75, этаж 2, кабинет 231: отдельный кабинет под лазерную эпиляцию и уход за телом."
+          photos={studioPhotos}
+        />
+      </div>
+
       <ReelsFeed />
 
       <div className="mx-auto max-w-6xl px-5 pb-20 md:px-10 md:pb-28">
