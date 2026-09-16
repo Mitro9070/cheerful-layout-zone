@@ -1,11 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { loyalty } from "@/data/site";
+import studioCertificates from "@/assets/photo/studio/certificates.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 export function Loyalty() {
   return (
-    <section className="border-y border-border bg-secondary/40 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5 md:px-10">
+    <section className="relative overflow-hidden border-y border-border bg-secondary/40 py-20 md:py-28">
+      <div className="absolute inset-0 z-0 opacity-[0.07] grayscale">
+        <img src={studioCertificates.url} alt="" className="size-full object-cover" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-10">
         <div className="max-w-2xl">
           <Reveal>
             <span className="eyebrow">клубная карта и сертификаты</span>
