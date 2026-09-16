@@ -12,6 +12,8 @@ import {
   legalNote,
   massageRows,
 } from "@/data/site";
+import { PhotoGrid } from "@/components/site/PhotoGrid";
+import { bodyEquipmentPhotos, teamBodyPhotos } from "@/data/photos";
 import bodyImg from "@/assets/service-body.jpg";
 import studio from "@/assets/studio.jpg";
 
@@ -45,6 +47,14 @@ function BodyPage() {
         accent="в комфортном ритме"
         text="Вакуумный и вибрационно-роликовый массаж, EMSculpt и TURBOSCULPT. Перед курсом специалист уточнит задачу и поможет выбрать подходящую процедуру."
         image={bodyImg}
+      />
+
+      <PhotoGrid
+        eyebrow="аппараты для тела"
+        title="EMSlim neo и"
+        accent="Turbo G5"
+        text="Аппаратный массаж и электромагнитная стимуляция мышц: мастер подбирает интенсивность под задачу и уровень комфорта."
+        photos={[...bodyEquipmentPhotos, ...teamBodyPhotos]}
       />
 
       <section className="mx-auto max-w-6xl px-5 md:px-10">

@@ -11,6 +11,8 @@ import {
   sugaringComplexes,
   sugaringRows,
 } from "@/data/site";
+import { PhotoGrid } from "@/components/site/PhotoGrid";
+import { sugaringWorkPhotos, teamSugaringPhotos } from "@/data/photos";
 import sugaringImg from "@/assets/service-sugaring.jpg";
 
 export const Route = createFileRoute("/sugaring")({
@@ -58,6 +60,14 @@ function SugaringPage() {
         accent="с бережным уходом"
         text="Шугаринг и восковая депиляция для быстрого результата. Электроэпиляция подходит для точечной работы, в том числе со светлыми и седыми волосами."
         image={sugaringImg}
+      />
+
+      <PhotoGrid
+        eyebrow="материалы и мастера"
+        title="Работаем на"
+        accent="проверенных составах"
+        text="Сахарные пасты и воск в картриджах разной плотности: состав подбирается под зону и чувствительность кожи."
+        photos={[...teamSugaringPhotos, ...sugaringWorkPhotos].slice(0, 6)}
       />
 
       <section className="mx-auto max-w-6xl px-5 md:px-10">

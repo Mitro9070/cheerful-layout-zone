@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { BadgeCheck, HeartHandshake, Sparkles, MapPin } from "lucide-react";
-import studio from "@/assets/studio.jpg";
+import { heroTeamPhoto } from "@/data/photos";
 import { Reveal } from "./Reveal";
 
 const points = [
@@ -22,8 +22,8 @@ export function Master() {
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
             <motion.img
-              src={studio}
-              alt="Кабинет студии «Импульс»"
+              src={heroTeamPhoto.src}
+              alt={heroTeamPhoto.alt}
               loading="lazy"
               width={1200}
               height={1408}
