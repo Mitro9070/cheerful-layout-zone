@@ -15,6 +15,7 @@ import { QuizTeaser } from "@/components/site/QuizTeaser";
 import { Reviews } from "@/components/site/Reviews";
 import { Contacts } from "@/components/site/Contacts";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
+import { LaserVideo } from "@/components/site/LaserVideo";
 import { teamPhotos, equipmentPhotos } from "@/data/photos";
 
 export const Route = createFileRoute("/")({
@@ -72,6 +73,7 @@ function HomePage() {
           photos={equipmentPhotos.slice(0, 3)}
         />
       </div>
+      <LaserVideo />
       <Reviews />
       <Loyalty />
       <Contacts />
