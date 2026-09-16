@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Star } from "lucide-react";
+import teamTrio from "@/assets/photo/team/trio.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reviews = [
@@ -27,8 +28,12 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <section id="reviews" className="overflow-hidden bg-secondary/35 py-28 md:py-36">
-      <div className="mx-auto max-w-7xl px-5 md:px-10">
+    <section id="reviews" className="relative overflow-hidden bg-secondary/35 py-28 md:py-36">
+      <div className="absolute inset-0 z-0 opacity-[0.05] grayscale">
+        <img src={teamTrio.url} alt="" className="size-full object-cover object-top" />
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary/35 via-transparent to-secondary/35" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-10">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <Reveal>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
+import studioLaserRoom from "@/assets/photo/studio/laser-room.jpg.asset.json";
 import { Check, Gift } from "lucide-react";
 import { lasers, legalNote } from "@/data/site";
 import { Reveal } from "./Reveal";
@@ -10,8 +11,13 @@ export function Complexes() {
   const active = lasers.find((l) => l.id === activeId) ?? lasers[0]!;
 
   return (
-    <section id="complexes" className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-      <div className="max-w-3xl">
+    <section id="complexes" className="relative overflow-hidden py-20 md:py-28">
+      <div className="absolute inset-0 z-0 opacity-10">
+        <img src={studioLaserRoom.url} alt="" className="size-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-10">
+        <div className="max-w-3xl">
         <Reveal>
           <span className="eyebrow">комплексы</span>
         </Reveal>
@@ -147,6 +153,7 @@ export function Complexes() {
         </Link>{" "}
         — посчитаем стоимость и пришлём в мессенджер.
       </p>
-    </section>
+    </div>
+</section>
   );
 }

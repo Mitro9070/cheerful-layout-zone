@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ScrollText } from "lucide-react";
 import { Reveal } from "./Reveal";
+import workSettings from "@/assets/photo/work/settings.jpg.asset.json";
 import { openPriceDrawer } from "./PriceDrawer";
 import { pricingTopNote } from "@/data/site";
 
@@ -13,7 +14,11 @@ const highlights = [
 
 export function PricingTeaser() {
   return (
-    <section id="prices" className="bg-secondary/35 py-24 md:py-32">
+    <section id="prices" className="relative overflow-hidden bg-secondary/35 py-24 md:py-32">
+      <div className="absolute top-0 right-0 z-0 hidden h-full w-1/3 opacity-10 lg:block">
+        <img src={workSettings.url} alt="" className="size-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-l from-secondary/35 via-transparent to-secondary/35" />
+      </div>
       <div className="mx-auto max-w-6xl px-5 md:px-10">
         <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr]">
           <div>
