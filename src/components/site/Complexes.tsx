@@ -136,7 +136,7 @@ export function Complexes() {
 
       {active.id === "everlas" && (
         <p className="mt-8 text-base text-muted-foreground">
-          Тот же комплекс на Magic One 4000 Вт — плюс 600 ₽ и заметно быстрее.
+          Тот же комплекс на Magic One 4000 Вт: доплата составляет 500–600 ₽ в зависимости от комплекса.
         </p>
       )}
       <p className="mt-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">{legalNote}</p>

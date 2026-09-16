@@ -193,7 +193,7 @@ export const everlasComplexes: Complex[] = [
 export const magicComplexes: Complex[] = [
   {
     name: "Старт Premium",
-    subtitle: "Те же зоны, но быстрее и с любым типом волос",
+    subtitle: "Те же зоны на аппарате повышенной мощности",
     zones: ["Глубокое бикини", "Подмышечные впадины"],
     gifts: "Межъягодичная зона",
     giftValue: "подарок 900 ₽",
