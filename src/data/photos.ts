@@ -57,6 +57,13 @@ export const teamPhotos: Photo[] = [
   p(teamMasterMagicHandpiece, "Специалист с манипулой диодного лазера"),
 ];
 
+// Три мастера студии, по одному отдельному кадру на каждую (без общих фото команды).
+export const teamMemberPhotos: Photo[] = [
+  p(teamMasterMagic, "Мастер студии «Импульс» рядом с диодным лазером Magic One"),
+  p(teamMasterPortrait, "Мастер студии «Импульс» в процедурном кабинете"),
+  p(teamMasterMagicHandpiece, "Мастер студии «Импульс» с манипулой диодного лазера"),
+];
+
 export const teamSugaringPhotos: Photo[] = [
   p(teamMasterSugaring, "Специалист студии по шугарингу и восковой депиляции"),
   p(teamMasterWax, "Специалист с картриджами воска для депиляции"),
