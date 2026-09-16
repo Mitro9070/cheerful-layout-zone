@@ -26,7 +26,7 @@ export function Complexes() {
         <Reveal delay={0.16}>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
             Комплекс всегда выгоднее суммы зон на 25–40%, и подарочные зоны посчитаны в рублях.
-            Выберите аппарат — цены обновятся.
+            Выберите аппарат, и цены обновятся.
           </p>
         </Reveal>
       </div>
@@ -161,7 +161,7 @@ export function Complexes() {
         <Link to="/quiz" className="text-gold underline underline-offset-4">
           Соберите комплекс в конструкторе
         </Link>{" "}
-        — посчитаем стоимость и пришлём в мессенджер.
+        , и мы посчитаем стоимость и пришлём её в мессенджер.
       </p>
     </div>
 </section>
