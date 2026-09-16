@@ -16,7 +16,7 @@ import { Reviews } from "@/components/site/Reviews";
 import { Contacts } from "@/components/site/Contacts";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { LaserVideo } from "@/components/site/LaserVideo";
-import { teamPhotos, equipmentPhotos } from "@/data/photos";
+import { teamMemberPhotos, equipmentPhotos } from "@/data/photos";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,8 +61,8 @@ function HomePage() {
         title="Люди, которые"
         accent="работают с вами"
         text="Мастера студии «Импульс» в Истре: лазерная эпиляция на двух аппаратах, шугаринг и аппаратный уход за телом."
-        photos={teamPhotos.slice(0, 4)}
-        columns={4}
+        photos={teamMemberPhotos}
+        columns={3}
       />
       <div className="bg-secondary/35">
         <PhotoGrid
