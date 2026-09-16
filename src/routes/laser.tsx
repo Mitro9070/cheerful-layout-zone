@@ -7,6 +7,7 @@ import { Faq } from "@/components/site/Faq";
 import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
+import { LaserVideo } from "@/components/site/LaserVideo";
 import { Reveal } from "@/components/site/Reveal";
 import { faq, lasers } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
@@ -46,6 +47,8 @@ function LaserPage() {
         text="Everlas 1800 Вт и Magic One 4000 Вт позволяют подобрать параметры под тип волос и фототип кожи. Цены на зоны, комплексы и курсы собраны на этой странице."
         image={laserImg}
       />
+
+      <LaserVideo />
 
       <PhotoGrid
         eyebrow="аппараты"
