@@ -4,6 +4,8 @@ import { PageHero } from "@/components/site/PageHero";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { Reveal } from "@/components/site/Reveal";
+import { PhotoGrid } from "@/components/site/PhotoGrid";
+import { studioPhotos, teamPhotos } from "@/data/photos";
 import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/about")({

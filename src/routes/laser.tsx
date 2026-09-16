@@ -9,6 +9,8 @@ import { BookingWidget } from "@/components/site/BookingWidget";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { Reveal } from "@/components/site/Reveal";
 import { faq, lasers } from "@/data/site";
+import { PhotoGrid } from "@/components/site/PhotoGrid";
+import { equipmentPhotos, laserWorkPhotos } from "@/data/photos";
 import laserImg from "@/assets/service-laser.jpg";
 import studio from "@/assets/studio.jpg";
 
@@ -45,7 +47,26 @@ function LaserPage() {
         image={laserImg}
       />
 
+      <PhotoGrid
+        eyebrow="аппараты"
+        title="Два уровня"
+        accent="лазерной эпиляции"
+        text="Классический Everlas и более мощный Magic One с сапфировым охлаждением: параметры подбираются под тип волос и фототип кожи."
+        photos={equipmentPhotos}
+        columns={4}
+      />
+
       <Complexes />
+
+      <div className="bg-secondary/35">
+        <PhotoGrid
+          eyebrow="как проходит процедура"
+          title="Работа"
+          accent="наших мастеров"
+          text="Подготовка кожи, настройка параметров и проход по зоне с охлаждением. Защитные очки для клиента и специалиста обязательны."
+          photos={laserWorkPhotos.slice(0, 6)}
+        />
+      </div>
 
       <section className="mx-auto max-w-6xl space-y-6 px-5 md:px-10">
         <ZoneMatrix />
