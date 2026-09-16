@@ -35,6 +35,8 @@
   --color-gold-soft: var(--gold-soft);
   --color-blush: var(--blush);
   --color-sand: var(--sand);
+  --color-wine: var(--wine);
+  --color-wine-foreground: var(--wine-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -50,8 +52,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", "Times New Roman", serif;
+  --font-sans: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
 
   --shadow-soft: 0 24px 60px -30px color-mix(in oklab, var(--foreground) 28%, transparent);
   --shadow-lift: 0 40px 90px -40px color-mix(in oklab, var(--foreground) 34%, transparent);
@@ -81,6 +83,8 @@
   --gold-soft: oklch(0.88 0.05 82);
   --blush: oklch(0.93 0.028 30);
   --sand: oklch(0.918 0.022 80);
+  --wine: oklch(0.36 0.105 18);
+  --wine-foreground: oklch(0.97 0.012 78);
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0.008 84);

@@ -115,6 +115,25 @@ export const laserWorkPhotos: Photo[] = [
   p(workGelHands, "Подготовка геля перед процедурой эпиляции"),
 ];
 
+// Живые кадры для комплексов: последовательность подобрана по зонам и смыслу карточек.
+export const offerPhotos: Photo[] = [
+  p(eqMagicScreen, "Настройка диодного лазера перед процедурой"),
+  p(workUnderarms1, "Лазерная эпиляция зоны подмышек"),
+  p(workLegsMaster, "Лазерная эпиляция ног в студии «Импульс»"),
+  p(teamMasterMagicHandpiece, "Мастер студии с манипулой Magic One"),
+  p(workLaserProcedure, "Процедура лазерной эпиляции в студии «Импульс»"),
+  p(teamMasterTurbo, "Мастер проводит аппаратную процедуру для тела"),
+];
+
+export const complexPhotos: Photo[] = [
+  p(workUnderarms2, "Лазерная эпиляция подмышек"),
+  p(workLaserLeg, "Лазерная эпиляция ног крупным планом"),
+  p(workMasterHandpiece, "Мастер проводит лазерную эпиляцию"),
+  p(workLegsPulse, "Процедура лазерной эпиляции ног"),
+  p(workSettings, "Настройка лазерного аппарата"),
+  p(eqMagicFull, "Диодный лазер Magic в кабинете студии"),
+];
+
 export const sugaringWorkPhotos: Photo[] = [
   p(workWaxCartridge, "Картриджи воска для депиляции"),
   p(studioPaste, "Сахарная паста для шугаринга"),
