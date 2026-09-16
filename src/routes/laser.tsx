@@ -48,6 +48,8 @@ function LaserPage() {
         image={laserImg}
       />
 
+      <LaserVideo />
+
       <PhotoGrid
         eyebrow="аппараты"
         title="Два уровня"
