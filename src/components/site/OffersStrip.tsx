@@ -7,7 +7,7 @@ import { CardCarousel } from "./CardCarousel";
 
 export function OffersStrip() {
   return (
-    <section id="offers" className="relative overflow-hidden border-y border-border bg-secondary/45 py-20 md:py-28">
+    <section id="offers" className="relative overflow-hidden border-y border-border bg-background py-20 md:py-28">
       <div className="absolute inset-x-0 top-0 h-px bg-gold/70" />
       <div className="mx-auto max-w-7xl px-5 md:px-10">
       <div className="flex flex-wrap items-end justify-between gap-6">
@@ -39,14 +39,14 @@ export function OffersStrip() {
             delay={0.05 * i}
             className="h-full"
           >
-            <article className={`group relative flex h-full min-h-[34rem] flex-col overflow-hidden rounded-[1.75rem] border shadow-soft transition-all hover:-translate-y-1 hover:shadow-lift ${i === 0 || i % 3 === 2 ? "border-primary/25 bg-primary text-primary-foreground" : "border-border bg-card"}`}>
+            <article className="group relative flex h-full min-h-[34rem] flex-col overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-lift">
               <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
                 <img src={offerPhotos[i]?.src} alt={offerPhotos[i]?.alt ?? ""} loading="lazy" className="photo-tone absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/35 via-transparent to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-6">
               {o.badge && (
-                  <span className={`w-fit rounded-full px-3.5 py-1 text-[10px] tracking-[0.18em] uppercase ${i === 0 || i % 3 === 2 ? "border border-gold/55 text-gold-soft" : "border border-gold/40 text-gold"}`}>
+                  <span className="w-fit rounded-full border border-gold/40 px-3.5 py-1 text-[10px] tracking-[0.18em] text-gold uppercase">
                   {o.badge}
                 </span>
               )}
@@ -59,7 +59,7 @@ export function OffersStrip() {
                   </span>
                 )}
               </div>
-              <p className={`mt-3 flex-1 text-[14px] leading-relaxed ${i === 0 || i % 3 === 2 ? "text-primary-foreground/75" : "text-muted-foreground"}`}>{o.includes}</p>
+              <p className="mt-3 flex-1 text-[14px] leading-relaxed text-muted-foreground">{o.includes}</p>
               {o.gift && (
                 <p className="mt-3 flex gap-2 text-[13px] text-gold">
                   <Gift className="mt-0.5 size-3.5 shrink-0" />
@@ -69,7 +69,7 @@ export function OffersStrip() {
               <Link
                 to="/contacts"
                 hash="booking"
-                className={`mt-5 block rounded-full py-3 text-center text-[10px] tracking-[0.2em] uppercase transition-colors ${i === 0 || i % 3 === 2 ? "bg-primary-foreground text-primary hover:bg-gold-soft" : "border border-foreground/20 hover:border-gold hover:text-gold"}`}
+                className="mt-5 block rounded-full border border-foreground/20 py-3 text-center text-[10px] tracking-[0.2em] uppercase transition-colors hover:border-gold hover:text-gold"
               >
                 {o.cta}
               </Link>
