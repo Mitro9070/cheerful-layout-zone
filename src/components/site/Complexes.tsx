@@ -66,8 +66,9 @@ export function Complexes() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3"
+          className="mt-10"
         >
+          <CardCarousel label={`Комплексы на аппарате ${active.name}`} itemClassName="h-auto">
           {active.complexes.map((c, index) => (
             <article
               key={c.name}
