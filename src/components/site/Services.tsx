@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 
 const MotionLink = motion.create(Link);
 import { ArrowUpRight } from "lucide-react";
-import laser from "@/assets/service-laser.jpg";
-import sugaring from "@/assets/service-sugaring.jpg";
-import body from "@/assets/service-body.jpg";
+import laserAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
+import sugaringAsset from "@/assets/photo/services/sugaring-paste-new.jpg.asset.json";
+import bodyAsset from "@/assets/photo/services/body-equipment-new.jpg.asset.json";
 import { Reveal, RevealText } from "./Reveal";
 
 const services = [
@@ -15,7 +15,8 @@ const services = [
     to: "/laser",
     price: "от 700 ₽",
     text: "Everlas 1800 Вт и Magic One 4000 Вт. Отдельные зоны и готовые комплексы для женщин и мужчин.",
-    img: laser,
+    img: laserAsset.url,
+    alt: "Лазерная процедура в студии «Импульс»",
   },
   {
     n: "02",
@@ -23,7 +24,8 @@ const services = [
     to: "/sugaring",
     price: "от 300 ₽",
     text: "Деликатная сахарная паста и плёночный воск. Идеальная гладкость там, где лазер пока не подходит.",
-    img: sugaring,
+    img: sugaringAsset.url,
+    alt: "Сахарная паста для шугаринга в студии «Импульс»",
   },
   {
     n: "03",
@@ -31,7 +33,8 @@ const services = [
     to: "/body",
     price: "от 1 500 ₽",
     text: "Вакуумный и вибрационно-роликовый массаж, микротоки, ЛимфаЛик. Абонементы с выгодой до 10 000 ₽.",
-    img: body,
+    img: bodyAsset.url,
+    alt: "Манипулы аппарата для коррекции фигуры",
   },
 ];
 
@@ -68,13 +71,13 @@ export function Services() {
               <div className="relative aspect-4/5 overflow-hidden">
                 <motion.img
                   src={s.img}
-                  alt={s.title}
+                  alt={s.alt}
                   loading="lazy"
                   width={912}
                   height={1104}
                   variants={{ hover: { scale: 1.07 } }}
                   transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="size-full object-cover"
+                  className="photo-tone size-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/55 via-foreground/5 to-transparent" />
                 <span className="absolute top-5 left-6 font-display text-sm text-background/80">
