@@ -72,7 +72,7 @@ export function Complexes() {
             <article
               key={c.name}
               className={`group flex h-full flex-col overflow-hidden rounded-[1.75rem] border shadow-soft transition-all hover:-translate-y-1 hover:shadow-lift ${
-                c.featured ? "border-wine/40 bg-wine text-wine-foreground" : "border-border bg-card"
+                c.featured ? "border-primary/35 bg-primary text-primary-foreground" : "border-border bg-card"
               }`}
             >
               <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
@@ -80,7 +80,7 @@ export function Complexes() {
                   src={complexPhotos[index % complexPhotos.length]?.src}
                   alt={complexPhotos[index % complexPhotos.length]?.alt ?? ""}
                   loading="lazy"
-                  className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="photo-tone size-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/45 via-transparent to-transparent" />
               </div>
@@ -89,7 +89,7 @@ export function Complexes() {
                 {c.badge && (
                   <span
                     className={`rounded-full px-4 py-1.5 text-[10px] leading-none tracking-[0.2em] uppercase ${
-                      c.featured ? "bg-wine-foreground text-wine" : "border border-gold/40 text-gold"
+                      c.featured ? "bg-primary-foreground text-primary" : "border border-gold/40 text-gold"
                     }`}
                   >
                     {c.badge}
@@ -98,7 +98,7 @@ export function Complexes() {
               </span>
 
               <h3 className="mt-5 font-display text-3xl leading-tight md:text-4xl">{c.name}</h3>
-              <p className={`mt-2 text-[15px] ${c.featured ? "text-wine-foreground/70" : "text-muted-foreground"}`}>{c.subtitle}</p>
+              <p className={`mt-2 text-[15px] ${c.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>{c.subtitle}</p>
 
               <ul className="mt-6 space-y-2.5 text-[15px]">
                 {c.zones.map((z) => (
@@ -109,7 +109,7 @@ export function Complexes() {
                 ))}
               </ul>
 
-              <div className={`mt-5 flex flex-1 gap-2.5 rounded-2xl p-4 text-sm leading-relaxed ${c.featured ? "bg-wine-foreground/10" : "bg-secondary/50"}`}>
+              <div className={`mt-5 flex flex-1 gap-2.5 rounded-2xl p-4 text-sm leading-relaxed ${c.featured ? "bg-primary-foreground/10" : "bg-secondary/50"}`}>
                 <Gift className="mt-0.5 size-4 shrink-0 text-gold" />
                 <span>
                   {c.gifts}
@@ -119,7 +119,7 @@ export function Complexes() {
                 </span>
               </div>
 
-              <div className={`mt-6 space-y-3 border-t pt-6 ${c.featured ? "border-wine-foreground/20" : "border-border"}`}>
+              <div className={`mt-6 space-y-3 border-t pt-6 ${c.featured ? "border-primary-foreground/20" : "border-border"}`}>
                 <div className="flex items-baseline justify-between gap-4">
                   <span className="text-sm text-muted-foreground">Цена первого визита</span>
                   <span className="font-display text-3xl text-gold">{c.first}</span>
@@ -140,7 +140,7 @@ export function Complexes() {
               <Link
                 to="/contacts"
                 hash="booking"
-                className={`mt-6 block rounded-full py-4 text-center text-sm tracking-[0.18em] uppercase transition-opacity hover:opacity-90 ${c.featured ? "bg-wine-foreground text-wine" : "bg-primary text-primary-foreground"}`}
+                className={`mt-6 block rounded-full py-4 text-center text-sm tracking-[0.18em] uppercase transition-opacity hover:opacity-90 ${c.featured ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground"}`}
               >
                 Записаться
               </Link>

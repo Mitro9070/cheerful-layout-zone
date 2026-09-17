@@ -1,5 +1,6 @@
 import type { Photo } from "@/data/photos";
 import { Reveal } from "./Reveal";
+import { CardCarousel } from "./CardCarousel";
 
 type Props = {
   photos: Photo[];
@@ -9,6 +10,7 @@ type Props = {
   text?: string;
   columns?: 2 | 3 | 4;
   aspect?: "portrait" | "square";
+  carousel?: boolean;
 };
 
 export function PhotoGrid({
@@ -19,6 +21,7 @@ export function PhotoGrid({
   text,
   columns = 3,
   aspect = "portrait",
+  carousel = false,
 }: Props) {
   const cols =
     columns === 4
@@ -51,23 +54,39 @@ export function PhotoGrid({
         </div>
       )}
 
+      {carousel ? (
+        <CardCarousel label={title ?? "Фотографии"} itemClassName="h-auto">
+          {photos.map((ph, i) => (
+            <Reveal key={ph.src} delay={Math.min(i, 5) * 0.06}>
+              <PhotoFigure photo={ph} aspect={aspect} />
+            </Reveal>
+          ))}
+        </CardCarousel>
+      ) : (
       <div className={`grid gap-4 ${cols} md:gap-6`}>
         {photos.map((ph, i) => (
           <Reveal key={ph.src} delay={Math.min(i, 5) * 0.06}>
-            <figure className="group relative overflow-hidden rounded-[1.5rem] bg-secondary/40 shadow-soft">
-              <img
-                src={ph.src}
-                alt={ph.alt}
-                loading="lazy"
-                className={`w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04] ${
-                  aspect === "square" ? "aspect-square" : "aspect-4/5"
-                }`}
-              />
-              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-primary/35 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-            </figure>
+            <PhotoFigure photo={ph} aspect={aspect} />
           </Reveal>
         ))}
       </div>
+      )}
     </section>
+  );
+}
+
+function PhotoFigure({ photo, aspect }: { photo: Photo; aspect: "portrait" | "square" }) {
+  return (
+    <figure className="group relative overflow-hidden rounded-[1.5rem] bg-secondary/40 shadow-soft">
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        loading="lazy"
+        className={`photo-tone w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04] ${
+          aspect === "square" ? "aspect-square" : "aspect-4/5"
+        }`}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-primary/35 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+    </figure>
   );
 }

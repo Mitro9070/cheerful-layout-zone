@@ -63,6 +63,7 @@ function HomePage() {
         text="Мастера студии «Импульс» в Истре: лазерная эпиляция на двух аппаратах, шугаринг и аппаратный уход за телом."
         photos={teamMemberPhotos}
         columns={3}
+        carousel
       />
       <div className="bg-secondary/35">
         <PhotoGrid
@@ -71,6 +72,7 @@ function HomePage() {
           accent="студии"
           text="Классический диодный лазер Everlas и более мощный Magic One с сапфировым охлаждением, а также аппараты для коррекции фигуры."
           photos={equipmentPhotos.slice(0, 3)}
+          carousel
         />
       </div>
       <LaserVideo />
