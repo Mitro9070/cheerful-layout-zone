@@ -1,23 +1,25 @@
 import { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { Instagram, Pause, Play } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { site } from "@/data/site";
-import laserVideo from "@/assets/reels/showcase-laser-final.mp4.asset.json";
-import laserPoster from "@/assets/reels/showcase-laser-final-poster.jpg.asset.json";
-import sugaringVideo from "@/assets/reels/showcase-sugaring-final.mp4.asset.json";
-import sugaringPoster from "@/assets/reels/showcase-sugaring-final-poster.jpg.asset.json";
-import bodyVideo from "@/assets/reels/showcase-body-final.mp4.asset.json";
-import bodyPoster from "@/assets/reels/showcase-body-final-poster.jpg.asset.json";
-import emsVideo from "@/assets/reels/showcase-ems-final.mp4.asset.json";
-import emsPoster from "@/assets/reels/showcase-ems-final-poster.jpg.asset.json";
+import laserVideo from "@/assets/reels/showcase-vitrine-laser-back.mp4.asset.json";
+import laserPoster from "@/assets/reels/showcase-vitrine-laser-back-poster.jpg.asset.json";
+import magicVideo from "@/assets/reels/showcase-vitrine-magic-back.mp4.asset.json";
+import magicPoster from "@/assets/reels/showcase-vitrine-magic-back-poster.jpg.asset.json";
+import bodySetupVideo from "@/assets/reels/showcase-vitrine-body-setup.mp4.asset.json";
+import bodySetupPoster from "@/assets/reels/showcase-vitrine-body-setup-poster.jpg.asset.json";
+import emsVideo from "@/assets/reels/showcase-vitrine-ems.mp4.asset.json";
+import emsPoster from "@/assets/reels/showcase-vitrine-ems-poster.jpg.asset.json";
+import bodyLegsVideo from "@/assets/reels/showcase-vitrine-body-legs.mp4.asset.json";
+import bodyLegsPoster from "@/assets/reels/showcase-vitrine-body-legs-poster.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reels = [
-  { video: laserVideo.url, poster: laserPoster.url, label: "Лазерная эпиляция" },
-  { video: sugaringVideo.url, poster: sugaringPoster.url, label: "Шугаринг в студии" },
-  { video: bodyVideo.url, poster: bodyPoster.url, label: "Аппаратный уход за телом" },
+  { video: laserVideo.url, poster: laserPoster.url, label: "Лазерная эпиляция Magic One" },
+  { video: magicVideo.url, poster: magicPoster.url, label: "Аппаратный уход по телу" },
+  { video: bodySetupVideo.url, poster: bodySetupPoster.url, label: "Настройка процедуры" },
   { video: emsVideo.url, poster: emsPoster.url, label: "EMS-тренировка" },
+  { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Коррекция фигуры" },
 ];
 
 function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number }) {
@@ -77,6 +79,9 @@ function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number
 }
 
 export function ReelsFeed() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleReels = showAll ? reels : reels.slice(0, 4);
+
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
@@ -91,18 +96,19 @@ export function ReelsFeed() {
               </h2>
             </Reveal>
           </div>
-          <a
-            href={site.instagram}
-            target="_blank"
-            rel="noreferrer"
-            className="glass-card inline-flex shrink-0 items-center gap-2 rounded-full px-5 py-3 text-[10px] tracking-[0.2em] uppercase"
+          <Button
+            type="button"
+            variant="outline"
+            onClick={() => setShowAll(true)}
+            disabled={showAll}
+            className="shrink-0 rounded-full border-foreground/20 px-5 py-3 text-[10px] tracking-[0.2em] uppercase hover:border-gold hover:text-gold disabled:opacity-60"
           >
-            <Instagram className="size-3.5 text-gold" /> Смотреть все
-          </a>
+            {showAll ? "Все видео открыты" : "Смотреть все"}
+          </Button>
         </div>
 
-        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0">
-          {reels.map((r, i) => (
+        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 lg:grid-cols-5">
+          {visibleReels.map((r, i) => (
             <ReelCard key={r.label} reel={r} index={i} />
           ))}
         </div>
