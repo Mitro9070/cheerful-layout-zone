@@ -12,6 +12,8 @@ import emsVideo from "@/assets/reels/showcase-vitrine-ems.mp4.asset.json";
 import emsPoster from "@/assets/reels/showcase-vitrine-ems-poster.jpg.asset.json";
 import bodyLegsVideo from "@/assets/reels/showcase-vitrine-body-legs.mp4.asset.json";
 import bodyLegsPoster from "@/assets/reels/showcase-vitrine-body-legs-poster.jpg.asset.json";
+import underarmsVideo from "@/assets/reels/showcase-vitrine-underarms.mp4.asset.json";
+import underarmsPoster from "@/assets/reels/showcase-vitrine-underarms-poster.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reels = [
@@ -20,6 +22,16 @@ const reels = [
   { video: bodySetupVideo.url, poster: bodySetupPoster.url, label: "Настройка процедуры" },
   { video: emsVideo.url, poster: emsPoster.url, label: "EMS-тренировка" },
   { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Коррекция фигуры" },
+  { video: underarmsVideo.url, poster: underarmsPoster.url, label: "Лазерная эпиляция подмышек" },
+];
+
+const mosaicClasses = [
+  "lg:col-span-2 lg:row-span-2",
+  "lg:col-span-2 lg:row-span-2",
+  "lg:col-span-2 lg:row-span-1",
+  "lg:col-span-2 lg:row-span-1",
+  "lg:col-span-3 lg:row-span-2",
+  "lg:col-span-3 lg:row-span-2",
 ];
 
 function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number }) {
@@ -43,9 +55,9 @@ function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group relative w-[68%] shrink-0 snap-start overflow-hidden rounded-[1.25rem] md:w-auto"
+      className={`group relative overflow-hidden rounded-[1.25rem] shadow-soft ${mosaicClasses[index] ?? ""}`}
     >
-      <div className="aspect-9/16 overflow-hidden">
+      <div className="aspect-9/16 overflow-hidden lg:size-full lg:aspect-auto">
         <video
           ref={videoRef}
           src={reel.video}
@@ -79,13 +91,10 @@ function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number
 }
 
 export function ReelsFeed() {
-  const [showAll, setShowAll] = useState(false);
-  const visibleReels = showAll ? reels : reels.slice(0, 4);
-
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 sm:flex sm:justify-between">
+        <div className="max-w-3xl">
           <div className="min-w-0">
             <Reveal>
               <span className="eyebrow">видео</span>
@@ -96,19 +105,10 @@ export function ReelsFeed() {
               </h2>
             </Reveal>
           </div>
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => setShowAll(true)}
-            disabled={showAll}
-            className="shrink-0 rounded-full border-foreground/20 px-5 py-3 text-[10px] tracking-[0.2em] uppercase hover:border-gold hover:text-gold disabled:opacity-60"
-          >
-            {showAll ? "Все видео открыты" : "Смотреть все"}
-          </Button>
         </div>
 
-        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0 lg:grid-cols-5">
-          {visibleReels.map((r, i) => (
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-6 lg:auto-rows-[13.5rem] lg:gap-5 xl:auto-rows-[14.5rem]">
+          {reels.map((r, i) => (
             <ReelCard key={r.label} reel={r} index={i} />
           ))}
         </div>
