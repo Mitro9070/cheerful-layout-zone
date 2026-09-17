@@ -131,7 +131,7 @@ export function Complexes() {
                   <span className="font-display text-lg line-through">{c.separate}</span>
                 </div>
                 <div className="text-[11px] tracking-[0.16em] text-gold uppercase">
-                  Ваша выгода {c.benefit}
+                  Выгода {c.benefit}
                 </div>
               </div>
 

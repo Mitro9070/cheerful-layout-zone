@@ -81,12 +81,12 @@ export const offers: Offer[] = [
   {
     name: "Гладкость",
     badge: "Выбирают чаще всего",
-    price: "3 780 ₽",
+    price: "2 700 ₽",
     oldPrice: "5 400 ₽",
     includes: "Глубокое бикини + подмышки + ноги полностью",
     gift: "Подарки на 2 800 ₽: межъягодичная зона, белая линия живота, пальчики на ногах, верхняя губа",
     text: "Три основные зоны за один визит. Комплекс стоит выгоднее, чем те же процедуры по отдельности.",
-    line: "Скидка 50% на первый визит",
+    line: "Первый визит со скидкой 50%",
     cta: "Записаться",
   },
   {
@@ -138,7 +138,7 @@ export const everlasComplexes: Complex[] = [
     price: "4 200 ₽",
     first: "2 100 ₽",
     separate: "5 800 ₽",
-    benefit: "3 700 ₽",
+    benefit: "3 700 ₽ на первом визите",
   },
   {
     name: "Гладкость",
@@ -149,7 +149,7 @@ export const everlasComplexes: Complex[] = [
     price: "5 400 ₽",
     first: "2 700 ₽",
     separate: "7 400 ₽",
-    benefit: "4 800 ₽",
+    benefit: "4 800 ₽ на первом визите",
     badge: "Выбирают чаще всего",
     featured: true,
   },
@@ -174,7 +174,7 @@ export const everlasComplexes: Complex[] = [
     price: "6 500 ₽",
     first: "3 250 ₽",
     separate: "9 400 ₽",
-    benefit: "5 700 ₽",
+    benefit: "5 700 ₽ на первом визите",
   },
   {
     name: "Всё и сразу",
@@ -185,7 +185,7 @@ export const everlasComplexes: Complex[] = [
     price: "7 000 ₽",
     first: "3 500 ₽",
     separate: "10 000 ₽",
-    benefit: "6 500 ₽",
+    benefit: "6 500 ₽ на первом визите",
     badge: "Максимальная выгода",
   },
 ];
@@ -212,7 +212,7 @@ export const magicComplexes: Complex[] = [
     price: "4 700 ₽",
     first: "2 350 ₽",
     separate: "7 300 ₽",
-    benefit: "5 300 ₽",
+    benefit: "5 300 ₽ на первом визите",
   },
   {
     name: "Гладкость Premium",
@@ -223,7 +223,7 @@ export const magicComplexes: Complex[] = [
     price: "5 900 ₽",
     first: "2 950 ₽",
     separate: "9 300 ₽",
-    benefit: "7 000 ₽",
+    benefit: "7 000 ₽ на первом визите",
     badge: "Выбирают чаще всего",
     featured: true,
   },
@@ -247,7 +247,7 @@ export const magicComplexes: Complex[] = [
     price: "7 000 ₽",
     first: "3 500 ₽",
     separate: "11 800 ₽",
-    benefit: "8 400 ₽",
+    benefit: "8 400 ₽ на первом визите",
   },
   {
     name: "Всё и сразу Premium",
@@ -258,7 +258,7 @@ export const magicComplexes: Complex[] = [
     price: "7 500 ₽",
     first: "3 750 ₽",
     separate: "12 600 ₽",
-    benefit: "9 600 ₽",
+    benefit: "9 600 ₽ на первом визите",
     badge: "Максимальная выгода",
   },
 ];

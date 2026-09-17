@@ -7,8 +7,8 @@ import { pricingTopNote } from "@/data/site";
 
 const highlights = [
   { label: "Первый визит", value: "от 1 450 ₽" },
-  { label: "Комплекс «Гладкость»", value: "3 780 ₽" },
-  { label: "Шугаринг, первый визит", value: "2 100 ₽" },
+  { label: "Лазер новым клиентам", value: "−50%" },
+  { label: "Шугаринг новым клиентам", value: "−10%" },
   { label: "Коррекция фигуры", value: "от 1 300 ₽" },
 ];
 
