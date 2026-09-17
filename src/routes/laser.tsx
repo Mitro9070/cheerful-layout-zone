@@ -4,7 +4,6 @@ import { Complexes } from "@/components/site/Complexes";
 import { ZoneMatrix } from "@/components/site/ZoneMatrix";
 import { Abonements } from "@/components/site/Abonements";
 import { Faq } from "@/components/site/Faq";
-import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { LaserVideo } from "@/components/site/LaserVideo";
@@ -12,8 +11,9 @@ import { Reveal } from "@/components/site/Reveal";
 import { faq, lasers } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { equipmentPhotos, laserWorkPhotos } from "@/data/photos";
+import { ClientResultCard } from "@/components/site/ClientResultCard";
+import { clientResults } from "@/data/clientResults";
 import laserImgAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
-import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/laser")({
   head: () => ({
