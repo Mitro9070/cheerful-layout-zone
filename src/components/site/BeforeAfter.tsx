@@ -1,9 +1,6 @@
 import { useRef, useState } from "react";
 
-/**
- * Слайдер «до / после». Изображения — временные демо-кадры,
- * заменяются живыми фото студии (единый ракурс, свет и фон).
- */
+/** Интерактивный слайдер сравнения двух кадров в одном ракурсе. */
 export function BeforeAfter({
   before,
   after,
@@ -31,12 +28,21 @@ export function BeforeAfter({
         onPointerDown={(e) => move(e.clientX)}
         onPointerMove={(e) => e.buttons === 1 && move(e.clientX)}
       >
-        <img src={after} alt={`${label} — после`} loading="lazy" className="photo-tone absolute inset-0 size-full object-cover" />
+        <img
+          src={after}
+          alt={`${label}, после`}
+          loading="lazy"
+          width={1024}
+          height={1280}
+          className="photo-tone absolute inset-0 size-full object-cover"
+        />
         <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
           <img
             src={before}
-            alt={`${label} — до`}
+            alt={`${label}, до`}
             loading="lazy"
+            width={1024}
+            height={1280}
             className="photo-tone absolute inset-0 h-full w-[100vw] max-w-none object-cover"
             style={{ width: ref.current?.offsetWidth ?? "100%" }}
           />
