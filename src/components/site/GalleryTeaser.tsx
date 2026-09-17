@@ -1,13 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { BeforeAfter } from "./BeforeAfter";
+import { CardCarousel } from "./CardCarousel";
+import { ClientResultCard } from "./ClientResultCard";
 import { Reveal } from "./Reveal";
-import laserLegsBefore from "@/assets/results/laser-legs-before.jpg";
-import laserLegsAfter from "@/assets/results/laser-legs-after.jpg";
-import backSkinBefore from "@/assets/results/back-skin-before.jpg";
-import backSkinAfter from "@/assets/results/back-skin-after.jpg";
-import waistBefore from "@/assets/results/waist-before.jpg";
-import waistAfter from "@/assets/results/waist-after.jpg";
+import { clientResults } from "@/data/clientResults";
 
 export function GalleryTeaser() {
   return (
@@ -25,7 +21,7 @@ export function GalleryTeaser() {
             </Reveal>
             <Reveal delay={0.14}>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                Наглядные визуализации возможных изменений. Результат и количество процедур индивидуальны.
+                Реальные результаты клиенток студии. Результат и количество процедур индивидуальны.
               </p>
             </Reveal>
           </div>
@@ -37,10 +33,14 @@ export function GalleryTeaser() {
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <BeforeAfter before={laserLegsBefore} after={laserLegsAfter} label="Лазерная эпиляция ног" />
-          <BeforeAfter before={backSkinBefore} after={backSkinAfter} label="Аппаратный уход за телом" />
-          <BeforeAfter before={waistBefore} after={waistAfter} label="Коррекция силуэта" />
+        <div className="mt-10">
+          <CardCarousel label="Реальные результаты клиенток" itemClassName="w-[88%] sm:w-[48%] lg:w-[calc((100%-2.5rem)/3)]">
+            {clientResults.map((result, index) => (
+              <Reveal key={result.src} delay={Math.min(index, 3) * 0.06} className="h-full">
+                <ClientResultCard result={result} />
+              </Reveal>
+            ))}
+          </CardCarousel>
         </div>
       </div>
     </section>
