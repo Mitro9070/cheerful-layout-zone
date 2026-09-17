@@ -31,13 +31,13 @@ export function BeforeAfter({
         onPointerDown={(e) => move(e.clientX)}
         onPointerMove={(e) => e.buttons === 1 && move(e.clientX)}
       >
-        <img src={after} alt={`${label} — после`} loading="lazy" className="absolute inset-0 size-full object-cover" />
+        <img src={after} alt={`${label} — после`} loading="lazy" className="photo-tone absolute inset-0 size-full object-cover" />
         <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
           <img
             src={before}
             alt={`${label} — до`}
             loading="lazy"
-            className="absolute inset-0 h-full w-[100vw] max-w-none object-cover"
+            className="photo-tone absolute inset-0 h-full w-[100vw] max-w-none object-cover"
             style={{ width: ref.current?.offsetWidth ?? "100%" }}
           />
           <span className="absolute top-3 left-3 rounded-full bg-foreground/70 px-3 py-1 text-[10px] tracking-[0.2em] text-background uppercase">

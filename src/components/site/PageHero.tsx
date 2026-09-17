@@ -56,7 +56,7 @@ export function PageHero({
         {image && (
           <Reveal delay={0.2}>
             <div className="relative aspect-4/5 overflow-hidden rounded-[1.75rem] shadow-lift lg:aspect-square">
-              <img src={image} alt={title} className="size-full object-cover" loading="lazy" />
+              <img src={image} alt={title} className="photo-tone size-full object-cover" loading="lazy" />
             </div>
           </Reveal>
         )}
