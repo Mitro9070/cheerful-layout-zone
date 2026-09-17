@@ -1,5 +1,7 @@
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { Instagram, Play } from "lucide-react";
+import { Instagram, Pause, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";
 import laserVideo from "@/assets/reels/showcase-laser.mp4.asset.json";
 import laserPoster from "@/assets/reels/showcase-laser-poster.jpg.asset.json";
@@ -17,6 +19,62 @@ const reels = [
   { video: bodyVideo.url, poster: bodyPoster.url, label: "Аппаратный уход за телом" },
   { video: emsVideo.url, poster: emsPoster.url, label: "EMS-тренировка" },
 ];
+
+function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlayback = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      await video.play();
+    } else {
+      video.pause();
+    }
+  };
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.08 }}
+      className="group relative w-[68%] shrink-0 snap-start overflow-hidden rounded-[1.25rem] md:w-auto"
+    >
+      <div className="aspect-9/16 overflow-hidden">
+        <video
+          ref={videoRef}
+          src={reel.video}
+          poster={reel.poster}
+          aria-label={reel.label}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+          className="size-full object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/65 to-transparent" />
+      <Button
+        type="button"
+        variant="ghost"
+        size="icon"
+        onClick={togglePlayback}
+        aria-label={isPlaying ? `Поставить на паузу: ${reel.label}` : `Воспроизвести: ${reel.label}`}
+        className="absolute top-4 left-4 z-10 rounded-full bg-background/85 text-foreground hover:bg-background"
+      >
+        {isPlaying ? <Pause /> : <Play />}
+      </Button>
+      <span className="pointer-events-none absolute inset-x-4 bottom-4 text-sm text-background">
+        {reel.label}
+      </span>
+    </motion.article>
+  );
+}
 
 export function ReelsFeed() {
   return (
@@ -45,33 +103,7 @@ export function ReelsFeed() {
 
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0">
           {reels.map((r, i) => (
-            <motion.article
-              key={r.label}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group relative w-[68%] shrink-0 snap-start overflow-hidden rounded-[1.25rem] md:w-auto"
-            >
-              <div className="aspect-9/16 overflow-hidden">
-                <video
-                  src={r.video}
-                  poster={r.poster}
-                  aria-label={r.label}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="size-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/65 to-transparent" />
-              <span aria-hidden="true" className="absolute top-4 left-4 grid size-9 place-items-center rounded-full bg-background/85">
-                <Play className="size-3.5" />
-              </span>
-              <span className="absolute inset-x-4 bottom-4 text-sm text-background">{r.label}</span>
-            </motion.article>
+            <ReelCard key={r.label} reel={r} index={i} />
           ))}
         </div>
       </div>
