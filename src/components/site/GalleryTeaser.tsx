@@ -2,9 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { BeforeAfter } from "./BeforeAfter";
 import { Reveal } from "./Reveal";
-import laser from "@/assets/service-laser.jpg";
-import bodyImg from "@/assets/service-body.jpg";
-import studio from "@/assets/studio.jpg";
+import laserLegsBefore from "@/assets/results/laser-legs-before.jpg";
+import laserLegsAfter from "@/assets/results/laser-legs-after.jpg";
+import backSkinBefore from "@/assets/results/back-skin-before.jpg";
+import backSkinAfter from "@/assets/results/back-skin-after.jpg";
+import waistBefore from "@/assets/results/waist-before.jpg";
+import waistAfter from "@/assets/results/waist-after.jpg";
 
 export function GalleryTeaser() {
   return (
@@ -20,6 +23,11 @@ export function GalleryTeaser() {
                 Результат, который <span className="italic text-gold">видно</span>
               </h2>
             </Reveal>
+            <Reveal delay={0.14}>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                Наглядные визуализации возможных изменений. Результат и количество процедур индивидуальны.
+              </p>
+            </Reveal>
           </div>
           <Link
             to="/gallery"
@@ -30,9 +38,9 @@ export function GalleryTeaser() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <BeforeAfter before={studio} after={laser} label="Подмышки, 4 процедуры" />
-          <BeforeAfter before={laser} after={studio} label="Голени, 5 процедур" />
-          <BeforeAfter before={studio} after={bodyImg} label="Бёдра, курс вакуума" />
+          <BeforeAfter before={laserLegsBefore} after={laserLegsAfter} label="Лазерная эпиляция ног" />
+          <BeforeAfter before={backSkinBefore} after={backSkinAfter} label="Аппаратный уход за телом" />
+          <BeforeAfter before={waistBefore} after={waistAfter} label="Коррекция силуэта" />
         </div>
       </div>
     </section>
