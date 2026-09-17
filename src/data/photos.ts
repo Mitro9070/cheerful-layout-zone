@@ -118,7 +118,7 @@ export const laserWorkPhotos: Photo[] = [
 // Живые кадры для комплексов: последовательность подобрана по зонам и смыслу карточек.
 export const offerPhotos: Photo[] = [
   p(eqMagicScreen, "Настройка диодного лазера перед процедурой"),
-  p(workUnderarms1, "Лазерная эпиляция зоны подмышек"),
+  p(teamMasterMagic, "Мастер студии рядом с диодным лазером Magic One"),
   p(workLegsMaster, "Лазерная эпиляция ног в студии «Импульс»"),
   p(teamMasterMagicHandpiece, "Мастер студии с манипулой Magic One"),
   p(workLaserProcedure, "Процедура лазерной эпиляции в студии «Импульс»"),
