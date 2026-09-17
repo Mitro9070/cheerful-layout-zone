@@ -13,7 +13,7 @@ import {
 } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { sugaringWorkPhotos, teamSugaringPhotos } from "@/data/photos";
-import sugaringImg from "@/assets/service-sugaring.jpg";
+import sugaringHero from "@/assets/photo/team/master-paste.jpg.asset.json";
 
 export const Route = createFileRoute("/sugaring")({
   head: () => ({
@@ -59,7 +59,7 @@ function SugaringPage() {
         title="Гладкая кожа"
         accent="с бережным уходом"
         text="Шугаринг и восковая депиляция для быстрого результата. Электроэпиляция подходит для точечной работы, в том числе со светлыми и седыми волосами."
-        image={sugaringImg}
+        image={sugaringHero.url}
       />
 
       <PhotoGrid
