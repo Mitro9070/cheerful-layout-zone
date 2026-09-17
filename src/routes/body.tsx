@@ -14,7 +14,7 @@ import {
 } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { bodyEquipmentPhotos, teamBodyPhotos } from "@/data/photos";
-import bodyHero from "@/assets/photo/team/master-turbo-g5.jpg.asset.json";
+import bodyHero from "@/assets/photo/services/body-equipment-new.jpg.asset.json";
 import bodyImg from "@/assets/service-body.jpg";
 import studio from "@/assets/studio.jpg";
 

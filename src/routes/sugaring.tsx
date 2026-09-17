@@ -13,7 +13,7 @@ import {
 } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { sugaringWorkPhotos, teamSugaringPhotos } from "@/data/photos";
-import sugaringHero from "@/assets/photo/team/master-paste.jpg.asset.json";
+import sugaringHero from "@/assets/photo/services/sugaring-paste-new.jpg.asset.json";
 
 export const Route = createFileRoute("/sugaring")({
   head: () => ({
