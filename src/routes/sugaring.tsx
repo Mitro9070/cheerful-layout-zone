@@ -88,11 +88,11 @@ function SugaringPage() {
               Первый визит
             </span>
             <h2 className="mt-5 font-display text-3xl md:text-4xl">
-              Шугаринг для новых клиентов: 2 100 ₽{" "}
+              Шугаринг для новых клиентов: 2 340 ₽{" "}
               <span className="text-muted-foreground line-through">2 600 ₽</span>
             </h2>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-              Глубокое бикини + подмышки. Для тех, кто пока не готов к курсу лазера.
+              Глубокое бикини + подмышки со скидкой 10% на первый визит.
             </p>
           </div>
         </Reveal>

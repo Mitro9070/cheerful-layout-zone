@@ -17,11 +17,11 @@ import underarmsPoster from "@/assets/reels/showcase-vitrine-underarms-poster.jp
 import { Reveal } from "./Reveal";
 
 const reels = [
-  { video: laserVideo.url, poster: laserPoster.url, label: "Лазерная эпиляция Magic One" },
-  { video: magicVideo.url, poster: magicPoster.url, label: "Аппаратный уход по телу" },
-  { video: bodySetupVideo.url, poster: bodySetupPoster.url, label: "Настройка процедуры" },
-  { video: emsVideo.url, poster: emsPoster.url, label: "EMS-тренировка" },
-  { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Коррекция фигуры" },
+  { video: laserVideo.url, poster: laserPoster.url, label: "Подготовка к процедуре" },
+  { video: magicVideo.url, poster: magicPoster.url, label: "Лазерная эпиляция спины" },
+  { video: bodySetupVideo.url, poster: bodySetupPoster.url, label: "Настройка аппарата" },
+  { video: emsVideo.url, poster: emsPoster.url, label: "EMSculpt" },
+  { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Аппаратная коррекция фигуры" },
   { video: underarmsVideo.url, poster: underarmsPoster.url, label: "Лазерная эпиляция подмышек" },
 ];
 
