@@ -3,14 +3,14 @@ import { motion } from "motion/react";
 import { Instagram, Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";
-import laserVideo from "@/assets/reels/showcase-laser-minute.mp4.asset.json";
-import laserPoster from "@/assets/reels/showcase-laser-minute-poster.jpg.asset.json";
-import sugaringVideo from "@/assets/reels/showcase-sugaring-minute.mp4.asset.json";
-import sugaringPoster from "@/assets/reels/showcase-sugaring-minute-poster.jpg.asset.json";
-import bodyVideo from "@/assets/reels/showcase-body-minute.mp4.asset.json";
-import bodyPoster from "@/assets/reels/showcase-body-minute-poster.jpg.asset.json";
-import emsVideo from "@/assets/reels/showcase-ems-minute.mp4.asset.json";
-import emsPoster from "@/assets/reels/showcase-ems-minute-poster.jpg.asset.json";
+import laserVideo from "@/assets/reels/showcase-laser-final.mp4.asset.json";
+import laserPoster from "@/assets/reels/showcase-laser-final-poster.jpg.asset.json";
+import sugaringVideo from "@/assets/reels/showcase-sugaring-final.mp4.asset.json";
+import sugaringPoster from "@/assets/reels/showcase-sugaring-final-poster.jpg.asset.json";
+import bodyVideo from "@/assets/reels/showcase-body-final.mp4.asset.json";
+import bodyPoster from "@/assets/reels/showcase-body-final-poster.jpg.asset.json";
+import emsVideo from "@/assets/reels/showcase-ems-final.mp4.asset.json";
+import emsPoster from "@/assets/reels/showcase-ems-final-poster.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reels = [
