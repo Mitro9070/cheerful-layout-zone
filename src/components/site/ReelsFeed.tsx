@@ -25,6 +25,15 @@ const reels = [
   { video: underarmsVideo.url, poster: underarmsPoster.url, label: "Лазерная эпиляция подмышек" },
 ];
 
+const mosaicClasses = [
+  "lg:col-span-2 lg:row-span-2",
+  "lg:col-span-2 lg:row-span-2",
+  "lg:col-span-2 lg:row-span-1",
+  "lg:col-span-2 lg:row-span-1",
+  "lg:col-span-3 lg:row-span-2",
+  "lg:col-span-3 lg:row-span-2",
+];
+
 function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -46,9 +55,9 @@ function ReelCard({ reel, index }: { reel: (typeof reels)[number]; index: number
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group relative overflow-hidden rounded-[1.25rem] shadow-soft"
+      className={`group relative overflow-hidden rounded-[1.25rem] shadow-soft ${mosaicClasses[index] ?? ""}`}
     >
-      <div className="aspect-9/16 overflow-hidden">
+      <div className="aspect-9/16 overflow-hidden lg:size-full lg:aspect-auto">
         <video
           ref={videoRef}
           src={reel.video}
@@ -98,7 +107,7 @@ export function ReelsFeed() {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 lg:gap-5">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-6 lg:auto-rows-[13.5rem] lg:gap-5 xl:auto-rows-[14.5rem]">
           {reels.map((r, i) => (
             <ReelCard key={r.label} reel={r} index={i} />
           ))}
