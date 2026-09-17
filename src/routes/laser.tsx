@@ -98,9 +98,11 @@ function LaserPage() {
           </h2>
         </Reveal>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <BeforeAfter before={studio} after={laserImg} label="Подмышки, 4 процедуры" />
-          <BeforeAfter before={laserImg} after={studio} label="Голени, 5 процедур" />
-          <BeforeAfter before={studio} after={laserImg} label="Глубокое бикини, 6 процедур" />
+          {clientResults.map((result, index) => (
+            <Reveal key={result.src} delay={Math.min(index, 5) * 0.06} className="h-full">
+              <ClientResultCard result={result} />
+            </Reveal>
+          ))}
         </div>
       </section>
 
