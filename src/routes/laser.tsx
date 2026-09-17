@@ -12,7 +12,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { faq, lasers } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { equipmentPhotos, laserWorkPhotos } from "@/data/photos";
-import laserImg from "@/assets/service-laser.jpg";
+import laserImgAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
 
 export const Route = createFileRoute("/laser")({
