@@ -2,12 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { loyalty } from "@/data/site";
 import studioCertificates from "@/assets/photo/studio/certificates.jpg.asset.json";
 import { Reveal } from "./Reveal";
+import { CardCarousel } from "./CardCarousel";
 
 export function Loyalty() {
   return (
     <section className="relative overflow-hidden border-y border-border bg-secondary/40 py-20 md:py-28">
       <div className="absolute inset-0 z-0 opacity-[0.07] grayscale">
-        <img src={studioCertificates.url} alt="" className="size-full object-cover" />
+        <img src={studioCertificates.url} alt="" className="photo-tone size-full object-cover" />
       </div>
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-10">
         <div className="max-w-2xl">
@@ -21,7 +22,8 @@ export function Loyalty() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12">
+          <CardCarousel label="Клубная карта и сертификаты" itemClassName="h-auto">
           {loyalty.map((l, i) => (
             <Reveal key={l.title} delay={0.07 * i}>
               <div className="flex h-full flex-col rounded-[1.5rem] border border-border bg-card p-7 shadow-soft">
@@ -32,6 +34,7 @@ export function Loyalty() {
               </div>
             </Reveal>
           ))}
+          </CardCarousel>
         </div>
 
         <Reveal delay={0.2}>

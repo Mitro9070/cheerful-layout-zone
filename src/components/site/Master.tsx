@@ -28,7 +28,7 @@ export function Master() {
               width={1200}
               height={1408}
               style={{ y }}
-              className="aspect-4/5 w-full scale-110 object-cover"
+              className="photo-tone aspect-4/5 w-full scale-110 object-cover"
             />
             <div className="glass-card absolute bottom-6 left-6 rounded-2xl px-5 py-4">
               <div className="eyebrow">студия в Истре</div>

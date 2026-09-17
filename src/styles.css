@@ -35,8 +35,6 @@
   --color-gold-soft: var(--gold-soft);
   --color-blush: var(--blush);
   --color-sand: var(--sand);
-  --color-wine: var(--wine);
-  --color-wine-foreground: var(--wine-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -83,8 +81,6 @@
   --gold-soft: oklch(0.88 0.05 82);
   --blush: oklch(0.93 0.028 30);
   --sand: oklch(0.918 0.022 80);
-  --wine: oklch(0.36 0.105 18);
-  --wine-foreground: oklch(0.97 0.012 78);
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0.008 84);
@@ -162,6 +158,18 @@
   background-image: var(--gradient-gold);
   background-clip: text;
   color: transparent;
+}
+
+@utility photo-tone {
+  filter: sepia(0.1) saturate(0.86) contrast(0.96) brightness(1.025);
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @utility eyebrow {
