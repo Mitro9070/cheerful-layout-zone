@@ -4,7 +4,6 @@ import { Complexes } from "@/components/site/Complexes";
 import { ZoneMatrix } from "@/components/site/ZoneMatrix";
 import { Abonements } from "@/components/site/Abonements";
 import { Faq } from "@/components/site/Faq";
-import { BeforeAfter } from "@/components/site/BeforeAfter";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { ReelsFeed } from "@/components/site/ReelsFeed";
 import { LaserVideo } from "@/components/site/LaserVideo";
@@ -12,8 +11,9 @@ import { Reveal } from "@/components/site/Reveal";
 import { faq, lasers } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { equipmentPhotos, laserWorkPhotos } from "@/data/photos";
-import laserImg from "@/assets/service-laser.jpg";
-import studio from "@/assets/studio.jpg";
+import { ClientResultCard } from "@/components/site/ClientResultCard";
+import { clientResults } from "@/data/clientResults";
+import laserImgAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
 
 export const Route = createFileRoute("/laser")({
   head: () => ({
@@ -45,7 +45,7 @@ function LaserPage() {
         title="Гладкость, которая"
         accent="остаётся"
         text="Everlas 1800 Вт и Magic One 4000 Вт позволяют подобрать параметры под тип волос и фототип кожи. Цены на зоны, комплексы и курсы собраны на этой странице."
-        image={laserImg}
+        image={laserImgAsset.url}
       />
 
       <LaserVideo />
@@ -98,9 +98,11 @@ function LaserPage() {
           </h2>
         </Reveal>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <BeforeAfter before={studio} after={laserImg} label="Подмышки, 4 процедуры" />
-          <BeforeAfter before={laserImg} after={studio} label="Голени, 5 процедур" />
-          <BeforeAfter before={studio} after={laserImg} label="Глубокое бикини, 6 процедур" />
+          {clientResults.map((result, index) => (
+            <Reveal key={result.src} delay={Math.min(index, 5) * 0.06} className="h-full">
+              <ClientResultCard result={result} />
+            </Reveal>
+          ))}
         </div>
       </section>
 
