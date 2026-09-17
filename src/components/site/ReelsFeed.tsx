@@ -1,17 +1,21 @@
 import { motion } from "motion/react";
 import { Instagram, Play } from "lucide-react";
 import { site } from "@/data/site";
-import laser from "@/assets/service-laser.jpg";
-import sugaring from "@/assets/service-sugaring.jpg";
-import body from "@/assets/service-body.jpg";
-import studio from "@/assets/studio.jpg";
+import laserVideo from "@/assets/reels/showcase-laser.mp4.asset.json";
+import laserPoster from "@/assets/reels/showcase-laser-poster.jpg.asset.json";
+import sugaringVideo from "@/assets/reels/showcase-sugaring.mp4.asset.json";
+import sugaringPoster from "@/assets/reels/showcase-sugaring-poster.jpg.asset.json";
+import bodyVideo from "@/assets/reels/showcase-body.mp4.asset.json";
+import bodyPoster from "@/assets/reels/showcase-body-poster.jpg.asset.json";
+import emsVideo from "@/assets/reels/showcase-ems.mp4.asset.json";
+import emsPoster from "@/assets/reels/showcase-ems-poster.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reels = [
-  { img: laser, label: "Как проходит лазер" },
-  { img: sugaring, label: "Шугаринг без боли" },
-  { img: body, label: "Вакуум: 1 сеанс" },
-  { img: studio, label: "Наш кабинет" },
+  { video: laserVideo.url, poster: laserPoster.url, label: "Лазер Magic One" },
+  { video: sugaringVideo.url, poster: sugaringPoster.url, label: "Шугаринг в студии" },
+  { video: bodyVideo.url, poster: bodyPoster.url, label: "Аппаратный уход за телом" },
+  { video: emsVideo.url, poster: emsPoster.url, label: "EMS-тренировка" },
 ];
 
 export function ReelsFeed() {
@@ -41,11 +45,8 @@ export function ReelsFeed() {
 
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0">
           {reels.map((r, i) => (
-            <motion.a
+            <motion.article
               key={r.label}
-              href={site.instagram}
-              target="_blank"
-              rel="noreferrer"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -53,19 +54,24 @@ export function ReelsFeed() {
               className="group relative w-[68%] shrink-0 snap-start overflow-hidden rounded-[1.25rem] md:w-auto"
             >
               <div className="aspect-9/16 overflow-hidden">
-                <img
-                  src={r.img}
-                  alt={r.label}
-                  loading="lazy"
+                <video
+                  src={r.video}
+                  poster={r.poster}
+                  aria-label={r.label}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
                   className="size-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/65 to-transparent" />
-              <span className="absolute top-4 left-4 grid size-9 place-items-center rounded-full bg-background/85">
+              <span aria-hidden="true" className="absolute top-4 left-4 grid size-9 place-items-center rounded-full bg-background/85">
                 <Play className="size-3.5" />
               </span>
               <span className="absolute inset-x-4 bottom-4 text-sm text-background">{r.label}</span>
-            </motion.a>
+            </motion.article>
           ))}
         </div>
       </div>
