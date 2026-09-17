@@ -18,7 +18,7 @@ import { Reveal } from "./Reveal";
 
 const reels = [
   { video: laserVideo.url, poster: laserPoster.url, label: "Подготовка к процедуре" },
-  { video: magicVideo.url, poster: magicPoster.url, label: "Лазерная эпиляция спины" },
+  { video: magicVideo.url, poster: magicPoster.url, label: "Аппаратная коррекция спины" },
   { video: bodySetupVideo.url, poster: bodySetupPoster.url, label: "Настройка аппарата" },
   { video: emsVideo.url, poster: emsPoster.url, label: "EMSculpt" },
   { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Аппаратная коррекция фигуры" },
