@@ -126,7 +126,7 @@ export const offerPhotos: Photo[] = [
 ];
 
 export const complexPhotos: Photo[] = [
-  p(workUnderarms2, "Лазерная эпиляция подмышек"),
+  p(teamMasterLaserRoom, "Мастер лазерной эпиляции в кабинете студии"),
   p(workLaserLeg, "Лазерная эпиляция ног крупным планом"),
   p(workMasterHandpiece, "Мастер проводит лазерную эпиляцию"),
   p(workLegsPulse, "Процедура лазерной эпиляции ног"),
