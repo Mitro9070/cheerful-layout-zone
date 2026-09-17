@@ -45,7 +45,7 @@ function LaserPage() {
         title="Гладкость, которая"
         accent="остаётся"
         text="Everlas 1800 Вт и Magic One 4000 Вт позволяют подобрать параметры под тип волос и фототип кожи. Цены на зоны, комплексы и курсы собраны на этой странице."
-        image={laserImg}
+        image={laserImgAsset.url}
       />
 
       <LaserVideo />
