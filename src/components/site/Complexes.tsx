@@ -6,6 +6,7 @@ import { lasers, legalNote } from "@/data/site";
 import { complexPhotos } from "@/data/photos";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
+import { CardCarousel } from "./CardCarousel";
 
 export function Complexes() {
   const [activeId, setActiveId] = useState(lasers[0]!.id);
@@ -85,7 +86,7 @@ export function Complexes() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/45 via-transparent to-transparent" />
               </div>
-              <div className="flex flex-1 flex-col p-7 md:p-8">
+              <div className="flex flex-1 flex-col p-6 md:p-7">
               <span className="h-7">
                 {c.badge && (
                   <span
@@ -98,7 +99,7 @@ export function Complexes() {
                 )}
               </span>
 
-              <h3 className="mt-5 font-display text-3xl leading-tight md:text-4xl">{c.name}</h3>
+              <h3 className="mt-4 font-display text-2xl leading-tight md:text-3xl">{c.name}</h3>
               <p className={`mt-2 text-[15px] ${c.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>{c.subtitle}</p>
 
               <ul className="mt-6 space-y-2.5 text-[15px]">
@@ -123,7 +124,7 @@ export function Complexes() {
               <div className={`mt-6 space-y-3 border-t pt-6 ${c.featured ? "border-primary-foreground/20" : "border-border"}`}>
                 <div className="flex items-baseline justify-between gap-4">
                   <span className="text-sm text-muted-foreground">Цена первого визита</span>
-                  <span className="font-display text-3xl text-gold">{c.first}</span>
+                  <span className="font-display text-2xl text-gold">{c.first}</span>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
                   <span className="text-sm text-muted-foreground">Обычная цена комплекса</span>
@@ -148,6 +149,7 @@ export function Complexes() {
               </div>
             </article>
           ))}
+          </CardCarousel>
         </motion.div>
       </AnimatePresence>
 
