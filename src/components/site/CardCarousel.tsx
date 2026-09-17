@@ -31,8 +31,8 @@ export function CardCarousel({ children, itemClassName, label }: Props) {
     const card = track?.firstElementChild as HTMLElement | null;
     if (!track || !card) return;
     const maxScroll = track.scrollWidth - track.clientWidth;
-    setAtStart(track.scrollLeft <= 4);
-    setAtEnd(track.scrollLeft >= maxScroll - 4);
+    setAtStart(track.scrollLeft <= 24);
+    setAtEnd(track.scrollLeft >= maxScroll - 24);
     setActive(
       Math.min(items.length - 1, Math.max(0, Math.round(track.scrollLeft / (card.offsetWidth + 20)))),
     );
