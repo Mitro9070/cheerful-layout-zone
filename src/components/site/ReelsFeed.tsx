@@ -16,8 +16,8 @@ import underarmsVideo from "@/assets/reels/showcase-vitrine-underarms.mp4.asset.
 import underarmsPoster from "@/assets/reels/showcase-vitrine-underarms-poster.jpg.asset.json";
 import electroVideo from "@/assets/reels/reel-7559-720.mp4.asset.json";
 import electroPoster from "@/assets/reels/reel-7559-poster.jpg.asset.json";
-import electroPrepVideo from "@/assets/reels/reel-7558-720.mp4.asset.json";
-import electroPrepPoster from "@/assets/reels/reel-7558-poster.jpg.asset.json";
+import magicScreenVideo from "@/assets/reels/reel-magic-one-screen-720.mp4.asset.json";
+import magicScreenPoster from "@/assets/reels/reel-magic-one-screen-poster.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reels = [
@@ -28,7 +28,7 @@ const reels = [
   { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Аппаратная коррекция фигуры" },
   { video: underarmsVideo.url, poster: underarmsPoster.url, label: "Лазерная эпиляция подмышек" },
   { video: electroVideo.url, poster: electroPoster.url, label: "Электроэпиляция" },
-  { video: electroPrepVideo.url, poster: electroPrepPoster.url, label: "Подготовка к электроэпиляции" },
+  { video: magicScreenVideo.url, poster: magicScreenPoster.url, label: "Настройка Magic One" },
 ];
 
 const mosaicClasses = [
