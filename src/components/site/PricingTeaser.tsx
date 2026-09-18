@@ -6,7 +6,7 @@ import { openPriceDrawer } from "./PriceDrawer";
 import { pricingTopNote } from "@/data/site";
 
 const highlights = [
-  { label: "Первый визит", value: "от 1 450 ₽" },
+  { label: "Электроэпиляция", value: "от 1 200 ₽" },
   { label: "Лазер новым клиентам", value: "−50%" },
   { label: "Шугаринг новым клиентам", value: "−10%" },
   { label: "Коррекция фигуры", value: "от 1 300 ₽" },

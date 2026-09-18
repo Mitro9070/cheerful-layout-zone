@@ -4,8 +4,6 @@ import { PriceTable } from "@/components/site/PriceTable";
 import { BookingWidget } from "@/components/site/BookingWidget";
 import { Reveal } from "@/components/site/Reveal";
 import {
-  electroNote,
-  electroRows,
   legalNote,
   sugaringAbonements,
   sugaringComplexes,
@@ -18,16 +16,16 @@ import sugaringHero from "@/assets/photo/services/sugaring-paste-new.jpg.asset.j
 export const Route = createFileRoute("/sugaring")({
   head: () => ({
     meta: [
-      { title: "Шугаринг и электроэпиляция в Истре: цены" },
+      { title: "Шугаринг и воск в Истре: цены | «Импульс»" },
       {
         name: "description",
         content:
-          "Шугаринг и восковая депиляция в Истре: комплексы от 2 600 ₽, абонементы на 5 процедур, отдельные зоны. Электроэпиляция пакетами с иглой в цене.",
+          "Шугаринг и восковая депиляция в Истре: комплексы от 2 600 ₽, абонементы на 5 процедур и цены на отдельные зоны.",
       },
-      { property: "og:title", content: "Шугаринг и электроэпиляция в Истре" },
+      { property: "og:title", content: "Шугаринг и воск в Истре" },
       {
         property: "og:description",
-        content: "Комплексы шугаринга, абонементы с выгодой до 3 500 ₽ и электроэпиляция для светлых и седых волос.",
+        content: "Комплексы шугаринга, отдельные зоны и абонементы на пять процедур с выгодой до 3 500 ₽.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -38,27 +36,20 @@ export const Route = createFileRoute("/sugaring")({
 
 const compare = [
   {
-    title: "Лазер",
-    text: "Подходит для тёмных волос и больших зон. Для заметного сокращения роста волос требуется курс, длительность которого зависит от зоны и особенностей организма.",
-  },
-  {
     title: "Шугаринг",
     text: "Удаляет волосы разных оттенков и плотности. Эффект заметен сразу, а длительность гладкости индивидуальна.",
   },
-  {
-    title: "Электроэпиляция",
-    text: "Подходит для светлых и седых волос, на которые не действует лазер. Каждый волос обрабатывается отдельно.",
-  },
+  { title: "Плёночный воск", text: "Подходит для быстрого удаления волос на разных зонах. Материал и техника подбираются с учётом чувствительности кожи." },
 ];
 
 function SugaringPage() {
   return (
     <div>
       <PageHero
-        eyebrow="шугаринг · электроэпиляция"
+        eyebrow="шугаринг · воск"
         title="Гладкая кожа"
         accent="с бережным уходом"
-        text="Шугаринг и восковая депиляция для быстрого результата. Электроэпиляция подходит для точечной работы, в том числе со светлыми и седыми волосами."
+        text="Шугаринг и восковая депиляция для быстрого результата. Состав и способ работы мастер подбирает под зону и чувствительность кожи."
         image={sugaringHero.url}
       />
 
@@ -71,7 +62,7 @@ function SugaringPage() {
       />
 
       <section className="mx-auto max-w-6xl px-5 md:px-10">
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2">
           {compare.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.1}>
               <div className="h-full rounded-2xl border border-border bg-card/70 p-6">
@@ -101,16 +92,12 @@ function SugaringPage() {
           <PriceTable rows={sugaringComplexes} title="Комплексы шугаринга" />
           <PriceTable rows={sugaringAbonements} title="Абонементы, 5 процедур (−15%)" />
           <PriceTable rows={sugaringRows} title="Отдельные зоны" />
-          <div>
-            <PriceTable rows={electroRows} title="Пакеты электроэпиляции" />
-            <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">{electroNote}</p>
-          </div>
         </div>
 
         <p className="mt-8 max-w-3xl text-xs leading-relaxed text-muted-foreground">{legalNote}</p>
 
         <div className="py-20 md:py-28">
-          <BookingWidget defaultService="Шугаринг и воск" />
+          <BookingWidget defaultService="Шугаринг" />
         </div>
       </section>
     </div>

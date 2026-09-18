@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BodyRouteImport } from './routes/body'
 import { Route as ContactsRouteImport } from './routes/contacts'
+import { Route as ElectroRouteImport } from './routes/electro'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as LaserRouteImport } from './routes/laser'
 import { Route as MenRouteImport } from './routes/men'
@@ -39,6 +40,11 @@ const BodyRoute = BodyRouteImport.update({
 const ContactsRoute = ContactsRouteImport.update({
   id: '/contacts',
   path: '/contacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ElectroRoute = ElectroRouteImport.update({
+  id: '/electro',
+  path: '/electro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/body': typeof BodyRoute
   '/contacts': typeof ContactsRoute
+  '/electro': typeof ElectroRoute
   '/gallery': typeof GalleryRoute
   '/laser': typeof LaserRoute
   '/men': typeof MenRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/body': typeof BodyRoute
   '/contacts': typeof ContactsRoute
+  '/electro': typeof ElectroRoute
   '/gallery': typeof GalleryRoute
   '/laser': typeof LaserRoute
   '/men': typeof MenRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/body': typeof BodyRoute
   '/contacts': typeof ContactsRoute
+  '/electro': typeof ElectroRoute
   '/gallery': typeof GalleryRoute
   '/laser': typeof LaserRoute
   '/men': typeof MenRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/body'
     | '/contacts'
+    | '/electro'
     | '/gallery'
     | '/laser'
     | '/men'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/body'
     | '/contacts'
+    | '/electro'
     | '/gallery'
     | '/laser'
     | '/men'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/body'
     | '/contacts'
+    | '/electro'
     | '/gallery'
     | '/laser'
     | '/men'
@@ -164,6 +176,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BodyRoute: typeof BodyRoute
   ContactsRoute: typeof ContactsRoute
+  ElectroRoute: typeof ElectroRoute
   GalleryRoute: typeof GalleryRoute
   LaserRoute: typeof LaserRoute
   MenRoute: typeof MenRoute
@@ -201,6 +214,13 @@ declare module '@tanstack/react-router' {
       path: '/contacts'
       fullPath: '/contacts'
       preLoaderRoute: typeof ContactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/electro': {
+      id: '/electro'
+      path: '/electro'
+      fullPath: '/electro'
+      preLoaderRoute: typeof ElectroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -260,6 +280,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BodyRoute: BodyRoute,
   ContactsRoute: ContactsRoute,
+  ElectroRoute: ElectroRoute,
   GalleryRoute: GalleryRoute,
   LaserRoute: LaserRoute,
   MenRoute: MenRoute,

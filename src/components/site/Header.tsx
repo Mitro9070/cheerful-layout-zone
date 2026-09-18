@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 const links = [
   { to: "/laser", label: "Лазер" },
   { to: "/sugaring", label: "Шугаринг" },
+  { to: "/electro", label: "Электроэпиляция" },
   { to: "/body", label: "Фигура" },
   { to: "/men", label: "Мужчинам" },
   { to: "/gallery", label: "До / После" },
