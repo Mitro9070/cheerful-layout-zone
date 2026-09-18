@@ -4,7 +4,8 @@ import { site } from "@/data/site";
 
 const nav = [
   { to: "/laser", label: "Лазерная эпиляция" },
-  { to: "/sugaring", label: "Шугаринг и электроэпиляция" },
+  { to: "/sugaring", label: "Шугаринг и воск" },
+  { to: "/electro", label: "Электроэпиляция" },
   { to: "/body", label: "Коррекция фигуры" },
   { to: "/men", label: "Для мужчин" },
   { to: "/gallery", label: "До / После" },

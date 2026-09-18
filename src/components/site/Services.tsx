@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import laserAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
 import sugaringAsset from "@/assets/photo/services/sugaring-paste-new.jpg.asset.json";
 import bodyAsset from "@/assets/photo/services/body-equipment-new.jpg.asset.json";
+import electroAsset from "@/assets/photo/electro/electro-process.jpg.asset.json";
 import { Reveal, RevealText } from "./Reveal";
 
 const services = [
@@ -29,6 +30,15 @@ const services = [
   },
   {
     n: "03",
+    title: "Электроэпиляция",
+    to: "/electro",
+    price: "от 1 200 ₽",
+    text: "Точечная работа с отдельными волосами, включая светлые и седые. Одноразовая игла включена в пакеты.",
+    img: electroAsset.url,
+    alt: "Процедура электроэпиляции в студии «Импульс»",
+  },
+  {
+    n: "04",
     title: "Коррекция фигуры",
     to: "/body",
     price: "от 1 500 ₽",
@@ -60,7 +70,7 @@ export function Services() {
         </Reveal>
       </div>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {services.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.12}>
             <MotionLink

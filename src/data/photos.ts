@@ -42,6 +42,10 @@ import studioCertificatesShelf from "@/assets/photo/studio/certificates-shelf.jp
 import studioPaste from "@/assets/photo/studio/sugaring-paste.jpg.asset.json";
 import studioPasteJar from "@/assets/photo/studio/sugaring-paste-jar.jpg.asset.json";
 
+import electroMaster from "@/assets/photo/electro/electro-master.jpg.asset.json";
+import electroNeedle from "@/assets/photo/electro/electro-needle.jpg.asset.json";
+import electroProcess from "@/assets/photo/electro/electro-process.jpg.asset.json";
+
 export type Photo = { src: string; alt: string };
 
 const p = (a: { url: string }, alt: string): Photo => ({ src: a.url, alt });
@@ -144,6 +148,12 @@ export const studioPhotos: Photo[] = [
   p(studioLaserRoom, "Кабинет лазерной эпиляции студии «Импульс» в Истре"),
   p(studioCertificates, "Сертификаты специалистов студии «Импульс»"),
   p(studioCertificatesShelf, "Полка с сертификатами и декором в студии"),
+];
+
+export const electroPhotos: Photo[] = [
+  p(electroMaster, "Мастер студии проводит электроэпиляцию"),
+  p(electroNeedle, "Подготовка одноразовой иглы для электроэпиляции"),
+  p(electroProcess, "Точечная обработка волос во время электроэпиляции"),
 ];
 
 export const heroTeamPhoto = p(teamTrio, "Команда студии «Импульс» в Истре");

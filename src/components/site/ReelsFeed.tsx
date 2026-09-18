@@ -14,6 +14,10 @@ import bodyLegsVideo from "@/assets/reels/showcase-vitrine-body-legs.mp4.asset.j
 import bodyLegsPoster from "@/assets/reels/showcase-vitrine-body-legs-poster.jpg.asset.json";
 import underarmsVideo from "@/assets/reels/showcase-vitrine-underarms.mp4.asset.json";
 import underarmsPoster from "@/assets/reels/showcase-vitrine-underarms-poster.jpg.asset.json";
+import electroVideo from "@/assets/reels/reel-7559-720.mp4.asset.json";
+import electroPoster from "@/assets/reels/reel-7559-poster.jpg.asset.json";
+import electroPrepVideo from "@/assets/reels/reel-7558-720.mp4.asset.json";
+import electroPrepPoster from "@/assets/reels/reel-7558-poster.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const reels = [
@@ -23,6 +27,8 @@ const reels = [
   { video: emsVideo.url, poster: emsPoster.url, label: "EMSculpt" },
   { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Аппаратная коррекция фигуры" },
   { video: underarmsVideo.url, poster: underarmsPoster.url, label: "Лазерная эпиляция подмышек" },
+  { video: electroVideo.url, poster: electroPoster.url, label: "Электроэпиляция" },
+  { video: electroPrepVideo.url, poster: electroPrepPoster.url, label: "Подготовка к электроэпиляции" },
 ];
 
 const mosaicClasses = [
@@ -30,6 +36,8 @@ const mosaicClasses = [
   "lg:col-span-2 lg:row-span-2",
   "lg:col-span-2 lg:row-span-1",
   "lg:col-span-2 lg:row-span-1",
+  "lg:col-span-3 lg:row-span-2",
+  "lg:col-span-3 lg:row-span-2",
   "lg:col-span-3 lg:row-span-2",
   "lg:col-span-3 lg:row-span-2",
 ];
