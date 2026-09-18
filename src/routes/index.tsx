@@ -21,7 +21,7 @@ import { teamMemberPhotos, equipmentPhotos } from "@/data/photos";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Импульс: лазерная эпиляция и уход за телом" },
+      { title: "Импульс: лазерная и электроэпиляция в Истре" },
       {
         name: "description",
         content:
