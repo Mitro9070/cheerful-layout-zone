@@ -24,3 +24,7 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Медиафайлы
+
+Все используемые фото и видео хранятся в репозитории в `public/__l5e/assets-v1/...` по тем же путям, что указаны в `src/assets/**/*.asset.json`. Проект собирается и запускается без внешнего хранилища: `bun install && bun run dev`.
