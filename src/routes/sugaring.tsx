@@ -11,7 +11,7 @@ import {
 } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { sugaringWorkPhotos, teamSugaringPhotos } from "@/data/photos";
-import sugaringHero from "@/assets/photo/services/sugaring-paste-new.jpg.asset.json";
+import sugaringHero from "@/assets/photo/services/sugaring-paste-new.jpg";
 
 export const Route = createFileRoute("/sugaring")({
   head: () => ({
@@ -50,7 +50,7 @@ function SugaringPage() {
         title="Гладкая кожа"
         accent="с бережным уходом"
         text="Шугаринг и восковая депиляция для быстрого результата. Состав и способ работы мастер подбирает под зону и чувствительность кожи."
-        image={sugaringHero.url}
+        image={sugaringHero}
       />
 
       <PhotoGrid

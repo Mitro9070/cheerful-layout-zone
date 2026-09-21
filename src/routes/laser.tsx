@@ -13,7 +13,7 @@ import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { equipmentPhotos, laserWorkPhotos } from "@/data/photos";
 import { ClientResultCard } from "@/components/site/ClientResultCard";
 import { clientResults } from "@/data/clientResults";
-import laserImgAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
+import laserImgAsset from "@/assets/photo/services/laser-procedure-new.jpg";
 
 export const Route = createFileRoute("/laser")({
   head: () => ({
@@ -45,7 +45,7 @@ function LaserPage() {
         title="Гладкость, которая"
         accent="остаётся"
         text="Everlas 1800 Вт и Magic One 4000 Вт позволяют подобрать параметры под тип волос и фототип кожи. Цены на зоны, комплексы и курсы собраны на этой странице."
-        image={laserImgAsset.url}
+        image={laserImgAsset}
       />
 
       <LaserVideo />

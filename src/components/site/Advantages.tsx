@@ -1,12 +1,12 @@
 import { advantages } from "@/data/site";
-import workGelHands from "@/assets/photo/work/gel-hands.jpg.asset.json";
+import workGelHands from "@/assets/photo/work/gel-hands.jpg";
 import { Reveal } from "./Reveal";
 
 export function Advantages() {
   return (
     <section className="relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
       <div className="absolute -right-20 top-1/2 z-0 hidden size-96 -translate-y-1/2 opacity-[0.04] lg:block">
-        <img src={workGelHands.url} alt="" className="photo-tone size-full rounded-full object-cover" />
+        <img src={workGelHands} alt="" className="photo-tone size-full rounded-full object-cover" />
       </div>
       <Reveal>
         <span className="eyebrow">почему «Импульс»</span>

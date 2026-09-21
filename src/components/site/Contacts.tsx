@@ -1,5 +1,5 @@
 import { Clock, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/impulse-logo.png.asset.json";
+import logo from "@/assets/impulse-logo.png";
 import { site } from "@/data/site";
 import { Reveal } from "./Reveal";
 
@@ -83,7 +83,7 @@ export function Contacts() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 py-10 md:flex-row md:px-10">
-          <img src={logo.url} alt="Студия Импульс" className="h-5 w-auto opacity-70" />
+          <img src={logo} alt="Студия Импульс" className="h-5 w-auto opacity-70" />
           <p className="text-[10px] tracking-[0.24em] text-muted-foreground uppercase">
             © {new Date().getFullYear()} Студия красивого тела «Импульс», Истра
           </p>
