@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
-import reel720 from "@/assets/hero-reel-720.mp4.asset.json";
-import reel1080 from "@/assets/hero-reel-1080.mp4.asset.json";
-import poster from "@/assets/hero-reel-poster.jpg.asset.json";
+import reel720 from "@/assets/hero-reel-720.mp4";
+import reel1080 from "@/assets/hero-reel-1080.mp4";
+import poster from "@/assets/hero-reel-poster.jpg";
 
 
 export function Hero() {
@@ -22,7 +22,7 @@ export function Hero() {
       <motion.div style={{ y: videoY }} className="absolute inset-0 -z-10 size-full">
         <video
           className="size-full scale-105 object-cover object-center"
-          poster={poster.url}
+          poster={poster}
           autoPlay
           muted
           loop
@@ -30,8 +30,8 @@ export function Hero() {
           preload="metadata"
           aria-label="Процедуры студии красивого тела «Импульс» в Истре"
         >
-          <source src={reel720.url} type="video/mp4" media="(max-width: 900px)" />
-          <source src={reel1080.url} type="video/mp4" />
+          <source src={reel720} type="video/mp4" media="(max-width: 900px)" />
+          <source src={reel1080} type="video/mp4" />
         </video>
       </motion.div>
 

@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Reveal } from "./Reveal";
-import videoAsset from "@/assets/magic-one-720.mp4.asset.json";
-import posterAsset from "@/assets/magic-one-poster.jpg.asset.json";
+import videoAsset from "@/assets/magic-one-720.mp4";
+import posterAsset from "@/assets/magic-one-poster.jpg";
 
 const points = [
   { title: "Magic One, 4000 Вт", text: "Мощный диодный лазер с сапфировым охлаждением манипулы." },
@@ -22,8 +22,8 @@ export function LaserVideo() {
         >
           <video
             className="aspect-9/16 size-full object-cover"
-            poster={posterAsset.url}
-            src={videoAsset.url}
+            poster={posterAsset}
+            src={videoAsset}
             autoPlay
             muted
             loop

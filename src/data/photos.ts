@@ -1,54 +1,54 @@
-// Реальные фото студии «Импульс» (фотосессия), хранятся на CDN через asset-указатели.
-import teamTrio from "@/assets/photo/team/trio.jpg.asset.json";
-import teamTrioGoggles from "@/assets/photo/team/trio-goggles.jpg.asset.json";
-import teamMasterMagic from "@/assets/photo/team/master-magic.jpg.asset.json";
-import teamMasterMagicHandpiece from "@/assets/photo/team/master-magic-handpiece.jpg.asset.json";
-import teamMasterPortrait from "@/assets/photo/team/master-portrait.jpg.asset.json";
-import teamMasterLaserRoom from "@/assets/photo/team/master-laser-room.jpg.asset.json";
-import teamMasterCouch from "@/assets/photo/team/master-couch.jpg.asset.json";
-import teamMasterSmile from "@/assets/photo/team/master-smile.jpg.asset.json";
-import teamMasterSugaring from "@/assets/photo/team/master-sugaring.jpg.asset.json";
-import teamMasterWax from "@/assets/photo/team/master-wax.jpg.asset.json";
-import teamMasterWaxTwo from "@/assets/photo/team/master-wax-two.jpg.asset.json";
-import teamMasterPaste from "@/assets/photo/team/master-paste.jpg.asset.json";
-import teamDuoEmslim from "@/assets/photo/team/duo-emslim.jpg.asset.json";
-import teamDuoTurbo from "@/assets/photo/team/duo-turbo-g5.jpg.asset.json";
-import teamMasterTurbo from "@/assets/photo/team/master-turbo-g5.jpg.asset.json";
+// Реальные фото студии «Импульс» (фотосессия), файлы лежат в src/assets.
+import teamTrio from "@/assets/photo/team/trio.jpg";
+import teamTrioGoggles from "@/assets/photo/team/trio-goggles.jpg";
+import teamMasterMagic from "@/assets/photo/team/master-magic.jpg";
+import teamMasterMagicHandpiece from "@/assets/photo/team/master-magic-handpiece.jpg";
+import teamMasterPortrait from "@/assets/photo/team/master-portrait.jpg";
+import teamMasterLaserRoom from "@/assets/photo/team/master-laser-room.jpg";
+import teamMasterCouch from "@/assets/photo/team/master-couch.jpg";
+import teamMasterSmile from "@/assets/photo/team/master-smile.jpg";
+import teamMasterSugaring from "@/assets/photo/team/master-sugaring.jpg";
+import teamMasterWax from "@/assets/photo/team/master-wax.jpg";
+import teamMasterWaxTwo from "@/assets/photo/team/master-wax-two.jpg";
+import teamMasterPaste from "@/assets/photo/team/master-paste.jpg";
+import teamDuoEmslim from "@/assets/photo/team/duo-emslim.jpg";
+import teamDuoTurbo from "@/assets/photo/team/duo-turbo-g5.jpg";
+import teamMasterTurbo from "@/assets/photo/team/master-turbo-g5.jpg";
 
-import eqMagicOne from "@/assets/photo/equipment/magic-one.jpg.asset.json";
-import eqMagicFull from "@/assets/photo/equipment/magic-full.jpg.asset.json";
-import eqMagicScreen from "@/assets/photo/equipment/magic-screen.jpg.asset.json";
-import eqMagicAlt from "@/assets/photo/equipment/magic-one-alt.jpg.asset.json";
-import eqEmslim from "@/assets/photo/equipment/emslim-neo.jpg.asset.json";
-import eqTurbo from "@/assets/photo/equipment/turbo-g5.jpg.asset.json";
+import eqMagicOne from "@/assets/photo/equipment/magic-one.jpg";
+import eqMagicFull from "@/assets/photo/equipment/magic-full.jpg";
+import eqMagicScreen from "@/assets/photo/equipment/magic-screen.jpg";
+import eqMagicAlt from "@/assets/photo/equipment/magic-one-alt.jpg";
+import eqEmslim from "@/assets/photo/equipment/emslim-neo.jpg";
+import eqTurbo from "@/assets/photo/equipment/turbo-g5.jpg";
 
-import workLaserProcedure from "@/assets/photo/work/laser-procedure.jpg.asset.json";
-import workMasterHandpiece from "@/assets/photo/work/master-handpiece.jpg.asset.json";
-import workHandpieceScreen from "@/assets/photo/work/handpiece-screen.jpg.asset.json";
-import workHandpiecePoint from "@/assets/photo/work/handpiece-point.jpg.asset.json";
-import workSettings from "@/assets/photo/work/settings.jpg.asset.json";
-import workUnderarms1 from "@/assets/photo/work/underarms-1.jpg.asset.json";
-import workUnderarms2 from "@/assets/photo/work/underarms-2.jpg.asset.json";
-import workLegsPulse from "@/assets/photo/work/legs-pulse.jpg.asset.json";
-import workLegsMaster from "@/assets/photo/work/legs-master.jpg.asset.json";
-import workLaserLeg from "@/assets/photo/work/laser-leg.jpg.asset.json";
-import workGelHands from "@/assets/photo/work/gel-hands.jpg.asset.json";
-import workWaxCartridge from "@/assets/photo/work/wax-cartridge.jpg.asset.json";
-import workMasterGoggles from "@/assets/photo/work/master-laser-goggles.jpg.asset.json";
+import workLaserProcedure from "@/assets/photo/work/laser-procedure.jpg";
+import workMasterHandpiece from "@/assets/photo/work/master-handpiece.jpg";
+import workHandpieceScreen from "@/assets/photo/work/handpiece-screen.jpg";
+import workHandpiecePoint from "@/assets/photo/work/handpiece-point.jpg";
+import workSettings from "@/assets/photo/work/settings.jpg";
+import workUnderarms1 from "@/assets/photo/work/underarms-1.jpg";
+import workUnderarms2 from "@/assets/photo/work/underarms-2.jpg";
+import workLegsPulse from "@/assets/photo/work/legs-pulse.jpg";
+import workLegsMaster from "@/assets/photo/work/legs-master.jpg";
+import workLaserLeg from "@/assets/photo/work/laser-leg.jpg";
+import workGelHands from "@/assets/photo/work/gel-hands.jpg";
+import workWaxCartridge from "@/assets/photo/work/wax-cartridge.jpg";
+import workMasterGoggles from "@/assets/photo/work/master-laser-goggles.jpg";
 
-import studioLaserRoom from "@/assets/photo/studio/laser-room.jpg.asset.json";
-import studioCertificates from "@/assets/photo/studio/certificates.jpg.asset.json";
-import studioCertificatesShelf from "@/assets/photo/studio/certificates-shelf.jpg.asset.json";
-import studioPaste from "@/assets/photo/studio/sugaring-paste.jpg.asset.json";
-import studioPasteJar from "@/assets/photo/studio/sugaring-paste-jar.jpg.asset.json";
+import studioLaserRoom from "@/assets/photo/studio/laser-room.jpg";
+import studioCertificates from "@/assets/photo/studio/certificates.jpg";
+import studioCertificatesShelf from "@/assets/photo/studio/certificates-shelf.jpg";
+import studioPaste from "@/assets/photo/studio/sugaring-paste.jpg";
+import studioPasteJar from "@/assets/photo/studio/sugaring-paste-jar.jpg";
 
-import electroMaster from "@/assets/photo/electro/electro-master.jpg.asset.json";
-import electroNeedle from "@/assets/photo/electro/electro-needle.jpg.asset.json";
-import electroProcess from "@/assets/photo/electro/electro-process.jpg.asset.json";
+import electroMaster from "@/assets/photo/electro/electro-master.jpg";
+import electroNeedle from "@/assets/photo/electro/electro-needle.jpg";
+import electroProcess from "@/assets/photo/electro/electro-process.jpg";
 
 export type Photo = { src: string; alt: string };
 
-const p = (a: { url: string }, alt: string): Photo => ({ src: a.url, alt });
+const p = (src: string, alt: string): Photo => ({ src, alt });
 
 export const teamPhotos: Photo[] = [
   p(teamTrio, "Специалисты студии «Импульс» в кабинете лазерной эпиляции"),

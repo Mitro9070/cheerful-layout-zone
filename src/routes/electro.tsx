@@ -6,11 +6,11 @@ import { BookingWidget } from "@/components/site/BookingWidget";
 import { Reveal } from "@/components/site/Reveal";
 import { electroNote, electroRows, legalNote } from "@/data/site";
 import { electroPhotos } from "@/data/photos";
-import electroHero from "@/assets/photo/electro/electro-master.jpg.asset.json";
-import processVideo from "@/assets/reels/reel-7559-720.mp4.asset.json";
-import processPoster from "@/assets/reels/reel-7559-poster.jpg.asset.json";
-import prepVideo from "@/assets/reels/reel-7558-720.mp4.asset.json";
-import prepPoster from "@/assets/reels/reel-7558-poster.jpg.asset.json";
+import electroHero from "@/assets/photo/electro/electro-master.jpg";
+import processVideo from "@/assets/reels/reel-7559-720.mp4";
+import processPoster from "@/assets/reels/reel-7559-poster.jpg";
+import prepVideo from "@/assets/reels/reel-7558-720.mp4";
+import prepPoster from "@/assets/reels/reel-7558-poster.jpg";
 
 export const Route = createFileRoute("/electro")({
   head: () => ({
@@ -43,7 +43,7 @@ function ElectroPage() {
         title="Точечная работа"
         accent="с каждым волосом"
         text="Электроэпиляция подходит для небольших зон, светлых, седых и оставшихся после курса лазера волос. Мастер подберёт длительность сеанса после консультации."
-        image={electroHero.url}
+        image={electroHero}
       />
 
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-10 md:py-24">
@@ -75,8 +75,8 @@ function ElectroPage() {
         </Reveal>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {[
-            { src: prepVideo.url, poster: prepPoster.url, label: "Подготовка к электроэпиляции" },
-            { src: processVideo.url, poster: processPoster.url, label: "Процесс электроэпиляции" },
+            { src: prepVideo, poster: prepPoster, label: "Подготовка к электроэпиляции" },
+            { src: processVideo, poster: processPoster, label: "Процесс электроэпиляции" },
           ].map((video) => (
             <video key={video.label} src={video.src} poster={video.poster} aria-label={video.label} controls muted playsInline preload="metadata" className="aspect-9/16 max-h-[42rem] w-full rounded-[1.5rem] bg-secondary object-cover shadow-soft" />
           ))}

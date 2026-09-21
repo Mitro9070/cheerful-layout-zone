@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/impulse-logo.png.asset.json";
+import logo from "@/assets/impulse-logo.png";
 import { site } from "@/data/site";
 
 const nav = [
@@ -21,7 +21,7 @@ export function Footer() {
     <footer className="border-t border-border bg-secondary/40 pb-24 lg:pb-0">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-10 md:py-20">
         <div>
-          <img src={logo.url} alt="Студия Импульс" className="h-12 w-auto" />
+          <img src={logo} alt="Студия Импульс" className="h-12 w-auto" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Лазерная эпиляция, шугаринг, электроэпиляция и аппаратный уход за телом в центре Истры.
           </p>

@@ -3,10 +3,10 @@ import { motion } from "motion/react";
 
 const MotionLink = motion.create(Link);
 import { ArrowUpRight } from "lucide-react";
-import laserAsset from "@/assets/photo/services/laser-procedure-new.jpg.asset.json";
-import sugaringAsset from "@/assets/photo/services/sugaring-paste-new.jpg.asset.json";
-import bodyAsset from "@/assets/photo/services/body-equipment-new.jpg.asset.json";
-import electroAsset from "@/assets/photo/electro/electro-process.jpg.asset.json";
+import laserAsset from "@/assets/photo/services/laser-procedure-new.jpg";
+import sugaringAsset from "@/assets/photo/services/sugaring-paste-new.jpg";
+import bodyAsset from "@/assets/photo/services/body-equipment-new.jpg";
+import electroAsset from "@/assets/photo/electro/electro-process.jpg";
 import { Reveal, RevealText } from "./Reveal";
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
     to: "/laser",
     price: "от 700 ₽",
     text: "Everlas 1800 Вт и Magic One 4000 Вт. Отдельные зоны и готовые комплексы для женщин и мужчин.",
-    img: laserAsset.url,
+    img: laserAsset,
     alt: "Лазерная процедура в студии «Импульс»",
   },
   {
@@ -25,7 +25,7 @@ const services = [
     to: "/sugaring",
     price: "от 300 ₽",
     text: "Деликатная сахарная паста и плёночный воск. Идеальная гладкость там, где лазер пока не подходит.",
-    img: sugaringAsset.url,
+    img: sugaringAsset,
     alt: "Сахарная паста для шугаринга в студии «Импульс»",
   },
   {
@@ -34,7 +34,7 @@ const services = [
     to: "/electro",
     price: "от 1 200 ₽",
     text: "Точечная работа с отдельными волосами, включая светлые и седые. Одноразовая игла включена в пакеты.",
-    img: electroAsset.url,
+    img: electroAsset,
     alt: "Процедура электроэпиляции в студии «Импульс»",
   },
   {
@@ -43,7 +43,7 @@ const services = [
     to: "/body",
     price: "от 1 500 ₽",
     text: "Вакуумный и вибрационно-роликовый массаж, микротоки, ЛимфаЛик. Абонементы с выгодой до 10 000 ₽.",
-    img: bodyAsset.url,
+    img: bodyAsset,
     alt: "Манипулы аппарата для коррекции фигуры",
   },
 ];

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Instagram, Menu, Phone, X } from "lucide-react";
-import logo from "@/assets/impulse-logo.png.asset.json";
+import logo from "@/assets/impulse-logo.png";
 import { site } from "@/data/site";
 import { Button } from "@/components/ui/button";
 
@@ -40,7 +40,7 @@ export function Header() {
     >
       <div className="mx-auto grid h-24 max-w-[110rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 md:h-32 md:px-8 2xl:flex 2xl:justify-between 2xl:gap-7">
         <Link to="/" className="flex min-w-0 shrink-0 items-center">
-          <img src={logo.url} alt="Студия Импульс" className="h-auto w-[12.5rem] md:w-[16rem] 2xl:w-[17rem]" />
+          <img src={logo} alt="Студия Импульс" className="h-auto w-[12.5rem] md:w-[16rem] 2xl:w-[17rem]" />
         </Link>
 
         <nav className="hidden items-center gap-5 2xl:flex">
@@ -105,7 +105,7 @@ export function Header() {
               className="ml-auto flex h-[100svh] w-full max-w-xl flex-col overflow-y-auto border-l border-gold/25 bg-background shadow-lift"
             >
               <div className="grid h-24 shrink-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-border px-5 md:h-32 md:px-10">
-                <img src={logo.url} alt="Студия Импульс" className="h-auto w-[12.5rem] md:w-[15rem]" />
+                <img src={logo} alt="Студия Импульс" className="h-auto w-[12.5rem] md:w-[15rem]" />
                 <Button
                   type="button"
                   variant="outline"

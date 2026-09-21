@@ -2,33 +2,33 @@ import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import laserVideo from "@/assets/reels/showcase-vitrine-laser-back.mp4.asset.json";
-import laserPoster from "@/assets/reels/showcase-vitrine-laser-back-poster.jpg.asset.json";
-import magicVideo from "@/assets/reels/showcase-vitrine-magic-back.mp4.asset.json";
-import magicPoster from "@/assets/reels/showcase-vitrine-magic-back-poster.jpg.asset.json";
-import bodySetupVideo from "@/assets/reels/showcase-vitrine-body-setup.mp4.asset.json";
-import bodySetupPoster from "@/assets/reels/showcase-vitrine-body-setup-poster.jpg.asset.json";
-import emsVideo from "@/assets/reels/showcase-vitrine-ems.mp4.asset.json";
-import emsPoster from "@/assets/reels/showcase-vitrine-ems-poster.jpg.asset.json";
-import bodyLegsVideo from "@/assets/reels/showcase-vitrine-body-legs.mp4.asset.json";
-import bodyLegsPoster from "@/assets/reels/showcase-vitrine-body-legs-poster.jpg.asset.json";
-import underarmsVideo from "@/assets/reels/showcase-vitrine-underarms.mp4.asset.json";
-import underarmsPoster from "@/assets/reels/showcase-vitrine-underarms-poster.jpg.asset.json";
-import electroVideo from "@/assets/reels/reel-7559-720.mp4.asset.json";
-import electroPoster from "@/assets/reels/reel-7559-poster.jpg.asset.json";
-import magicScreenVideo from "@/assets/reels/reel-magic-one-screen-720.mp4.asset.json";
-import magicScreenPoster from "@/assets/reels/reel-magic-one-screen-poster.jpg.asset.json";
+import laserVideo from "@/assets/reels/showcase-vitrine-laser-back.mp4";
+import laserPoster from "@/assets/reels/showcase-vitrine-laser-back-poster.jpg";
+import magicVideo from "@/assets/reels/showcase-vitrine-magic-back.mp4";
+import magicPoster from "@/assets/reels/showcase-vitrine-magic-back-poster.jpg";
+import bodySetupVideo from "@/assets/reels/showcase-vitrine-body-setup.mp4";
+import bodySetupPoster from "@/assets/reels/showcase-vitrine-body-setup-poster.jpg";
+import emsVideo from "@/assets/reels/showcase-vitrine-ems.mp4";
+import emsPoster from "@/assets/reels/showcase-vitrine-ems-poster.jpg";
+import bodyLegsVideo from "@/assets/reels/showcase-vitrine-body-legs.mp4";
+import bodyLegsPoster from "@/assets/reels/showcase-vitrine-body-legs-poster.jpg";
+import underarmsVideo from "@/assets/reels/showcase-vitrine-underarms.mp4";
+import underarmsPoster from "@/assets/reels/showcase-vitrine-underarms-poster.jpg";
+import electroVideo from "@/assets/reels/reel-7559-720.mp4";
+import electroPoster from "@/assets/reels/reel-7559-poster.jpg";
+import magicScreenVideo from "@/assets/reels/reel-magic-one-screen-720.mp4";
+import magicScreenPoster from "@/assets/reels/reel-magic-one-screen-poster.jpg";
 import { Reveal } from "./Reveal";
 
 const reels = [
-  { video: laserVideo.url, poster: laserPoster.url, label: "Подготовка к процедуре" },
-  { video: magicVideo.url, poster: magicPoster.url, label: "Аппаратная коррекция спины" },
-  { video: bodySetupVideo.url, poster: bodySetupPoster.url, label: "Настройка аппарата" },
-  { video: emsVideo.url, poster: emsPoster.url, label: "EMSculpt" },
-  { video: bodyLegsVideo.url, poster: bodyLegsPoster.url, label: "Аппаратная коррекция фигуры" },
-  { video: underarmsVideo.url, poster: underarmsPoster.url, label: "Лазерная эпиляция подмышек" },
-  { video: electroVideo.url, poster: electroPoster.url, label: "Электроэпиляция" },
-  { video: magicScreenVideo.url, poster: magicScreenPoster.url, label: "Настройка Magic One" },
+  { video: laserVideo, poster: laserPoster, label: "Подготовка к процедуре" },
+  { video: magicVideo, poster: magicPoster, label: "Аппаратная коррекция спины" },
+  { video: bodySetupVideo, poster: bodySetupPoster, label: "Настройка аппарата" },
+  { video: emsVideo, poster: emsPoster, label: "EMSculpt" },
+  { video: bodyLegsVideo, poster: bodyLegsPoster, label: "Аппаратная коррекция фигуры" },
+  { video: underarmsVideo, poster: underarmsPoster, label: "Лазерная эпиляция подмышек" },
+  { video: electroVideo, poster: electroPoster, label: "Электроэпиляция" },
+  { video: magicScreenVideo, poster: magicScreenPoster, label: "Настройка Magic One" },
 ];
 
 const mosaicClasses = [

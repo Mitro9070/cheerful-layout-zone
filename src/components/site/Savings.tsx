@@ -1,12 +1,12 @@
 import { savings } from "@/data/site";
 import { Reveal } from "./Reveal";
-import workHandpiecePoint from "@/assets/photo/work/handpiece-point.jpg.asset.json";
+import workHandpiecePoint from "@/assets/photo/work/handpiece-point.jpg";
 
 export function Savings() {
   return (
     <section className="relative overflow-hidden border-y border-border bg-secondary/40 py-20 md:py-28">
       <div className="absolute -left-24 -top-24 z-0 size-96 opacity-[0.05] grayscale lg:block">
-        <img src={workHandpiecePoint.url} alt="" className="photo-tone size-full object-cover" />
+        <img src={workHandpiecePoint} alt="" className="photo-tone size-full object-cover" />
       </div>
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-10">
         <div className="max-w-2xl">

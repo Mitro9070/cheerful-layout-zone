@@ -14,7 +14,7 @@ import {
 } from "@/data/site";
 import { PhotoGrid } from "@/components/site/PhotoGrid";
 import { bodyEquipmentPhotos, teamBodyPhotos } from "@/data/photos";
-import bodyHero from "@/assets/photo/services/body-equipment-new.jpg.asset.json";
+import bodyHero from "@/assets/photo/services/body-equipment-new.jpg";
 import bodyImg from "@/assets/service-body.jpg";
 import studio from "@/assets/studio.jpg";
 
@@ -47,7 +47,7 @@ function BodyPage() {
         title="Рельеф и тонус"
         accent="в комфортном ритме"
         text="Вакуумный и вибрационно-роликовый массаж, EMSculpt и TURBOSCULPT. Перед курсом специалист уточнит задачу и поможет выбрать подходящую процедуру."
-        image={bodyHero.url}
+        image={bodyHero}
       />
 
       <PhotoGrid
