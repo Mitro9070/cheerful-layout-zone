@@ -1,4 +1,4 @@
-// Реальные фото студии «Импульс» (фотосессия), хранятся на CDN через asset-указатели.
+// Реальные фото студии «Импульс» (фотосессия), файлы лежат в src/assets.
 import teamTrio from "@/assets/photo/team/trio.jpg";
 import teamTrioGoggles from "@/assets/photo/team/trio-goggles.jpg";
 import teamMasterMagic from "@/assets/photo/team/master-magic.jpg";
@@ -48,7 +48,7 @@ import electroProcess from "@/assets/photo/electro/electro-process.jpg";
 
 export type Photo = { src: string; alt: string };
 
-const p = (a: { url: string }, alt: string): Photo => ({ src: a.url, alt });
+const p = (src: string, alt: string): Photo => ({ src, alt });
 
 export const teamPhotos: Photo[] = [
   p(teamTrio, "Специалисты студии «Импульс» в кабинете лазерной эпиляции"),
